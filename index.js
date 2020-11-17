@@ -15,7 +15,7 @@ let port;
 // DECLARATION DES DIFFERENTS MODULES CORRESPONDANT A CHAQUE ACTION
 //-------------------------------------------------------------------------
 
-const req_commencer = require("./req_commencer.js");
+const req_entrer = require("./req_entrer.js");
 const req_afficher_formulaire_inscription = require("./req_afficher_formulaire_inscription.js");
 const req_inscrire = require("./req_inscrire.js");
 const req_identifier = require("./req_identifier.js");
@@ -43,8 +43,8 @@ const traite_requete = function (req, res) {
 	try {
 		switch (pathname) {
 			case '/':
-			case '/req_commencer':
-				req_commencer(req, res, query);
+			case '/req_entrer':
+				req_entrer(req, res, query);
 				break;
 			case '/req_afficher_formulaire_inscription':
 				req_afficher_formulaire_inscription(req, res, query);

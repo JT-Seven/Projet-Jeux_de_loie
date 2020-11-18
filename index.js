@@ -23,6 +23,8 @@ const req_connecter = require("./req_connecter.js");
 
 const req_statique = require("./req_statique.js");
 const req_erreur = require("./req_erreur.js");
+const req_commencer = require("./req_commencer");
+
 
 //-------------------------------------------------------------------------
 // FONCTION DE CALLBACK APPELLEE POUR CHAQUE REQUETE
@@ -58,6 +60,9 @@ const traite_requete = function (req, res) {
 				break;
 			case '/req_connecter':
 				req_connecter(req, res, query);
+				break;
+			case "/req_commencer":
+				req_commencer(req, res, query);
 				break;
 			default:
 				req_statique(req, res, query);

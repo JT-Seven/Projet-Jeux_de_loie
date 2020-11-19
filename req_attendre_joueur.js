@@ -20,7 +20,7 @@ const trait = function(req, res, query) {
 	list_joueurs = JSON.parse(joueurs);
 
 	if (list_joueurs.length >= 5) {
-		if (list_joueurs[0] === ) {
+		if (list_joueurs[0] === 0) {
 			res.writeHead(200, {"Content-Type": "text/html"});
 			res.write(page_jeu_actif);
 			res.end();
@@ -32,4 +32,4 @@ const trait = function(req, res, query) {
 
 };
 
-module.exports = traits;
+module.exports = trait;

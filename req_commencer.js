@@ -11,19 +11,8 @@ const traits = function(req, res, query) {
     let page_attente;
     let listeMembres;
     let contenu_fichier;
-
-	 contenu_fichier = fs.readFileSync("membres.json", 'utf-8');
-       list_joueurs.push(listeMembres);
-       joueurs = fs.readFileSync("joueurs.json", "utf-8");
-       console.log(joueurs);
-      list_joueurs = JSON.parse(joueurs);
-  
-       console.log(listeMembres);
-       console.log(list_joueurs);
-
-
 	
-    	
+		console.log(query);   	
 		page = fs.readFileSync("modele_salle_attente.html","utf-8");
 		res.writeHead(200, {"Content-Type": "text/html"});
 		res.write(page);

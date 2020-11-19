@@ -23,7 +23,8 @@ const req_connecter = require("./req_connecter.js");
 
 const req_statique = require("./req_statique.js");
 const req_erreur = require("./req_erreur.js");
-const req_commencer = require("./req_commencer");
+const req_commencer = require("./req_commencer.js");
+const req_attendre_joueur  = require("./req_attendre_joueur.js");
 
 
 //-------------------------------------------------------------------------
@@ -64,6 +65,10 @@ const traite_requete = function (req, res) {
 			case "/req_commencer":
 				req_commencer(req, res, query);
 				break;
+		    case "/req_attendre_joueur":
+                req_attendre_joueur (req, res, query);
+                break;
+
 			default:
 				req_statique(req, res, query);
 				break;

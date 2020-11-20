@@ -11,9 +11,10 @@ const traits = function(req, res, query) {
     let page_attente;
     let listeMembres;
     let contenu_fichier;
-	
-		console.log(query);   	
+
+		console.log(query.pseudo);   	
 		page = fs.readFileSync("modele_salle_attente.html","utf-8");
+		
 		res.writeHead(200, {"Content-Type": "text/html"});
 		res.write(page);
 		res.end();

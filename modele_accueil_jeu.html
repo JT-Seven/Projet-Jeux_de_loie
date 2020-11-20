@@ -6,9 +6,6 @@
 				<title>ACCUEIL DU JEU</title>
 		</head>
 		<body>
-		<form>
-		<input type = "hidden" name = "pseudo" value = "{pseudo}"/>
-		</form>
 		<br>
 		<h1>ACCUEIL DU JEU</h1>
 		</br>
@@ -17,8 +14,9 @@
 		Bloquant ainsi le joueur dans sa quête. Chaque pion correspond à un personnages Snowden, Lindsay, Patrick, Corbin ou encore Trevor James.</br>
 		Il faut être au minimum 5 joueurs.</i></h3>
 		</br>
-		<p>
-			<a href="req_commencer">COMMENCER JEU</a>
-		</p>
+		<form action="/req_commencer" method="GET">
+		<input type = "hidden" name = "pseudo" value = "{pseudo}"/>
+		<input type="submit" value="COMMENCER JEU">
+		</form>
 		</body>
 </html>

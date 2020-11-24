@@ -5,6 +5,7 @@
 
 
 	<head>	
+		<meta http-equiv="refresh" content="5;url=/req_attendre_joueur?pseudo={pseudo}">
 		<meta charset="UTF-8" />
 		<title>Salle d'attente</title>
 	</head>
@@ -12,8 +13,11 @@
 	<body>
 		<h1>Salle d'attente</h1>
 		<P>En attente de joueurs...</p>
+		{liste}
 		<button><a href="modele_accueil_jeu.html">Quitter</a></button> 
-	
+		<form action="/req_attendre_joueur" method="GET">
+		<input type="hidden" name="pseudo" value="{pseudo}" />
+		</form>
 	</body>
 
 

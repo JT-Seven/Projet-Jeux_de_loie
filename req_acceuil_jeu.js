@@ -24,7 +24,7 @@ const traits = function(req, res, query) {
 	listeMembres.push(liste_joueurs);
 
 	joueurs = fs.readFileSync("joueurs.json", "utf-8");
-	list_joueurs = JSON.parse(joueurs);
+	list_joueurs.joueurs = JSON.parse(joueurs);
 	
 	console.log(listeMembres);
 	console.log(list_joueurs);

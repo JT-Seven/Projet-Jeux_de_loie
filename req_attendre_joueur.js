@@ -40,7 +40,7 @@ const trait = function(req, res, query) {
 	marqueurs.pseudo = query.pseudo;
 	marqueurs.liste = afficher_liste_joueurs(list_joueurs);
 	if (list_joueurs.length >= 2) {
-		if (list_joueurs[0] === query.pseudo) {
+		if (list_joueurs[0].joueurs === query.pseudo) {
 			//res.writeHead(200, {"Content-Type": "text/html"});
 			//res.write(page_jeu_actif);
 			//res.end();

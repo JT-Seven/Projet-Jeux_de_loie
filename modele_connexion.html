@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    </head>
+       <head>
+           <link rel="stylesheet" type="text/css" href="modele_connexion.css">
+		   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+       </head>
     <body>
-        <h2>Mon PI</h2>
-
-        {erreur}
-
-        <form action="/req_connecter" method="GET">
-            <input type="text" name="pseudo" value="{pseudo}">
-            <br/>
-            <input type="password" name="password" value="">
-            <br/>
-            <input type="submit" name="action" value="Se connecter">
-        </form>
-
-    </body>
+        <h2>La Quête de Snowden</h2>
+              
+			 <p class="ligne"> {erreur}</p>
+			<h2 class="titre">Connexion</h2>
+			<div class="forme">
+                <form action="/req_connecter" method="GET">
+                     <p class="noms">Noms d'utilisateur :</p>
+					<input class="inputbasic" type="text" name="pseudo" value="{pseudo}" placeholder="Entrez votre nom d'utilisateur">
+                    <br>
+			        <p class="prenom">Mots de passe :</p>
+					<input class="inputbasic" type="password" name="password" value="" placeholder="Entrez votre mots de passe">
+                    <br>
+				 	<input type="submit" name="action" value="Se connecter"><input type="reset" value="Effacer">
+				</form>
+    		</div>
+	</body>
 </html>
-
+                                 

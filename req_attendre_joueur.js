@@ -20,11 +20,15 @@ const traits = function(req, res, query) {
 	let chaine;
 	let _joueur;
 	let participant;
+	let contenu;
+	let trouve1;
 
-	joueurs = fs.readFileSync("joueurs.json", "utf-8");
+	joueurs = fs.readFileSync("joueurs.json","utf-8");
+	console.log(joueurs);
 	list_joueurs = JSON.parse(joueurs);
 	i = 0;
 	trouve = false;
+	trouve1 = false;
 
 	while (i < list_joueurs.participant.length && trouve == false) {
 		if (list_joueurs.participant[i].pseudo  === query.pseudo) {
@@ -33,17 +37,31 @@ const traits = function(req, res, query) {
 			i++;
 		}
 
+	}
+	
 	if (trouve === false) {
 		console.log("ERREUR : On n'a pas trouve le joueur dans la liste.");
-		}
 	}
+	
 
 	if(list_joueurs.participant.length === 2) {
+		// affiche page passif
 		page_jeu_passif = fs.readFileSync("modele_jeu_passif.html","utf-8");
 		res.writeHead(200, {"Content-Type": "text/html"});
 		res.write(page_jeu_passif);
 		res.end();
-	
+	while (i < list_joueurs.participant.length && trouve1 == false) {
+		if (list_joueurs.participant[i].pseudo  === query.pseudo) {
+			trouve1 = true;
+			list_joueurs.participant.splice(1,i);
+			 chaine = JSON.stringify(list_joueurs);
+			 fs.writeFileSync("joueurs.json",chaine,"utf-8");
+		
+		} else {
+			i++;
+		}
+}
+
 	} else {
 
 

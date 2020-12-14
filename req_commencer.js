@@ -22,12 +22,15 @@ if(JSON.parse(contenu).role.length === 0 ) {
 	contenu = fs.readFileSync("joueurs.json","utf-8");
 	}
 
-//utilisation du fichier tamplate .
+//utilisation du fichier tamplate.
 
 if(contenu !== "") {  
-	list_joueurs =  JSON.parse(contenu); //utilisation de joueur.json pour le 2e joueurs
-	}else 	{
-	list_joueurs = JSON.parse(fs.readFileSync("_joueurs.json","utf-8")); //utilisation de _joueurs.json pour 1e 
+	list_joueurs =  JSON.parse(contenu); 
+
+//utilisation de joueur.json pour le 2e joueurs.
+
+	} else {
+	list_joueurs = JSON.parse(fs.readFileSync("_joueurs.json","utf-8"));//utilisation de _joueurs.json pour 1e 
 	}
 	
 	// on ajoute le pseudo, le role et l'etat dans la liste.
@@ -46,8 +49,6 @@ if(contenu !== "") {
 
     chaine = JSON.stringify(list_joueurs);
     fs.writeFileSync("joueurs.json",chaine,"utf-8");
-
-
 
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;

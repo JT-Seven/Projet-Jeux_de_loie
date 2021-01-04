@@ -3,7 +3,6 @@
 const afficher_liste_lobby = function (lobby) {
 	let html;
 	let i;
-	console.log(lobby);
 
 	html = "<ul>";
 	for (i = 0; i < lobby.length; i++) {

@@ -19,7 +19,7 @@ const trait = function (req, res, query) {
 	contenu = fs.readFileSync("lobby.json", "utf-8");
 	lobby = JSON.parse(contenu);
 
-	contenu = fs.readFileSync("_joueurs.json", "utf-8");
+	contenu = fs.readFileSync("_partie.json", "utf-8");
 	partie = JSON.parse(contenu);
 
 	// On change l'état de tous les joueurs à "EN JEU".
@@ -35,14 +35,14 @@ const trait = function (req, res, query) {
 	fs.writeFileSync("lobby.json", contenu, "utf-8");
 
 	contenu = JSON.stringify(partie);
-	fs.writeFileSync("joueurs.json", contenu, "utf-8");
+	fs.writeFileSync("partie.json", contenu, "utf-8");
 
 	// Création de la page à afficher.
 
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
 
-	page = fs.readFileSync("./modele_jeu.html", "utf-8");
+	page = fs.readFileSync("./modele_jeu_actif.html", "utf-8");
 	page = page.supplant(marqueurs);
 
 	// Envoi de la réponse.

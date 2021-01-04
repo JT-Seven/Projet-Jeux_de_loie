@@ -9,18 +9,17 @@ const afficher_boutton_demarrer = require("./fct_afficher_boutton_demarrer.js");
 const traits = function(req, res, query) {
 	let page;
 	let marqueurs;
-	let list_lobby;
+	let lobby;
 	let trouve;
 	let i;
 	let joueurs;
 
 	joueurs = fs.readFileSync("lobby.json","utf-8");
-	list_lobby = JSON.parse(joueurs);
+	lobby = JSON.parse(joueurs);
 	i = 0;
 	trouve = false;
-
-	while (i < list_lobby.length && trouve == false) {
-		if (list_lobby[i].pseudo  === query.pseudo) {
+	while (i < lobby.length && trouve == false) {
+		if (lobby[i].pseudo  === query.pseudo) {
 			trouve = true;
 		} else {
 			i++;
@@ -32,10 +31,12 @@ const traits = function(req, res, query) {
 		console.log("ERREUR : On n'a pas trouve le joueur dans la liste.");
 	}
 	
-	if (list_lobby[i].etat === "ATTENTE") {
-	console.log(list_lobby);
-	//	marqueurs.demarrer = afficher_boutton_demarrer(list_lobby, query.pseudo);
-		marqueurs.liste = afficher_liste_lobby(list_lobby);
+	marqueurs = {};
+	marqueurs.pseudo = query.pseudo;
+
+	if (lobby[i].etat === "ATTENTE") {
+		marqueurs.demarrer = afficher_boutton_demarrer(lobby, query.pseudo);
+		marqueurs.liste = afficher_liste_lobby(lobby);
 	
 		page = fs.readFileSync("./modele_salle_attente.html", "utf-8");
 	} else if (lobby[i].etat === "EN JEU") {

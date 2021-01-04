@@ -15,11 +15,14 @@ const traits = function(req, res, query) {
 	let trouve;
 
 	contenu = fs.readFileSync("lobby.json", "utf-8");
+	if (contenu === "") {
+		lobby = [];
+	} else {	
 	lobby = JSON.parse(contenu);
-	
+	}
+
 	i = 0;
 	trouve = false;
-	
 	while (i < lobby.length && trouve === false) {
 		if (lobby[i] === query.pseudo) {
 			trouve = true;
@@ -36,7 +39,7 @@ const traits = function(req, res, query) {
 	contenu = JSON.stringify(lobby)
 	fs.writeFileSync("lobby.json",contenu,"utf-8");
 	}
-	
+
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
 	marqueurs.liste = afficher_liste_lobby(lobby);

@@ -20,13 +20,12 @@ const req_afficher_formulaire_inscription = require("./req_afficher_formulaire_i
 const req_afficher_formulaire_connexion = require("./req_afficher_formulaire_connexion.js");
 const req_inscrire = require("./req_inscrire.js");
 const req_connecter = require("./req_connecter.js");
-
 const req_statique = require("./req_statique.js");
 const req_erreur = require("./req_erreur.js");
 const req_commencer = require("./req_commencer.js");
 const req_attendre_joueur  = require("./req_attendre_joueur.js");
- const req_retour_acceuil = require("./req_retour_acceuil.js");
-
+const req_retour_acceuil = require("./req_retour_acceuil.js");
+const req_demarrer = require("./req_demarrer.js");
 
 //-------------------------------------------------------------------------
 // FONCTION DE CALLBACK APPELLEE POUR CHAQUE REQUETE
@@ -67,11 +66,14 @@ const traite_requete = function (req, res) {
 				req_commencer(req, res, query);
 				break;
 				case "/req_retour_accueuil":
-				req_retour_acceuil (req, res, query);
+				req_retour_acceuil(req, res, query);
 				break;
 		    case "/req_attendre_joueur":
-                req_attendre_joueur (req, res, query);
+                req_attendre_joueur(req, res, query);
                 break;
+			case "/req_demarrer":	
+				req_demarrer(req, res, query);
+				break;
 
 			default:
 				req_statique(req, res, query);

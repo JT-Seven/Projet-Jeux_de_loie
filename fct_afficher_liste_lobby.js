@@ -1,16 +1,18 @@
 "use strict"
 
-const afficher_liste_joueurs = function (list_joueurs) {
+const afficher_liste_lobby = function (lobby) {
 	let html;
 	let i;
 
 	html = "<ul>";
-	for (i = 0; i < list_joueurs.participant.length; i++) {
-		html += "<li>" + list_joueurs.participant[i].pseudo + "</li>";
+	for (i = 0; i < lobby.length; i++) {
+		if (lobby[i].etat === "ATTENTE") {
+			html += "<li>" + lobby[i].pseudo + "</li>";
+		}
 	}
 	
 	html += "<ul>";
 	return html;
 };
 
-module.exports = afficher_liste_joueurs;
+module.exports = afficher_liste_lobby;

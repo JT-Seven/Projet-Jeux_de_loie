@@ -3,35 +3,28 @@
 const fs = require("fs");
 require("remedial");
 
-const afficher_liste_joueurs = require("./fct_afficher_liste_lobby.js");
+const afficher_liste_lobby = require("./fct_afficher_liste_lobby.js");
+const afficher_boutton_demarrer = require("./fct_afficher_boutton_demarrer.js");
 
 const traits = function(req, res, query) {
+	//declaration des variables
 	let page;
 	let marqueurs;
-	let _joueurs;
-	let joueurs;
-	let list_joueurs;
-	let page_jeu_actif;
-	let page_jeu_passif;
-	let page_attente;
+	let lobby;
 	let trouve;
 	let i;
-	let Role;
-	let chaine;
-	let _joueur;
-	let participant;
-	let contenu;
-	let trouve1;
+	let joueurs;
 
-	joueurs = fs.readFileSync("joueurs.json","utf-8");
-	console.log(joueurs);
-	list_joueurs = JSON.parse(joueurs);
+	//on lit le fichier lobby.json et on met son contenu dans la variable joueurs, puis on la transforme en object
+	//et on met l'objet dans la variable lobby
+	joueurs = fs.readFileSync("lobby.json","utf-8");
+	lobby = JSON.parse(joueurs);
+
+	//on cherche si notre joueur est dans la liste lobby 
 	i = 0;
 	trouve = false;
-	trouve1 = false;
-
-	while (i < list_joueurs.participant.length && trouve == false) {
-		if (list_joueurs.participant[i].pseudo  === query.pseudo) {
+	while (i < lobby.length && trouve == false) {
+		if (lobby[i].pseudo  === query.pseudo) {
 			trouve = true;
 		} else {
 			i++;
@@ -39,43 +32,28 @@ const traits = function(req, res, query) {
 
 	}
 	
+	//si il n'est pas dans la liste on dit qu'il y a une erreur
 	if (trouve === false) {
 		console.log("ERREUR : On n'a pas trouve le joueur dans la liste.");
 	}
 	
-
-	if(list_joueurs.participant.length === 2) {
-		// affiche page passif
-		page_jeu_passif = fs.readFileSync("modele_jeu_passif.html","utf-8");
-		res.writeHead(200, {"Content-Type": "text/html"});
-		res.write(page_jeu_passif);
-		res.end();
-	while (i < list_joueurs.participant.length && trouve1 == false) {
-		if (list_joueurs.participant[i].pseudo  === query.pseudo) {
-			trouve1 = true;
-			list_joueurs.participant.splice(1,i);
-			 chaine = JSON.stringify(list_joueurs);
-			 fs.writeFileSync("joueurs.json",chaine,"utf-8");
-		
-		} else {
-			i++;
-		}
-}
-
-	} else {
-
-
- 	marqueurs = {};
+	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
-	marqueurs.liste = afficher_liste_joueurs(list_joueurs);
 	
-	page_attente = fs.readFileSync("modele_salle_attente.html", "utf-8");
-	page_attente = page_attente.supplant(marqueurs);
+	//si le joueur est en ATTENTE on montre de nouveau la meme page, sinon on affiche la page jeu passif
+	if (lobby[i].etat === "ATTENTE") {
+		marqueurs.demarrer = afficher_boutton_demarrer(lobby, query.pseudo);
+		marqueurs.liste = afficher_liste_lobby(lobby);
 	
-	res.writeHead(200, {"Content-Type": "text/html"});
-	res.write(page_attente);
-	res.end();
+		page = fs.readFileSync("./modele_salle_attente.html", "utf-8");
+	} else if (lobby[i].etat === "EN JEU") {
+		page = fs.readFileSync("./modele_jeu_passif.html", "utf-8");
 	}
-};
 
-module.exports = traits; 
+	page = page.supplant(marqueurs);
+
+	res.writeHead(200, {"Content-Type": "text/html"});
+	res.write(page);
+	res.end();
+};
+module.exports = traits;

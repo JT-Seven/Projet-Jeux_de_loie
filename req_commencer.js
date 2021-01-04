@@ -1,60 +1,61 @@
 "use strict";
 
-const afficher_liste_joueurs = require("./fct_afficher_liste_lobby.js");
+const afficher_liste_lobby = require("./fct_afficher_liste_lobby.js");
+const afficher_boutton_demarrer = require("./fct_afficher_boutton_demarrer.js");
 
 const traits = function(req, res, query) {
-const fs = require("fs");
-require("remedial");
+
+	//declaration des variables
+	const fs = require("fs");
+	require("remedial");
 	let page;
-	let contenu;
-	let _joueurs; 
-    let i;
-	let chaine;
-	let list_joueurs;
+	let lobby = [];
 	let marqueurs;
+	let joueurs;
+	let contenu;
+	let i;
+	let trouve;
 
-contenu = fs.readFileSync("joueurs.json","utf-8");
-
-// supprime le contenu du joueurs.json (utilisé pour une nouvelle partie).
-
-if(JSON.parse(contenu).role.length === 0 ) {
-	fs.writeFileSync("joueurs.json", "", "utf-8");
-	contenu = fs.readFileSync("joueurs.json","utf-8");
+	//lecture du fichier lobby.json, si il est vide on cree une liste vide qui s'appel lobby sinon on met le contenu
+	//de lobby.json dans lobby 
+	contenu = fs.readFileSync("lobby.json", "utf-8");
+	if (contenu === "") {
+		lobby = [];
+	} else {	
+	lobby = JSON.parse(contenu);
 	}
 
-//utilisation du fichier tamplate.
 
-if(contenu !== "") {  
-	list_joueurs =  JSON.parse(contenu); 
-
-//utilisation de joueur.json pour le 2e joueurs.
-
-	} else {
-	list_joueurs = JSON.parse(fs.readFileSync("_joueurs.json","utf-8"));//utilisation de _joueurs.json pour 1e 
+	//on cherche le joueur si on le trouve pas, aller voir etape suivate, si on le trouve
+	//on met la valeur de la variable trouve a true
+	i = 0;
+	trouve = false;
+	while (i < lobby.length && trouve === false) {
+		if (lobby[i] === query.pseudo) {
+			trouve = true;
+		}
+		i++;
 	}
 	
-	// on ajoute le pseudo, le role et l'etat dans la liste.
+	//si on trouve pas le joueur on cree un objet joueurs avec un pseudo et un etat, on met l'etat a "ATTENTE"
+	//puis on ecrit ces valeurs dans le fichier lobby.json
+	if (trouve === false) {
+	joueurs = {};
+	joueurs.pseudo = query.pseudo;
+	joueurs.etat = "ATTENTE";
+	lobby.push(joueurs);
+	contenu = JSON.stringify(lobby)
+	fs.writeFileSync("lobby.json",contenu,"utf-8");
+	}
 	
-	i = Math.floor(Math.random() * list_joueurs.role.length);
 
-	_joueurs = {};	
-	_joueurs.pseudo = query.pseudo;
-	_joueurs.etat = "Attente";
-	_joueurs.role = list_joueurs.role[i];
-	
-	list_joueurs.role.splice(i, 1);
-	list_joueurs.participant.push(_joueurs);	
-	
-	// Enregistrement des information dans le fichier joueurs.json.
-
-    chaine = JSON.stringify(list_joueurs);
-    fs.writeFileSync("joueurs.json",chaine,"utf-8");
-
+	//les marqueurs sont pour afficher la liste de joueurs et le boutton demarrer sur la page html 
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
-	marqueurs.liste = afficher_liste_joueurs(list_joueurs);
+	marqueurs.liste = afficher_liste_lobby(lobby);
+	marqueurs.demarrer = afficher_boutton_demarrer(lobby, query.pseudo);
 
-	page = fs.readFileSync("modele_salle_attente.html","utf-8");
+	page = fs.readFileSync("./modele_salle_attente.html","utf-8");
 	page = page.supplant(marqueurs);
 
 	res.writeHead(200, {"Content-Type": "text/html"});

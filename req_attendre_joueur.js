@@ -7,6 +7,7 @@ const afficher_liste_lobby = require("./fct_afficher_liste_lobby.js");
 const afficher_boutton_demarrer = require("./fct_afficher_boutton_demarrer.js");
 
 const traits = function(req, res, query) {
+	//declaration des variables
 	let page;
 	let marqueurs;
 	let lobby;
@@ -14,8 +15,12 @@ const traits = function(req, res, query) {
 	let i;
 	let joueurs;
 
+	//on lit le fichier lobby.json et on met son contenu dans la variable joueurs, puis on la transforme en object
+	//et on met l'objet dans la variable lobby
 	joueurs = fs.readFileSync("lobby.json","utf-8");
 	lobby = JSON.parse(joueurs);
+
+	//on cherche si notre joueur est dans la liste lobby 
 	i = 0;
 	trouve = false;
 	while (i < lobby.length && trouve == false) {
@@ -27,13 +32,15 @@ const traits = function(req, res, query) {
 
 	}
 	
+	//si il n'est pas dans la liste on dit qu'il y a une erreur
 	if (trouve === false) {
 		console.log("ERREUR : On n'a pas trouve le joueur dans la liste.");
 	}
 	
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
-
+	
+	//si le joueur est en ATTENTE on montre de nouveau la meme page, sinon on affiche la page jeu passif
 	if (lobby[i].etat === "ATTENTE") {
 		marqueurs.demarrer = afficher_boutton_demarrer(lobby, query.pseudo);
 		marqueurs.liste = afficher_liste_lobby(lobby);
@@ -49,4 +56,4 @@ const traits = function(req, res, query) {
 	res.write(page);
 	res.end();
 };
-module.exports = traits; 
+module.exports = traits;

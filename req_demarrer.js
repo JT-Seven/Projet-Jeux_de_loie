@@ -14,7 +14,7 @@ const trait = function (req, res, query) {
 	let trouve;
 	let marqueurs;
 	let joueur;
-	// Récupération de la liste des gens déjà en attente.
+	//récupération de la liste des gens déjà en attente.
 
 	contenu = fs.readFileSync("lobby.json", "utf-8");
 	lobby = JSON.parse(contenu);
@@ -22,8 +22,9 @@ const trait = function (req, res, query) {
 	contenu = fs.readFileSync("_partie.json", "utf-8");
 	partie = JSON.parse(contenu);
 
-	// On change l'état de tous les joueurs à "EN JEU".
-
+	//on change l'état de tous les joueurs à "EN JEU".
+	//et on leur attribue leurs roles et leur position
+	//la position sera 0 pour tout le monde
 	for (i = 0; i < lobby.length; i++) {
 		if (lobby[i].etat === "ATTENTE") {
 			lobby[i].etat = "EN JEU";
@@ -42,7 +43,7 @@ const trait = function (req, res, query) {
 	contenu = JSON.stringify(partie);
 	fs.writeFileSync("partie.json", contenu, "utf-8");
 
-	// Création de la page à afficher.
+	//création de la page à afficher
 
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
@@ -50,7 +51,7 @@ const trait = function (req, res, query) {
 	page = fs.readFileSync("./modele_jeu_actif.html", "utf-8");
 	page = page.supplant(marqueurs);
 
-	// Envoi de la réponse.
+	//envoi de la réponse.
 
 	res.writeHead(200, { "Content-Type": "text/html" });
 	res.write(page);

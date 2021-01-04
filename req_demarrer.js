@@ -13,7 +13,7 @@ const trait = function (req, res, query) {
 	let i;
 	let trouve;
 	let marqueurs;
-
+	let joueur;
 	// Récupération de la liste des gens déjà en attente.
 
 	contenu = fs.readFileSync("lobby.json", "utf-8");
@@ -27,7 +27,12 @@ const trait = function (req, res, query) {
 	for (i = 0; i < lobby.length; i++) {
 		if (lobby[i].etat === "ATTENTE") {
 			lobby[i].etat = "EN JEU";
-			partie.joueurs.push(lobby[i].pseudo);
+			joueur = {}
+			joueur.pseudo = lobby[i].pseudo;
+			joueur.role = partie.roles[0];
+			partie.roles.splice(0, 1);
+			joueur.position = 0;
+			partie.joueurs.push(joueur);
 		}
 	}
 

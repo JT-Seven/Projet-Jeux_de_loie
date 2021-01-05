@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	</head>
-	<body>
-		<h2>Formulaire de création de compte</h2>
+<html lang="fr"><head>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Page De Connexion</title>
+    <link rel="stylesheet" href="modele_formulaire_inscription.css">
+  </head>
+  <body>
+    <div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front">
 
-		{erreur}
+			</div>
+			<div class="flip-box-back">
 
-		<form action="/req_inscrire" method="GET">
-			<label>Pseudo :</label>
-			<input type="text" name="pseudo" value="{pseudo}">
-			<br/>
-			<label>Mot de passe :</label>
-			<input type="text" name="password" value="">
-			<br/>
-			<button name="action" value="creer">Créer compte</button>
-		</form>
+			</div>
+		</div>
+	</div>
+	<header class="main-head">
+        <img class="secret" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F38%2F2b%2F2b%2F382b2b9adf635bf0a26080cbc149e36d.jpg&amp;f=1&amp;nofb=1" alt="image">
+    </header>
+	<div class="forme">
+		<form action="/req_inscrire" class="box" method="GET">
+          	<h1>Inscription</h1>
+		  		<div class="image">
+					<img class="inscrit" src="icone_inscription.png" alt="image"></div>
+					<div class="blaze">
+						<label class="blaz" for="blaz">Nom d'utilisateur : </label>
+						<input type="text" name="pseudo" value="{blaze}" placeholder="Votre Pseudo"></div>
+					<div class="nom">
+						<label class="N" for="nom">Nom : </label>
+						<input type="text" name="nom" value="{nom}" placeholder="Votre Nom">
+						<label class="N_2" for="prenom">Prénom : </label>
+						<input type="text" name="prenom" value="{prenom}" placeholder="Votre Prénom"></div>
+					<div class="civilite">
+						<label class="C">Civilité : </label>
+						<input id="homme" type="radio" name="civil" value="Homme">
+						<label class="sexe" for="homme">Homme</label>
+						<input id="femme" type="radio" name="civil" value="Femme">
+						<label class="sexe" for="femme">Femme</label>
+					</div>
+					<div class="date">
+						<label class="D" for="date">Date de Naissance : </label>
+						<input type="date" name="date" value="{age}" placeholder="Date de naissance"></div>
+					<div class="adresse">
+						<label class="A" for="adress">Adresse Mail: </label>
+						<input type="text" name="mail" value="{adresse}" placeholder="Votre Mail"></div>
+					<div class="password">
+						<label class="B" for="mdp">Mot de Passe : </label>
+						<input type="password" name="password" value="{password}" placeholder="Votre Mot De Passe">
+						<label class="B_2" for="mdp">Confirmation du mot de Passe : </label>
+						<input type="password" name="password" value="{password}" placeholder="Confirmation du Mot De Passe">
+					</div>
+		  			<div class="btn">
+						<button type="submit" name="action" value="Créer compte">Créer compte</button>
+					</div>
+					<div class="reset">
+						<button type="reset" name="effacer" value="Effacer">Effacer</button>
+					</div>
+			</form>
+		</div>
 	</body>
 </html>

@@ -1,20 +1,56 @@
 <!DOCTYPE html>
-<html>
-       <head>
-           <title>Acceuil</title>
-           <link rel="stylesheet" type="text/css" href="modele_accueil.css">
-           <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-       </head>
-    <body>
-            
-        <h2>LA QUETE DE SNOWDEN</h2>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    	<title>Page De Connexion</title>
+    	<link rel="stylesheet" href="modele_accueil.css">
+  	</head>
+  	<body>
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+				
+				</div>
+				<div class="flip-box-back">
 
-        <div class="position">
-            <fieldset class="cadre">
-                <a href="/req_afficher_formulaire_connexion"><button>connexion</button></a>
-                <a href="/req_afficher_formulaire_inscription"><button>Créer compte</button></a>
-            </fieldset>   
-        </div>
-        </body>
+				</div>
+			</div>
+		</div>
+		
+		<header class="main-head">
+        	<img class="secret" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F38%2F2b%2F2b%2F382b2b9adf635bf0a26080cbc149e36d.jpg&amp;f=1&amp;nofb=1" alt="image">
+    
+		</header>
+		<div class="text-box">
+        	<span>S</span>
+        	<span>n</span>
+        	<span>o</span>
+        	<span>w</span>
+        	<span>d</span>
+        	<span>e</span>
+        	<span>n</span>
+        	<span>Q</span>
+        	<span>u</span>
+        	<span>e</span>
+        	<span>s</span>
+        	<span>t</span>
+		</div>
+
+		<div class="forme">
+			<form action="/req_connecter" class="box" method="GET">
+            	<svg width="30" height="30" viewBox="0 0 24 24">
+             		<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
+             	</svg>
+          		<h1>Connexion</h1>
+          			<input type="text" name="pseudo" value="" placeholder="Votre Nom d'utilisateur">
+          			<input type="password" name="password" value="" placeholder="Votre Mot De Passe">
+		  			<button type="submit" name="action" value="Connexion">Connexion</button>
+			</form>
+			<br>
+			<form action="/req_afficher_formulaire_inscription" class="inscription" method="GET">
+				<button type="submit" name="action" value="Inscription">Inscription</button>
+				<img class="inscrit" src="icone_inscription.png" alt="image">
+			</form>
+		</div>
+	</body>
 </html>
-                                 

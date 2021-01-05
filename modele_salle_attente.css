@@ -1,0 +1,593 @@
+body {
+
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-30deg, #2d5764 0% ,#000 50%, #070f15 50%, #004b60);
+  width: 70vw;
+  height: 130vh;
+
+}
+
+/* container1 */
+
+.container1 {
+  background-size:cover;
+  background-position:center;
+ 
+}
+
+.container1 .card1 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+.container1 .card1 .box1 .content1 {
+
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container1 .card1 .box1 .content1 h2 {
+
+  font-size: 27px;
+  padding: 0px 0px 33px;
+}
+
+.container1 .card1 .box1 .content1 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+.container1 .card1 .box1 .content1 p {
+
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* container2 */
+
+.container2 {
+  background-image:url("prison.png");
+  background-size:cover;
+  background-position:center;
+ 
+}
+
+.container2 .card2 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+
+
+.container2 .card2 .box2 .content2 {
+
+  text-align: center;
+  margin-top: 40px;
+}
+.container2 .card2 .box2 .content2 h2 {
+
+  font-size: 28px;
+
+}
+.container2 .card2 .box2 .content2 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+.container2 .card2 .box2 .content2 p {
+
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* container3 */
+
+.container3 {
+  background-image:url("attente.png"),
+  url("deux.png");
+  background-size:cover;
+  background-position:center;
+  
+
+}
+
+.container3 .card3 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+
+.container3 .card3 .box3 .content3 {
+
+  text-align: center;
+  margin-top: 40px;
+}
+.container3 .card3 .box3 .content3 h2 {
+
+  font-size: 26px;
+  padding-top: 2px;
+}
+
+.container3 .card3 .box3 .content3 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+.container3 .card3 .box3 .content3 p {
+
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* container4 */
+
+.container4 .card4 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+
+.container4 {
+
+  background-image:url("dependant.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.container4 .card4 .box4 .content4 {
+
+  text-align: center;
+  margin-top: 40px;
+
+}
+.container4 .card4 .box4 .content4 h2 {
+
+  font-size: 27px;
+
+}
+.container4 .card4 .box4 .content4 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+.container4 .card4 .box4 .content4 p {
+
+  font-size: 15px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* container5 */
+
+.container5 {
+  
+  background-image:url("retour.png");
+  background-size:cover;
+  background-position:center;
+
+}
+
+.container5 .card5 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+.container5 .card5 .box5 .content5 {
+
+  text-align: center;
+  margin-top: 40px;
+}
+.container5 .card5 .box5 .content5 h2 {
+
+  font-size: 27px;
+
+}
+.container5 .card5 .box5 .content5 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+.container5 .card5 .box5 .content5 p {
+
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* container6 */
+
+.container6 {
+  background-image:url("regle.png");
+  background-size:cover;
+  background-position:center;
+ 
+}
+
+.container6 .card6 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+
+.container6 .card6 .box6 .content6 {
+
+  text-align: center;
+  margin-top: 30px;
+}
+.container6 .card6 .box6 .content6 h2 {
+
+  font-size: 35px;
+
+}
+.container6 .card6 .box6 .content6 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+.container6 .card6 .box6 .content6 p {
+
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* container7 */
+
+.container7 {
+  background-image:url("boost.png");
+  background-size:cover;
+  background-position:center;
+}
+
+
+.container7 .card7 {
+background: rgba(0,0,0,0.5);
+border-radius: 20px;
+}
+
+.container7 .card7 .box7 .content7 {
+
+  text-align: center;
+  margin-top: 40px;
+}
+.container7 .card7 .box7 .content7 h2 {
+
+  font-size: 27px;
+
+}
+.container7 .card7 .box7 .content7 h3 {
+
+  font-size: 20px;
+  z-index: 1;
+  transition: 0.5s;
+  padding-top: 5px;
+
+}
+.container7 .card7 .box7 .content7 p {
+
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+
+}
+
+/* regle */
+
+.regle {
+position: absolute;
+bottom: 40%;
+right: 1547px;
+}
+
+/* mise en page */
+
+.all {
+display: flex;
+width: 140%;
+align-items: self-end;
+justify-content: space-evenly;
+height: 1070px;
+}
+
+.container {
+border: 1px solid;
+display: flex;
+justify-content: center;
+height: 330px;
+width: 210px;
+margin-left: 20px;
+border-radius: 20px;
+box-shadow: 5px 5px 5px 5px black;
+background-image:url("cacher.png");
+background-position-x: -180px;
+}
+
+.container1:hover {
+  background-image:url("crane.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.container2:hover {
+  background-image:url("prison.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.container3:hover {
+  background-image: url("attente.png"), url("deux.png");
+  background-size:cover;
+  background-position:center;
+}
+
+
+.container4:hover  {
+ background-image:url("dependant.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.container5:hover  {
+ background-image:url("retour.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.container6:hover  {
+ background-image:url("regle.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.container7:hover  {
+ background-image:url("boost.png");
+  background-size:cover;
+  background-position:center;
+}
+
+
+
+.container6 .card6 .content6 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container6 .card6:hover .content6 {
+transform:translateY(0px);
+opacity:1;
+}
+
+.container1 .card1 .content1 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container1 .card1:hover .content1 {
+transform:translateY(0px);
+opacity:1;
+}
+
+.container2 .card2 .content2 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container2 .card2:hover .content2 {
+transform:translateY(0px);
+opacity:1;
+}
+
+.container3 .card3 .content3 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container3 .card3:hover .content3 {
+transform:translateY(0px);
+opacity:1;
+}
+
+.container4 .card4 .content4 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container4 .card4:hover .content4 {
+transform:translateY(0px);
+opacity:1;
+}
+
+.container5 .card5 .content5 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container5 .card5:hover .content5 {
+transform:translateY(0px);
+opacity:1;
+}
+
+.container7 .card7 .content7 {
+transform:translateY(40px);
+opacity: 0;
+transition:0.5s;
+}
+
+.container7 .card7:hover .content7 {
+transform:translateY(0px);
+opacity:1;
+}
+
+
+/* liste */
+
+.liste {
+
+  background: url("central.jpg");
+      background-repeat: repeat;
+  width: 900px;
+  object-fit: cover;
+  height: 61vh;
+  position: absolute;
+left: 456px;
+bottom: 190px;
+  background-repeat: no-repeat;
+
+  background-position: center;
+}
+.li {
+
+  border: 1px solid;
+  width: 26%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 455px;
+  top: 151px;
+  font-size: 23px;
+  color: white;
+  padding-right: 6%;
+  background: rgba(0,0,0,0.2);
+  padding-top: 203px;
+  padding-left: 308px;
+  padding-bottom: 302px;
+
+}
+.L {
+border: 1px solid black;
+position: absolute;
+top: 385px;
+left: 28%;
+padding: 10px 50px 10px 10px;
+box-shadow: 2px 2px 2px 2px black;
+border-radius: 15px;
+}
+
+.attente {
+}
+
+li {
+display: flex;
+border: 1px solid black;
+padding: 10px 80px 5px 80px;
+margin-top: 10px;
+border-radius: 20px;
+object-fit: cover;
+background-size: cover;
+background-image:url("fumer.gif");
+color: white;
+}
+
+/* Role */
+
+.role {
+}
+
+.R {
+border: 1px solid black;
+top: 45%;
+left: 55%;
+padding: 10px 50px 10px 10px;
+box-shadow: 2px 2px 2px 2px black;
+border-radius: 15px;
+position: absolute;
+}
+
+/* Police d'ecriture et couleur */
+
+h2 {
+color: white;
+}
+
+h3 {
+color: #ae1d1d;
+}
+
+p {
+color: white;
+}
+/* boutton */
+
+.btn {
+
+    background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
+    border: 5px inset #243b55;
+    width: 5%;
+    height: 4vh;
+    left: 47%;
+
+    position: absolute;
+    top: 70%;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1790px) {
+	body {
+		display:block;
+		height:auto;
+	}
+
+	.container {
+		position:static;
+		display:inline-block;
+		display: flex;
+	}
+
+	.card {
+		justify-content: center;
+		position:static;
+		display:inline-block;
+	}
+
+	.card1 {
+		position: relative;
+		min-width: 320px;
+		height: 441px;
+		left: 481px;
+		top: 150%;
+	}
+
+	.box {
+		position:static;
+		display:flex;
+        display:inline-block;
+	}
+
+	.liste {
+		display:flex;
+		justify-content:center;
+		background-position:center;
+	}
+}
+
+

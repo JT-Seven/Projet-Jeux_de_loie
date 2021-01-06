@@ -4,35 +4,45 @@ body {
     background-position: center;
 	background-repeat:no-repeat;
 	 object-fit: cover;
-	 height:90vh;
+	 height:100vh;
 	 padding: 0;
 	 margin: 0;
 }
 
-  center {
-      display: flex;
-      margin-top: 250px;
-      margin-left: 50px;
-  }
+.all {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+justify-content: center;
+  padding: 0;
+  margin: 0;
+}
 
 /* slide Snowden  */
 
 .flip-box {
-	width: 350px;
-  height:400px;
+	width: 20%;
+  height:50%;
  
   perspective:1000px;
-  position: relative;
-  left: 80%;
-  top: 30%;
+  left: 78%;
+  top: 22%;
   
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .flip-box-inner {
-  position:relative;
+  position:absolute;
   width: 100%;
   height:100%;
-  text-align: :center;
   transition:transform 2s;
   transform-style:preserve-3d;
 }
@@ -40,10 +50,6 @@ body {
 .flip-box-front {
    background: linear-gradient(45deg, #032440 15%, #eeb645 100%);
   color:black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 
 }
 
@@ -83,6 +89,7 @@ body {
   left: 30%;
   
 
+  width: 70%;
 }
 .flip-box-back {
   background: url("edward-snowden.jpeg");
@@ -105,27 +112,26 @@ body {
 
 
   .fond {
-  	width: 270px;
-height: 50px;
-padding: 75px;
-border: 1px solid #ccc;
+  	width: 24%;
+height: 91%;
 background-image: url(https://www.angelxp.eu/iphone5/02/Anonymous07.jpg);
 object-fit: cover;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 position: absolute;
-top: 5%;
+top: 4%;
 left: 1%;
-padding-top: 33%;
 border: 5px solid white;
 border-image: linear-gradient(128deg, #141e30, white, #243b55);
 border-image-slice: 1;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
   }
 
   .btn {
 background: none;
-display: block;
 margin: 20px auto;
 text-align: center;
 border: 2px inset #243b55;
@@ -151,7 +157,6 @@ bottom: 5%;
   .boutton {
 background: none;
 display: block;
-margin: 20px auto;
 text-align: center;
 border: 2px inset #243b55;
 padding: 14px 40px;
@@ -162,9 +167,8 @@ color: white;
 cursor: pointer;
 transition: 0.4s ease-out;
 border-radius: 30px;
-margin-left: 20%;
-margin-top: 20%;
-margin-bottom: 4%;
+position: absolute;
+top: 90%;
 }
   .boutton:hover {
     color: black;
@@ -181,31 +185,23 @@ margin-bottom: 4%;
     background-position: center;
     height: 50px;
     width: 150px;
-    display: flex;
-    margin-top: 40px;
     position: absolute;
     top: 4%;
-    z-index: 1;
-    right: 84%;
-	left: 149px;
   }
   
   .lyricsfish {
-font-size: 18px;
+font-size: 17px;
 letter-spacing: 2px;
 color: rgb(255, 255, 255);
 line-height: 18px;
 height: auto;
-width: 350px;
-overflow: hidden;
+width: 360px;
 background: rgb(0,0,0,0.6);
 text-transform: uppercase;
 box-shadow: 5px 2px 35px 1px rgb(0, 75, 105);
-display: flex;
-justify-content: center;
-margin-left: -40px;
 position: absolute;
 top: 14%;
+text-align: center;
   }
   
   .textfish {
@@ -221,4 +217,135 @@ top: 14%;
     border-bottom: 1px solid #ddd; 
     margin-bottom: 10px
   }
+
+
+@media screen and (max-width:1409px) and (min-width:1000px) {
+  
+   body {
+    
+
+  margin: 0;
+  padding: 0;
+  }
+  
+  
+  
+  .flip-box-front h2 {
+    
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  left: 13%;
+  width: 72%;
+  }
+  .flip-box {
+    
+  height: 45%;
+  left: 73%;
+  top: 19%;
+  width: 25%;
+  }
+  
+  .flip-box-back {
+  background-position: center;
+  }
+  .fond {
+    width: 26%;
+    height: 90%;
+  }
+  
+  .lyricsfish {
+    
+  width: 290px;
+  font-size: 13px;
+  }
+  
+}
+   
+
+
+
+
+@media screen and (max-width:1599px) and (min-width:1410px) {
+   
+  body {
+    
+
+  margin: 0;
+  padding: 0;
+  }
+  
+  
+  
+  .flip-box-front h2 {
+    
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  left: 13%;
+  }
+  .flip-box {
+    
+  height: 45%;
+  left: 74%;
+  top: 15%;
+  width: 25%;
+  }
+  
+  .flip-box-back {
+  background-position: center;
+  }
+  .fond {
+    width: 25%;
+    height: 90%;
+  }
+  
+  .lyricsfish {
+    
+  width: 300px;
+  font-size: 14px;
+  }
+  
+}
+
+
+@media screen and (max-width:1810px) and (min-width:1600px){
+  
+  body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  
+  }
+  .flip-box {
+  position: absolute;
+  width: 22%;
+  top: 19%;
+  left: 77%;
+  }
+  
+  .flip-box-front h2 {
+    
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  left: 25%;
+  }
+  
+  .flip-box-back {
+
+  width: 105%;
+  }
+ 
+  .lyricsfish {
+    
+  }
+  
+  
+}
+
 

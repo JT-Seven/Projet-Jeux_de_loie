@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="modele_accueil_jeu.css">
     <title>Page Acceuil</title>
  </head>
- <body>
-    <div class="flip-box">
+  <body>
+ 	<div class="flip-box"> 
 		<div class="flip-box-inner">
 			<div class="flip-box-front">
    				<p>Lorsque vous dites « le droit à la vie privée ne me préoccupe pas, parce que je n'ai rien à cacher », cela ne fait aucune différence avec le fait de dire « Je me moque du droit à la liberté d'expression parce que je n'ai rien à dire », ou « de la liberté de la presse parce que je n'ai rien à écrire ».</p>
@@ -17,30 +17,23 @@
 			</div>
 		</div>
 	</div>
-
-   <center>
-   <div class="mission">
-    </div>
     <div class="fond">
-        <form action="/req_commencer" method="GET">
-      <input type="hidden" name="pseudo" value="t">
-      <button type="submit" name="action" value="Accepter" class="boutton">Accepter</button>
-    </form>
+        <div class="mission">
+    	</div>
+		<form action="/req_commencer" method="GET" style="">
+      		<input type="hidden" name="pseudo" value="t">
+      		<button type="submit" name="action" value="Accepter" class="boutton">Accepter</button>
+    	</form>
 
         <div class="lyricsfish">Votre mission vas se baser sur un Jeu de l'Oie, vous disposeré de 2 lancer de dés, une fois les dés lancer, vous avancerer en fonction de votre nombre obtenu qui correspondra a la somme de vos deux chiffre. Le but est d'arriver le premier sur la dérnière case avant les autres joueurs, mais attention t vous allez faire face a plusieurs pièges qui corresprondront a des peripeties.<br>
             Pour chacun des joueurs 1 personnage vous sera attribué, il y a 4 pion en tout, chaque pion correspond à un personnages de la Pièce maitresse : Snowden, Lindsay, Agent Russe et Corbin.<br>
             Attention a vous t !
             Que la chance soit de votre coté.<br>
-        <br>Bonne Game !
+        	<br>Bonne Game !
         </div>
      </div>
 	 <form action="/req_quitter" method="GET">
-      <button type="submit" name="action" value="Quitter" class="btn">Quitter</button>
+     	<button type="submit" name="action" value="Quitter" class="btn">Quitter</button>
     </form>
-
-   </center>
- 
-
-
-	</body>
+  </body>
 </html>

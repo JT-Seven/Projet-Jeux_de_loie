@@ -198,7 +198,7 @@ padding-left: 42%;
 
   .box {
     width: 250px;
-padding: 40px;
+padding: 30px;
 position: absolute;
 top: 35%;
 left: 88%;
@@ -214,10 +214,10 @@ padding-bottom: 45px;
 
 
   .inscription {
-  width: 250px;
-padding: 40px;
+    width: 230px;
+    padding: 40px;
 position: absolute;
-top: 77%;
+top: 72%;
 left: 88%;
 transform: translate(-50%,-50%);
 background: #191919;
@@ -226,24 +226,25 @@ background-color: rgba(0, 0, 0, 0.65);
 border: 5px solid aliceblue;
 border-image: linear-gradient(to right, #141e30, white, #243b55);
 border-image-slice: 1;
-padding-bottom: 45px;
+padding-bottom: 120px;
 
   }
 
   .inscrit {
 background: white;
 object-fit: cover;
-width: 8%;
+width: 11%;
 border: 0px solid white;
 border-radius: 35px;
-margin: -110px 60px -59px -13px;
-position: absolute;	
+position: absolute;
+left: 138px;
+top: 20%;
   }
 
   .inscription button {
-	 background: none;
+     background: none;
 display: block;
-margin: 20px auto;
+margin: 8px 0;
 text-align: center;
 border: 2px inset #243b55;
 padding: 14px 40px;
@@ -254,9 +255,10 @@ color: white;
 cursor: pointer;
 transition: 0.4s ease-out;
 border-radius: 30px;
-margin: 80px 2px -25px 20%;
-  }
-
+     position: absolute;
+     top: 50%;
+     left: 25%;
+}
   .inscription button:hover {
 	color: black;
     background-position: 100%;
@@ -276,7 +278,7 @@ margin: 80px 2px -25px 20%;
     margin: 20px auto;
     text-align: center;
     border: 2px solid blue;
-    padding: 14px 10px;
+    padding: 15px 10px;
     width: 200px;
     outline: none;
     color: white;
@@ -295,7 +297,7 @@ display: block;
 margin: 20px auto;
 text-align: center;
 border: 2px inset #243b55;
-padding: 14px 40px;
+padding: 14px 41px;
 outline: none;
 background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
 background-size: 200%;
@@ -303,7 +305,7 @@ color: white;
 cursor: pointer;
 transition: 0.4s ease-out;
 border-radius: 30px;
-margin-left: 20%;
+margin-left: 19%;
 margin-top: 0%;
 margin-bottom: 4%;
   }
@@ -318,3 +320,142 @@ margin-bottom: 4%;
     border-radius: 24px;
   }
 
+
+@media screen and (max-width:1310px) and (min-width:1000px) {
+    
+     body {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .flip-box {
+    width: 220px;
+    height: 117px;
+    position: absolute;
+    top:24%;
+    left: 2%;
+  }
+  
+  .main-head {
+    position: absolute;
+    top: 0%;
+  }
+  
+  .box {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    background: rgba(0,0,0,0.9);
+  
+    width: 400px;
+    height: 400px;
+  }
+  
+ 
+  .inscription {
+     width: 118px;
+    left: 50%;
+     padding: 30px;
+     position: absolute;
+     top: 70%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+     padding-bottom: 25px;
+     display: flex;
+     justify-content: center;
+     border: none;
+     background: none;
+  }
+  
+  .box button {
+    
+  margin-left: 31%;
+  }
+}
+
+@media screen and (max-width:1500px) and (min-width:1311px) {
+  body {
+    width: 10%;
+  }
+  
+  .flip-box {
+    width: 250px;
+    height: 132px;
+  }
+  
+  .main-head {
+    position: absolute;
+    top: 0%;
+  }
+  
+  .box {
+    position: absolute;
+  width: 200px;
+  
+  }
+  
+  .box input[type="text"], .box input[type="password"] {
+    
+  padding: 10px 0px;
+  }
+  
+  .box button {
+    
+  margin-left: 12%;
+  }
+  
+  .inscription {
+    width: 180px;
+    padding: 40px;
+position: absolute;
+top: 72%;
+left: 88%;
+transform: translate(-50%,-50%);
+background: #191919;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.65);
+border: 5px solid aliceblue;
+border-image: linear-gradient(to right, #141e30, white, #243b55);
+border-image-slice: 1;
+padding-bottom: 120px;
+
+  }
+
+  .inscrit {
+background: white;
+object-fit: cover;
+width: 12%;
+border: 0px solid white;
+border-radius: 35px;
+position: absolute;
+left: 44%;
+top: 20%;
+  }
+
+  .inscription button {
+     background: none;
+display: block;
+margin: 20px 0;
+text-align: center;
+border: 2px inset #243b55;
+padding: 14px 40px;
+outline: none;
+background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
+background-size: 200%;
+color: white;
+cursor: pointer;
+transition: 0.4s ease-out;
+border-radius: 30px;
+    position: absolute;
+     top: 50%;
+     left: 21%;
+}
+
+@media screen and (max-width: 1700px) and (min-width:1500px) {
+  body {
+    width: 20%;
+    
+    
+  }
+  
+}

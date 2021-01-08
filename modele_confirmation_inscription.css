@@ -1,0 +1,581 @@
+body {
+	background: black;
+	width:100vw;
+	height:100vh;
+	margin:0;
+	padding:0;
+}
+
+
+
+/*  slide 3d */
+
+.flip-box {
+	width: 320px;
+	height:405px;
+	perspective:1000px;
+	position: relative;
+	top: 22%;
+	left: 5%;
+
+}
+
+.flip-box-inner {
+	position:relative;
+	height:100%;
+	width: 100%;
+	transition:transform 0.8s;
+	transform-style: preserve-3d;
+
+}
+
+.flip-box-front {
+	background: linear-gradient(-30deg, #0f0f0f 2%, #333131 20%, #0f0f0f 21%,black 23%, #0f0f0f 100%, #333131 0%, #0f0f0f 0%);
+	color: white;
+box-shadow: -4px 5px 2px 2px rgba(255,255,255,.2);
+	padding-left: 12px;
+
+	
+	
+	position: relative;
+	position: relative;
+}
+
+.flip-box-back {
+  width: 100%;
+	transform: rotateY(180deg);
+	box-shadow: -4px 5px 2px 2px rgba(255,255,255,.2);
+	object-fit: cover;
+  height: 100%;
+	color: #fff;
+	
+	
+  background: white;
+ }
+
+img {
+	
+	width: 320px;
+	height: 276px;
+	object-fit: cover;
+	position: absolute;
+	top: 5%;
+}
+
+.ecriture {
+	border: 1px solid black;
+	position: absolute;
+	top: 81%;
+	left: 18%;
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	background: black;
+}
+
+
+
+.flip-box-front, .flip-box-back {
+	
+	width :100%;
+	height:100%;
+	backface-visibility: hidden;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	border: 1px solid white;
+}
+
+.condition:hover, .condition:hover ~ .flip-box-inner {
+	transform: rotateY(180deg);
+}
+
+
+/* */
+.i_mg {
+	position: absolute;
+	top: 38%;
+	width: 43%;
+	height: 50%;
+	
+	display: flex;
+	justify-content: center;
+	transform: translate(-50%,-50%);
+	left: 50%;
+}
+
+.image-position {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 63%;
+	width: 40%;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	position: absolute;
+	top: 45%;
+	z-index: 1;
+}
+
+
+/* boutton */
+
+.btn {
+	
+	position: absolute;
+	top: 60%;
+	right: 66%;
+	width: 30%;
+}
+
+.condition {
+	
+	background: url("attention.png");
+	width: 19%;
+	height: 13%;
+	position: absolute;
+	top: 82%;
+	left: 65%;
+	background-position: center;
+	object-fit: cover;
+	background-size: cover;
+	z-index: 1;
+	transition-property: background;
+	transition-timing-function: ease-in;
+}
+
+.condition:hover {
+		transform:rotateY(360deg);
+		width: 10%;
+		height: 7%;
+		position: absolute;
+		left: 69%;
+		top: 85%;
+}
+
+.camera {
+	
+}
+
+/* BOUTTON */
+
+
+.boutton {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: 32%;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  background: #272525;
+  width: 100%;
+  cursor: initial;
+}
+
+.btn:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
+  transition-delay: 1s;
+}
+
+
+ a:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
+  transition-delay: 0.1s;
+}
+
+
+
+.btn .b {
+  position: absolute;
+  display: block;
+}
+
+.btn .b:nth-child(1) {
+  top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn .b:nth-child(3) {
+  bottom:0;
+  right :-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(270deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.btn .b:nth-child(2) {
+  top:0;
+  right :0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn .b:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+/* CARTE JOUEUR */
+
+.B {
+	
+	background: url("carte.png");
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	object-fit: cover;
+	background-size: cover;
+}
+
+
+.carrer_blanc2 {
+	width: 32%;
+	height: 48%;
+	z-index: 1;
+	background: white;
+	position: absolute;
+	left: 68%;
+	top: 51%;
+}
+
+.carrer_blanc {
+	width: 33%;
+	height: 65%;
+	z-index: 1;
+	background: white;
+}
+
+
+.carte-joueur {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 36%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 0;
+	margin: 0;
+	width: 23%;
+	height: 30vh;
+	object-fit: cover;
+}
+
+.B_2 {
+	
+	background: url("Anonymous.jpg");
+	width: 20%;
+	height: 42%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 56%;
+	left: 76%;
+	border-radius: 25px;
+	z-index: 1;
+}
+
+
+.B_3 {
+	
+	background: url("nsa.jpeg");
+	width: 28%;
+	height: 40%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 5%;
+	left: 3%;
+	object-fit: cover;
+}
+
+.pseudo {
+	
+	position: absolute;
+	top: 27%;
+	left: 55%;
+}
+
+.password {
+	position: absolute;
+	top: 40%;
+	left: 65%;
+}
+
+/* EFFET */
+
+.tunnel {
+	position: relative;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+	width: 100%;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-position: center;
+}
+
+.tunnel:hover {
+	 color: #fbf6f6;
+  background:url("tunnel.jpg");
+  box-shadow: 0 0 10px white, 0 0 40px black, 0 0 80px white;
+  transition-delay: 1.5s;
+	 position: absolute;
+	 background-position: center;
+	 background-size: cover;
+	 object-fit: cover;
+	 height: 100%;
+}
+
+
+.tunnel .s {
+	 position: absolute;
+  display: block;
+}
+
+.tunnel .s:nth-child(1) {
+  	top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,white); 
+}
+
+.tunnel:hover .s:nth-child(1) {
+  	 left: 100%;
+  transition: 1s;
+}
+
+.tunnel .s:nth-child(3) {
+  bottom:0;
+  right :-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(270deg,transparent,white); 
+}
+
+.tunnel:hover .s:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.tunnel .s:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,white);  
+}
+
+.tunnel:hover .s:nth-child(2) {
+  top : 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+
+.tunnel .s:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,white);  
+}
+
+.tunnel:hover .s:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+.effet {
+	
+	width: 23%;
+	height: 75%;
+	position: absolute;
+	left: 85%;
+	transform: translate(-50%,-50%);
+	top: 54%;
+	display: flex;
+	justify-content: center;
+}
+
+
+@media screen and (min-width:1100px) and (max-width:1470px){
+	
+	.flip-box {
+		
+	width: 17%;
+	left: 6%;
+	top: 60%;
+	height: 40%;
+	}
+	
+	.image-position {
+		
+	}
+	
+	h2 {
+		
+	font-size: 22px;
+	}
+	p {
+		width: 73%;
+		font-size: 13px;
+	}
+	.i_mg {
+		
+	width: 60%;
+	left: 50%;
+	top: 36%;
+	}
+	
+	.boutton {
+		
+	left: 45%;
+	top: 78%;
+	}
+	.tunnel {
+		
+	}
+	
+	.carte-joueur {
+		
+	width: 28%;
+	height: 30%;
+	position: absolute;
+	top: 34%;
+	}
+	
+	.tunnel:hover {
+		
+	background-position: center;
+	}
+	.B {
+		
+	position: relative;
+	}
+	.btn {
+		
+	width: 100%;
+	padding: 6px;
+	top: 25%;
+	left: -77%;
+	cursor: initial;
+	}
+	.effet {
+		
+	height: 40%;
+	width: 20%;
+	top: 83%;
+	left: 85%;
+	}
+	.condition {
+		
+	width: 15%;
+	height: 9%;
+	left: 78%;
+	top: 85%;
+	}
+	
+	.flip-box-back {
+		
+	width: 100%;
+	}
+	
+	.condition:hover {
+		
+	width: 13%;
+	height: 7%;
+	transform: rotateY(360deg);
+	left: 77%;
+	}
+	
+	img {
+		
+	width: 100%;
+	height: 50%;
+	}
+	
+	.ecriture  {
+		
+	width: 90%;
+	left: 4%;
+	}
+	.B_3 {
+		
+	width: 28%;
+	height: 40%;
+	left: 2%;
+	position: relative;
+	top: -62%;
+	}
+	
+		
+}

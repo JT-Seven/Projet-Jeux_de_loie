@@ -5,7 +5,8 @@ const afficher_boutton_demarrer = function (lobby, pseudo) {
   let html;  
 
   if (lobby.length >= 3 && lobby[0].pseudo === pseudo) {
-	  html = '<a href="/req_demarrer?pseudo=' + pseudo + '"><button>Démarrer</button></a>'    ;
+	  html = '<a class="btn" href="/req_demarrer?pseudo=' + pseudo + '"><span></span><span></span><span></span><span></span>Démarrer</a>';
+
  } else {
 	 html = "";
  }

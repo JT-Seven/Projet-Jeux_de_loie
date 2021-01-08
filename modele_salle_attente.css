@@ -3,10 +3,258 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(-30deg, #2d5764 0% ,#000 50%, #070f15 50%, #004b60);
-  width: 70vw;
+  width: 99vw;
   height: 130vh;
 
 }
+
+
+/*  button animation  */
+
+.boutton {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 88%;
+}
+
+.btn, a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  /*background: #070e16;*/
+}
+
+.quitter {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+  background: #070e16;
+}
+
+
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  background: #070e16;
+}
+
+.btn:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
+  transition-delay: 1s;
+}
+
+
+ a:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
+  transition-delay: 0.1s;
+}
+
+
+
+.btn span {
+  position: absolute;
+  display: block;
+}
+
+.btn span:nth-child(1) {
+  top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,white);  
+}
+
+.btn:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn span:nth-child(3) {
+  bottom:0;
+  right :-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(270deg,transparent,white);  
+}
+
+.btn:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.btn span:nth-child(2) {
+  top:0;
+  right :0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,white);  
+}
+
+.btn:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,white);  
+}
+
+.btn:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+/*  bouton 2 */
+
+.boutton2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 88%;
+  left: 80%;
+}
+
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 14px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  background: linear-gradient(to right, #141e30, #243b55);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn2:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
+  transition-delay: 1s;
+}
+
+
+ a:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
+  transition-delay: 0.1s;
+}
+
+
+button {
+ background: none;
+border: none;
+}
+
+
+.btn2 .b2 {
+  position: absolute;
+  display: block;
+}
+
+.btn2 .b2:nth-child(1) {
+  top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn2 .b2:nth-child(3) {
+  bottom:0;
+  right :-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(270deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.btn2 .b2:nth-child(2) {
+  top:0;
+  right :0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn2 .b2:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+
 
 /* container1 */
 
@@ -299,17 +547,17 @@ border-radius: 20px;
 .regle {
 position: absolute;
 bottom: 40%;
-right: 1547px;
+right: 1540px;
 }
 
 /* mise en page */
 
 .all {
 display: flex;
-width: 140%;
 align-items: self-end;
+height: 95%;
+width: 100%;
 justify-content: space-evenly;
-height: 1070px;
 }
 
 .container {
@@ -323,6 +571,9 @@ border-radius: 20px;
 box-shadow: 5px 5px 5px 5px black;
 background-image:url("cacher.png");
 background-position-x: -180px;
+justify-content: space-evenly;
+padding: 0;
+margin: 0;
 }
 
 .container1:hover {
@@ -454,57 +705,119 @@ opacity:1;
 
   background: url("central.jpg");
       background-repeat: repeat;
-  width: 900px;
+  width: 50%;
   object-fit: cover;
-  height: 61vh;
+  height: 56vh;
   position: absolute;
-left: 456px;
-bottom: 190px;
   background-repeat: no-repeat;
 
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transform: translate(-50%,-50%);
+  top: 40%;
+  left: 50%;
+  z-index: 1;
 }
+
+.quitter {
+  
+  position: absolute;
+  top: 87%;
+  left: 80%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+.forme {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+
+
 .li {
 
   border: 1px solid;
-  width: 26%;
+  width: 900px;
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 455px;
-  top: 151px;
-  font-size: 23px;
+  font-size: 20px;
   color: white;
-  padding-right: 6%;
-  background: rgba(0,0,0,0.2);
-  padding-top: 203px;
-  padding-left: 308px;
-  padding-bottom: 302px;
 
+  left: 50%;
+  height: 502px;
+  position: absolute;
+  transform: translate(-50%,50%);
+  bottom: 60%;
+  padding: 1px;
+  background: #070e16;
 }
 .L {
 border: 1px solid black;
-position: absolute;
-top: 385px;
-left: 28%;
-padding: 10px 50px 10px 10px;
-box-shadow: 2px 2px 2px 2px black;
+box-shadow: 0px 0px 0px 0px black;
 border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 95%;
+position: absolute;
+width: 50%;
+padding: 0;
+margin: 0;
+background: rgb(0,0,0,0.6);
+top: 2%;
+}
+
+.joueur {
+  
+  position: absolute;
+  top: 30%;
+  height: 23%;
+  width: 24%;
+  left: 38%;
 }
 
 .attente {
+  position: absolute;
+  top: 28%;
+  left: 25%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 li {
 display: flex;
 border: 1px solid black;
-padding: 10px 80px 5px 80px;
-margin-top: 10px;
 border-radius: 20px;
-object-fit: cover;
-background-size: cover;
-background-image:url("fumer.gif");
+background:linear-gradient(to right,white 0%, black 0%, #fff 500%, #000 0%);
 color: white;
+padding: 5px 45px;
+text-align: center;
+margin: 5px;
+justify-content: center;
+}
+
+.pseudo {
+margin: 0;
+  width: 100%;
+padding: 0;
 }
 
 /* Role */
@@ -514,12 +827,8 @@ color: white;
 
 .R {
 border: 1px solid black;
-top: 45%;
-left: 55%;
-padding: 10px 50px 10px 10px;
 box-shadow: 2px 2px 2px 2px black;
 border-radius: 15px;
-position: absolute;
 }
 
 /* Police d'ecriture et couleur */
@@ -538,56 +847,161 @@ color: white;
 /* boutton */
 
 .btn {
-
-    background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-    border: 5px inset #243b55;
-    width: 5%;
-    height: 4vh;
-    left: 47%;
-
-    position: absolute;
-    top: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+   
+  background: linear-gradient(to right, #141e30, #243b55);
+  border-radius: 5px;
 }
+
 
 /* Responsive */
 
-@media screen and (max-width: 1790px) {
-	body {
-		display:block;
-		height:auto;
-	}
 
-	.container {
-		position:static;
-		display:inline-block;
-		display: flex;
-	}
 
-	.card {
-		justify-content: center;
-		position:static;
-		display:inline-block;
-	}
 
-	.card1 {
-		position: relative;
-		min-width: 320px;
-		height: 441px;
-		left: 481px;
-		top: 150%;
-	}
+@media screen and (min-width:1100px) and (max-width:1499px) {  
+  
+  body {
+    display: flex;
+    
+    
+    
+    width: 99vw;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+ .btn2 {
+      
+  padding: 9px 20px;
+  }
+  
+  
+  .container {
+  margin: 10px;
+  display: flex;
+  
+  background-position: center;
+  position: relative;
+  width: 170px;
+  }
+  
+  .regle {
+    
+  top: -100%;
+  left: 11%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  height: auto;
+  }
+  
+  .li {
+    
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: -100%;
+  width: 60%;
+  }
+  
+  .liste {
+    
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: -100%;
+  left: 50%;
+  width: 60%;
+  }
+  
+  
+  .quitter {
+    
+  position: absolute;
+  display: block;
+  left: 81%;
+  top: 90%;
+  }
+  
+  
+  .L {
+    
+  position: absolute;
+  left: 25%;
+  top: 2%;
+  height: 96%;
+  }
+  
+  .btn, a {
+    
+  padding: 9px 20px;
+  }
+  
+  
+  .boutton {
+    
+  top: 87%;
+  left: 50%;
+  }
+  .all  {
+    
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: auto;
+  top: 80%;
+  }
+  
+   .container6 .card6 .box6 .content6 {
 
-	.box {
-		position:static;
-		display:flex;
-        display:inline-block;
-	}
-
-	.liste {
-		display:flex;
-		justify-content:center;
-		background-position:center;
-	}
+  text-align: center;
+  margin-top: -20px;
 }
+  
+}
+
+
+@media screen and (min-width:1500px) {
+  .li {
+    
+  width: 50%;
+}
+  .L {
+    
+  }
+
+  .quitter {
+    
+  }
+  
+  
+   .regle {
+    
+  top: 40%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  left: 11%;
+  display: flex;
+  align-items: self-end;
+  height: 40%;
+  width: 15%;
+  }
+   .container {
+  margin: 10px;
+  display: flex;
+  background-position: center;
+  position: relative;
+  }
+  
+}
+
 
 

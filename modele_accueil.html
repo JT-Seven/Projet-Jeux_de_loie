@@ -7,14 +7,9 @@
   	</head>
   	<body>
 		<div class="flip-box">
-			<div class="flip-box-inner">
 				<div class="flip-box-front">
 				
 				</div>
-				<div class="flip-box-back">
-
-				</div>
-			</div>
 		</div>
 		
 		<header class="main-head">
@@ -44,13 +39,30 @@
           		<h1>Connexion</h1>
           			<input type="text" name="pseudo" value="" placeholder="Votre Nom d'utilisateur">
           			<input type="password" name="password" value="" placeholder="Votre Mot De Passe">
-		  			<button type="submit" name="action" value="Connexion">Connexion</button>
+					<div class="boutton" name="action">
+						<button class="btn" name="action">
+							<span class="b"></span>
+							<span class="b"></span>
+							<span class="b"></span>
+							<span class="b"></span>
+							Connexion
+						</button>
+					</div>
 			</form>
 			<br>
 			<form action="/req_afficher_formulaire_inscription" class="inscription" method="GET">
-				<button type="submit" name="action" value="Inscription">Inscription</button>
+				<div class="boutton2">
+					<button class="btn2"  name="action">
+						<span class="b2"></span>
+						<span class="b2"></span>
+						<span class="b2"></span>
+						<span class="b2"></span>
+						Inscription
+					</button>
+				</div>
 				<img class="inscrit" src="icone_inscription.png" alt="image">
 			</form>
 		</div>
 	</body>
 </html>
+

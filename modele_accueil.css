@@ -11,6 +11,230 @@ body{
 	background-position-y: -5px;
   }
 
+/*BOUTTON */
+
+.boutton {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+  left: 23%;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 14px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  background: linear-gradient(to right, #141e30, #243b55);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
+  transition-delay: 1s;
+}
+
+
+button:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
+  transition-delay: 0.1s;
+  
+}
+
+button {
+ background: none;
+border: none;
+}
+
+.btn .b {
+  position: absolute;
+  display: block;
+}
+
+.btn .b:nth-child(1) {
+  top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn .b:nth-child(3) {
+  bottom:0;
+  right :-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(270deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.btn .b:nth-child(2) {
+  top:0;
+  right :0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn .b:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,white);  
+}
+
+.btn:hover .b:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+/*  BOUTTON INSCRIPTION */
+
+.boutton2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 62%;
+  left: 22%;
+}
+
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 14px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  background: linear-gradient(to right, #141e30, #243b55);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn2:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
+  transition-delay: 1s;
+}
+
+
+ a:hover {
+  color: black;
+  background:#f2f0f0;
+  box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
+  transition-delay: 0.1s;
+}
+
+
+
+.btn2 .b2 {
+  position: absolute;
+  display: block;
+}
+
+.btn2 .b2:nth-child(1) {
+  top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn2 .b2:nth-child(3) {
+  bottom:0;
+  right :-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(270deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.btn2 .b2:nth-child(2) {
+  top:0;
+  right :0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn2 .b2:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,white);  
+}
+
+.btn2:hover .b2:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+
+
+
+
+
+
 /* Titre du Jeu */
 
 .text-box {
@@ -97,8 +321,7 @@ body{
 .flip-box {
 	width: 300px;
 	height:160px;
-	border: 1px solid white;
-	perspective:500px;
+	border: ;
 	position: relative;
 	top: 30%;
 	left: 5%;
@@ -210,6 +433,7 @@ border: 5px solid aliceblue;
 border-image: linear-gradient(to right, #141e30, white, #243b55);
 border-image-slice: 1;
 padding-bottom: 45px;
+    height: 35%;
 }
 
 
@@ -241,30 +465,8 @@ left: 138px;
 top: 20%;
   }
 
-  .inscription button {
-     background: none;
-display: block;
-margin: 8px 0;
-text-align: center;
-border: 2px inset #243b55;
-padding: 14px 40px;
-outline: none;
-background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-background-size: 200%;
-color: white;
-cursor: pointer;
-transition: 0.4s ease-out;
-border-radius: 30px;
-     position: absolute;
-     top: 50%;
-     left: 25%;
-}
-  .inscription button:hover {
-	color: black;
-    background-position: 100%;
-    border-radius:30px;
-
-  }
+  
+  
 
   .box h1{
     color: white;
@@ -291,30 +493,7 @@ border-radius: 30px;
     width: 235px;
     border-color: rgb(255, 123, 35);
   }
-  .box button {
-    background: none;
-display: block;
-margin: 20px auto;
-text-align: center;
-border: 2px inset #243b55;
-padding: 14px 41px;
-outline: none;
-background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-background-size: 200%;
-color: white;
-cursor: pointer;
-transition: 0.4s ease-out;
-border-radius: 30px;
-margin-left: 19%;
-margin-top: 0%;
-margin-bottom: 4%;
-  }
-  .box button:hover{
-    color: black;
-    background-position: 100%;
-    border-radius:30px;
-  }
-
+  
   svg{
     background: white;
     border-radius: 24px;
@@ -326,6 +505,28 @@ margin-bottom: 4%;
      body {
     width: 100vw;
     height: 100vh;
+  }
+  
+  .boutton {
+    
+  position: absolute;
+  top: 65%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  }
+  
+  .boutton2 {
+    
+  width: 75%;
+  left: 13%;
+  }
+  
+  .btn2 {
+    
+  padding-right: 0;
   }
   
   .flip-box {
@@ -368,26 +569,7 @@ padding-bottom: 25px;
   background: none;
   }
   
-  .inscription button {
-   background: none;
-    background-image: none;
-    background-size: auto;
-display: block;
-margin: 20px 0;
-text-align: center;
-border: 2px inset #243b55;
-padding: 14px 50px;
-outline: none;
-background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-background-size: 200%;
-color: white;
-cursor: pointer;
-transition: 0.4s ease-out;
-border-radius: 30px;
-position: absolute;
-top: -22%;
-left: 17%;
-  }
+  
   
   .inscrit {
     background: white;
@@ -396,14 +578,14 @@ width: 8%;
 border: 0px solid white;
 border-radius: 35px;
 position: absolute;
-left: 25%;
-top: 31%;
+left: 17%;
+top: 81%;
   }
   
   
   .box button {
     
-  margin-left: 31%;
+  width: 100%;
   }
 }
 
@@ -435,7 +617,6 @@ top: 31%;
   
   .box button {
     
-  margin-left: 12%;
   }
   
   .inscription {
@@ -455,6 +636,17 @@ padding-bottom: 120px;
 
   }
 
+  .boutton {
+    
+  left: 18%;
+  }
+  
+  .boutton2 {
+    
+  left: 17%;
+  }
+  
+  
   .inscrit {
 background: white;
 object-fit: cover;
@@ -466,24 +658,7 @@ left: 44%;
 top: 20%;
   }
 
-  .inscription button {
-     background: none;
-display: block;
-margin: 20px 0;
-text-align: center;
-border: 2px inset #243b55;
-padding: 14px 40px;
-outline: none;
-background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-background-size: 200%;
-color: white;
-cursor: pointer;
-transition: 0.4s ease-out;
-border-radius: 30px;
-    position: absolute;
-     top: 50%;
-     left: 21%;
-}
+  
 
 @media screen and (max-width: 1700px) and (min-width:1500px) {
   body {
@@ -493,4 +668,6 @@ border-radius: 30px;
   }
   
 }
+
+
 

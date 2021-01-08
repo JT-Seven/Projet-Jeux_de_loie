@@ -4,7 +4,7 @@ const afficher_liste_lobby = function (lobby) {
 	let html;
 	let i;
 
-	html = "<ul>";
+	html = "<ul class='pseudo'>";
 	for (i = 0; i < lobby.length; i++) {
 		if (lobby[i].etat === "ATTENTE") {
 			html += "<li>" + lobby[i].pseudo + "</li>";

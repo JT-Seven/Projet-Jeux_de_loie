@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="fr">
+ <head>
     <meta charset="UTF-8">
     <meta name="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="modele_accueil_jeu.css">
@@ -21,19 +22,33 @@
         <div class="mission">
     	</div>
 		<form action="/req_commencer" method="GET" style="">
-      		<input type="hidden" name="pseudo" value="t">
-      		<button type="submit" name="action" value="Accepter" class="boutton">Accepter</button>
-    	</form>
+      		<input type="hidden" name="pseudo" value="{pseudo}">
+    		<div class="boutton2">
+				<button class="btn2"  name="action">
+					<span class="b2"></span>
+					<span class="b2"></span>
+					<span class="b2"></span>
+					<span class="b2"></span>
+					Commencer
+				</button>
+			</div>
+		</form>
 
-        <div class="lyricsfish">Votre mission vas se baser sur un Jeu de l'Oie, vous disposeré de 2 lancer de dés, une fois les dés lancer, vous avancerer en fonction de votre nombre obtenu qui correspondra a la somme de vos deux chiffre. Le but est d'arriver le premier sur la dérnière case avant les autres joueurs, mais attention t vous allez faire face a plusieurs pièges qui corresprondront a des peripeties.<br>
+        <div class="lyricsfish">Votre mission vas se baser sur un Jeu de l'Oie, vous disposeré de 2 lancer de dés, une fois les dés lancer, vous avancerer en fonction de votre nombre obtenu qui correspondra a la somme de vos deux chiffre. Le but est d'arriver le premier sur la dérnière case avant les autres joueurs, mais attention {pseudo} vous allez faire face a plusieurs pièges qui corresprondront a des peripeties.<br>
             Pour chacun des joueurs 1 personnage vous sera attribué, il y a 4 pion en tout, chaque pion correspond à un personnages de la Pièce maitresse : Snowden, Lindsay, Agent Russe et Corbin.<br>
-            Attention a vous t !
+            Attention a vous {pseudo} !
             Que la chance soit de votre coté.<br>
         	<br>Bonne Game !
         </div>
      </div>
-	 <form action="/req_quitter" method="GET">
-     	<button type="submit" name="action" value="Quitter" class="btn">Quitter</button>
-    </form>
-  </body>
+  	 <div class="boutton">
+		 <button class="btn" href="modele_accueil.html">
+			<span class="b"></span>
+			<span class="b"></span>
+			<span class="b"></span>
+			<span class="b"></span>
+			Quitter
+		 </button>
+	 </div>
+   </body>
 </html>

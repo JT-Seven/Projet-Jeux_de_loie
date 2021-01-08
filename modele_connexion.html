@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html>
-       <head>
-           <link rel="stylesheet" type="text/css" href="modele_connexion.css">
-		   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-       </head>
-    <body>
-        <h2>La Quête de Snowden</h2>
-              
-			 <p class="ligne"> {erreur}</p>
-			<h2 class="titre">Connexion</h2>
-			<div class="forme">
-                <form action="/req_connecter" method="GET">
-                     <p class="noms">Noms d'utilisateur :</p>
-					<input class="inputbasic" type="text" name="pseudo" value="{pseudo}" placeholder="Entrez votre nom d'utilisateur">
-                    <br>
-			        <p class="prenom">Mots de passe :</p>
-					<input class="inputbasic" type="password" name="password" value="" placeholder="Entrez votre mots de passe">
-                    <br>
-				 	<input type="submit" name="action" value="Se connecter"><input type="reset" value="Effacer">
-				</form>
-    		</div>
-	</body>
-</html>
-                                 
+<html lang="fr">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Page De Connexion</title>
+    <link rel="stylesheet" href="modele_connexion.css">
+  </head>
+  <body>
+	<div class="nasa">
+		 <img class="russe" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wallpaperup.com%2Fuploads%2Fwallpapers%2F2013%2F02%2F06%2F35800%2Feb481e5edead5e2c22f662541f042a81.jpg&f=1&nofb=1" alt="image" />
+	</div>
+	<header class="main-head">
+	    <img class="secret" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F38%2F2b%2F2b%2F382b2b9adf635bf0a26080cbc149e36d.jpg&f=1&nofb=1" alt="image" />
+		<div class="logo">
+			<h2 class="seven">Snowden Quest</h2>
+		</div>
+	</header>
+    <section class="hero">
+	  <div class="forme">	
+		<form action="/req_connecter" class="box" action="" method="GET">
+
+    	  	 <svg width="30" height="30" viewBox="0 0 24 24">
+ 			 <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
+ 			 </svg>
+
+	      <h1>Connexion</h1>
+	      <input type="text" name="pseudo" value="{pseudo}" placeholder="Votre Nom d'utilisateur">
+ 	      <input type="password" name="password" value="" placeholder="Votre Mot De Passe">
+   		  <a href="/req_connecter"><button>Connexion</button></a>
+		 </form>
+		</div>
+	</section>
+</body>
+</html> 

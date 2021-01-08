@@ -38,8 +38,8 @@ bottom: 20%;
 	border: 1px solid white;
 	perspective:500px;
 	position: relative;
-	top: 30%;
-	left: 5%;
+	top: 20%;
+	left: 3%;
 	border: 5px solid aliceblue;
 
     border-image-outset: 0;
@@ -389,7 +389,23 @@ border-radius: 30px;
     background: white;
     border-radius: 24px;
 
+}
 
+    
+@media screen and (max-width: 1600px) {
+      
+      .flip-box {
+        
+  width: 230px;
+  height: 122px;
+      }
+      
+  .main-head {
+    
+  position: absolute;
+  top: 0%;
+  }
+}
 
 
 

@@ -1,142 +1,140 @@
-body {
-	 background: url("gris.jpg");
-}
-
-h2 {
-font-size: 50px;
-    display: flex;
-    justify-content: center;
-    text-shadow: 0px -2px 4px aliceblue;
-
-}
-
-form {
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20%;
-	
-}
-
-.forme input {
-	display: block;
-	margin-bottom: 25px;
-
-}
-
-.inputbasic {
-	border: 2px solid gray;
-padding: 5px;
-transition: all 0.5s ease;
-border-radius: 12px;
-}
-
-.inputbasic:focus {
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+	background-size: cover;
+	height: 100vh;
+	background: url("la_nsa.jpeg ");
+	background-position: center;
+	background-repeat:no-repeat;
 	background-color: black;
-	color: white;
-}
-input[type=submit] {
-margin-left: -10%;
-background-image: linear-gradient(to right,#000000, #ffffff, #000000);
-color: black;
-border-radius: 10px;
-border: 1px solid white;
-margin-top: 32px;
-margin-right: 26%;
-transition: all 0.5s ease;
-padding: 3px;
-cursor: pointer;
-font-family: monospace;
-font-size: 13px;
-background-size: 200%;
-}
+	
+  }
 
-input[type=submit]:hover {
-	 background-position:right;
-	color: black;
-}
+  .main-head {
+  background: black;
+color: #ffffff;
+height: 5vh;
+display: flex;
+  }
 
-.ligne {
+  h2 {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+    text-align: center;
+	font-size:25px;
+  }
+
+  .secret {
+  	width: 40px;
+height: 5vh;
+object-fit: cover;
+  }
+
+  .russe {
+  	width: 18rem;
+height: 20vh;
+object-fit: cover;
+padding-top: 1%;
+padding-left: 0%;
+border: 5px solid white;
+border-image: linear-gradient(303deg, #141e30, white, #243b55);
+border-image-slice: 1;
+  }
+	
+  .nasa {
+  	display: flex;
+flex-direction: row;
+position: absolute;
+width: 16%;
+margin-top: 5%;
+margin-left: 0%;
+padding-top: 5%;
+padding-bottom: 5%;
+padding-left: 1%;
+border-radius: 20px;
+  }
+  
+  .logo {
+  font-weight: normal;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 42%;
+  }
+
+  .box {
+  	width: 300px;
+padding: 40px;
+position: absolute;
+top: 33%;
+left: 88%;
+transform: translate(-50%,-50%);
+background: #191919;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.65);
+border: 5px solid aliceblue;
+border-image: linear-gradient(to right, #141e30, white, #243b55);
+border-image-slice: 1;
 }
 
-input[type=reset] {
-	margin-right: -25%;
-    margin-top: -51px;
-    background-image: linear-gradient(to right,#000000, #ffffff, #000000);
-	color: black;
-    border-radius: 10px;
-    border: 1px solid white;
-    margin-left: 22%;
-    transition: all 0.5s ease;
-    padding: 5px;
-    cursor: pointer;
-    width: 30%;
-    font-family: monospace;
-    font-size: 12px;
-	background-size: 200%;
 
-}
+  .forme {
+  }
 
-input[type=reset]:hover {
-	background-position:right;
-	color: black;
-}
-.noms {
-   box-shadow: 5px -3px 25px black;
-   font-size: 20px;
-   margin-right: 6px;
-   filter: drop-shadow(0px 90px 90px white);
-}
+  .box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .box input[type = "text"],.box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid blue;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+	border-image: linear-gradient(to right, #141e30, white, #243b55);
+	border-image-slice: 1;
+  }
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 280px;
+    border-color: rgb(255, 123, 35);
+  }
+  .box button {
+  	background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px inset #243b55;
+padding: 14px 40px;
+outline: none;
+background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
+background-size: 200%;
+color: white;
+cursor: pointer;
+transition: 0.4s ease-out;
+border-radius: 30px;
+  }
 
-.prenom {
-    box-shadow: 5px -3px 25px black;
-	font-size: 20px;
-	margin-right: 48px;
-	filter: drop-shadow(20px 9px 6px white);
-}
+  a {
+	text-decoration:none; 
+  }
+  .box button:hover{
+    color: black;
+	background-position: 100%;
+	border-radius:30px;
 
-.forme {
-	    border: 1px solid aliceblue;
-    border-radius: 20px;
-    width: 30%;
-    margin-left: 35%;
-    margin-top: 5%;
-    padding-bottom: 50px;
-	box-shadow: 0px 0px 10px white;
-	background-color: rgba(0,0,0,0.5);
-	background: url("realiter.jpg");
-	background-size:cover;
-	background-position: center;
-}
-
-.forme:hover {
-	background-color:gray;
-}
-
-
-/* decoration du placholder*/
-
-::-webkit-input-placeholder { /* WebKit browsers */
-    color: grey;
-	font-style: italic;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: grey;
-   opacity:  1;
-   font-style: italic;
-
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: grey;
-  opacity:  1;
-   font-style: italic;
-
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-   color: grey;
-    font-style: italic;
-
- }
+  }
+	
+  svg{
+    background: white;
+    border-radius: 24px;
+  }

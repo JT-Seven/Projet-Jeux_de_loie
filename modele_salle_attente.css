@@ -8,6 +8,37 @@ body {
 
 }
 
+.wavy {
+  position: relative;
+  
+  top: 43%;
+  left: -36%;
+}
+
+.wavy .w {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  animation: animate 1s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+        transform: translateY(-20px);
+  }
+  40%,100% {
+        transform: translateY(0px);
+  }
+}
+
+
+
 
 /*  button animation  */
 
@@ -67,8 +98,8 @@ body {
 .btn:hover {
   color: black;
   background:#f2f0f0;
-  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
   transition-delay: 1s;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
 }
 
 
@@ -300,7 +331,7 @@ border-radius: 20px;
 /* container2 */
 
 .container2 {
-  background-image:url("prison.png");
+  background-image:url("images/prison.png");
   background-size:cover;
   background-position:center;
  
@@ -341,7 +372,7 @@ border-radius: 20px;
 /* container3 */
 
 .container3 {
-  background-image:url("attente.png"),
+  background-image:url("images/attente.png"),
   url("deux.png");
   background-size:cover;
   background-position:center;
@@ -391,7 +422,7 @@ border-radius: 20px;
 
 .container4 {
 
-  background-image:url("dependant.png");
+  background-image:url("images/dependant.png");
   background-size:cover;
   background-position:center;
 }
@@ -426,7 +457,7 @@ border-radius: 20px;
 
 .container5 {
   
-  background-image:url("retour.png");
+  background-image:url("images/retour.png");
   background-size:cover;
   background-position:center;
 
@@ -465,7 +496,7 @@ border-radius: 20px;
 /* container6 */
 
 .container6 {
-  background-image:url("regle.png");
+  background-image:url("images/regle.png");
   background-size:cover;
   background-position:center;
  
@@ -505,7 +536,7 @@ border-radius: 20px;
 /* container7 */
 
 .container7 {
-  background-image:url("boost.png");
+  background-image:url("images/boost.png");
   background-size:cover;
   background-position:center;
 }
@@ -569,7 +600,7 @@ width: 210px;
 margin-left: 20px;
 border-radius: 20px;
 box-shadow: 5px 5px 5px 5px black;
-background-image:url("cacher.png");
+background-image:url("images/cacher.png");
 background-position-x: -180px;
 justify-content: space-evenly;
 padding: 0;
@@ -577,44 +608,44 @@ margin: 0;
 }
 
 .container1:hover {
-  background-image:url("crane.png");
+  background-image:url("images/crane.png");
   background-size:cover;
   background-position:center;
 }
 
 .container2:hover {
-  background-image:url("prison.png");
+  background-image:url("images/prison.png");
   background-size:cover;
   background-position:center;
 }
 
 .container3:hover {
-  background-image: url("attente.png"), url("deux.png");
+  background-image: url("images/attente.png"), url("images/deux.png");
   background-size:cover;
   background-position:center;
 }
 
 
 .container4:hover  {
- background-image:url("dependant.png");
+ background-image:url("images/dependant.png");
   background-size:cover;
   background-position:center;
 }
 
 .container5:hover  {
- background-image:url("retour.png");
+ background-image:url("images/retour.png");
   background-size:cover;
   background-position:center;
 }
 
 .container6:hover  {
- background-image:url("regle.png");
+ background-image:url("images/regle.png");
   background-size:cover;
   background-position:center;
 }
 
 .container7:hover  {
- background-image:url("boost.png");
+ background-image:url("images/boost.png");
   background-size:cover;
   background-position:center;
 }
@@ -703,7 +734,7 @@ opacity:1;
 
 .liste {
 
-  background: url("central.jpg");
+  background: url("images/central.jpg");
       background-repeat: repeat;
   width: 50%;
   object-fit: cover;
@@ -1002,6 +1033,10 @@ color: white;
   }
   
 }
+
+
+
+
 
 
 

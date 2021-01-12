@@ -37,8 +37,11 @@
              		<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
              	</svg>
           		<h1>Connexion</h1>
-          			<input type="text" name="pseudo" value="" placeholder="Votre Nom d'utilisateur">
-          			<input type="password" name="password" value="" placeholder="Votre Mot De Passe">
+          			<div class="erreur">
+						<p>{erreur}</p>
+					</div>
+					<input type="text" name="pseudo" value="" required="" placeholder="Votre Nom d'utilisateur">
+          			<input type="password" name="password" required="" value="" placeholder="Votre Mot De Passe">
 					<div class="boutton" name="action">
 						<button class="btn" name="action">
 							<span class="b"></span>
@@ -47,6 +50,9 @@
 							<span class="b"></span>
 							Connexion
 						</button>
+					</div>
+					<div class="mdp">
+						<a href="modele_mdp_oublie.html">Mot de passe oublié ?</a>
 					</div>
 			</form>
 			<br>
@@ -60,8 +66,17 @@
 						Inscription
 					</button>
 				</div>
-				<img class="inscrit" src="icone_inscription.png" alt="image">
+				<img class="inscrit" src="images/icone_inscription.png" alt="image">
 			</form>
+			<div class="boutton3">
+				<a  href="req_contacter" class="btn3">
+					<span class="b3"></span>
+					<span class="b3"></span>
+					<span class="b3"></span>
+					<span class="b3"></span>
+					Signaler
+				</a>
+			</div>
 		</div>
 	</body>
 </html>

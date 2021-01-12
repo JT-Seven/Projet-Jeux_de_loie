@@ -15,8 +15,6 @@ let port;
 // DECLARATION DES DIFFERENTS MODULES CORRESPONDANT A CHAQUE ACTION
 //-------------------------------------------------------------------------
 
-const req_entrer = require("./req_entrer.js");
-const req_afficher_formulaire_inscription = require("./req_afficher_formulaire_inscription.js");
 const req_afficher_formulaire_connexion = require("./req_afficher_formulaire_connexion.js");
 const req_inscrire = require("./req_inscrire.js");
 const req_connecter = require("./req_connecter.js");
@@ -26,6 +24,10 @@ const req_commencer = require("./req_commencer.js");
 const req_attendre_joueur  = require("./req_attendre_joueur.js");
 const req_retour_acceuil = require("./req_retour_acceuil.js");
 const req_demarrer = require("./req_demarrer.js");
+const req_lancer_des = require("./req_lancer_des.js");
+const req_attendre_tour = require("./req_attendre_tour.js");
+const req_entrer = require("./req_entrer.js");
+const req_contacter = require("./req_contacter.js");
 
 //-------------------------------------------------------------------------
 // FONCTION DE CALLBACK APPELLEE POUR CHAQUE REQUETE
@@ -43,41 +45,51 @@ const traite_requete = function (req, res) {
 	query = requete.query;
 
 	// ROUTEUR
-
-	try {
-		switch (pathname) {
-			case '/':
-			case '/req_entrer':
-				req_entrer(req, res, query);
-				break;
-			case '/req_afficher_formulaire_inscription':
-				req_afficher_formulaire_inscription(req, res, query);
-				break;
-			case "/req_afficher_formulaire_connexion":
-				req_afficher_formulaire_connexion(req, res, query);
-				break;
-			case '/req_inscrire':
-				req_inscrire(req, res, query);
-				break;
-			case '/req_connecter':
-				req_connecter(req, res, query);
-				break;
-			case "/req_commencer":
-				req_commencer(req, res, query);
-				break;
+		try {
+			switch (pathname) {
+				case '/':
+				case '/req_entrer':
+					req_entrer(req, res, query);
+					break;
+				case '/req_afficher_formulaire_inscription':
+					req_afficher_formulaire_inscription(req, res, query);
+					break;
+				case "/req_afficher_formulaire_connexion":
+					req_afficher_formulaire_connexion(req, res, query);
+				  break;
+				case '/req_inscrire':
+					req_inscrire(req, res, query);
+					break;
+				case '/req_entrer':
+					req_entrer(req, res, query);
+					break;
+				case '/req_connecter':
+					req_connecter(req, res, query);
+					break;
+				case "/req_commencer":
+					req_commencer(req, res, query);
+					break;
 				case "/req_retour_accueuil":
-				req_retour_acceuil(req, res, query);
-				break;
-		    case "/req_attendre_joueur":
-                req_attendre_joueur(req, res, query);
-                break;
-			case "/req_demarrer":	
-				req_demarrer(req, res, query);
-				break;
-
-			default:
-				req_statique(req, res, query);
-				break;
+					req_retour_acceuil(req, res, query);
+					break;
+				case "/req_attendre_joueur":
+					req_attendre_joueur(req, res, query);
+					break;
+				case "/req_demarrer":
+					req_demarrer(req, res, query);
+					break;
+				case "/req_lancer_des":
+					req_lancer_des(req, res, query);
+					break;
+				case "/req_attendre_tour":
+					req_attendre_tour(req, res, query);
+					break;
+				case "/req_contacter":	
+					req_contacter(req, res, query);
+					break;
+				default:
+					req_statique(req, res, query);
+					break;
 		}
 	} catch (e) {
 		console.log('Erreur : ' + e.stack);

@@ -49,7 +49,7 @@ const traits = function(req, res, query) {
 	}
 	
 
-	//les marqueurs sont pour afficher la liste de joueurs et le boutton demarrer sur la page html 
+	//les marqueurs sont la pour afficher la liste de joueurs et le boutton demarrer sur la page html 
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
 	marqueurs.liste = afficher_liste_lobby(lobby);

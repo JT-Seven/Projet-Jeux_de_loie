@@ -17,6 +17,7 @@ const trait = function (req, res, query) {
 	let listeMembres;
 	let i;
 	let trouve;
+	let rng;
 
 	// ON LIT LES COMPTES EXISTANTS
 
@@ -29,7 +30,22 @@ const trait = function (req, res, query) {
 	i = 0;
 	while (i < listeMembres.length && trouve === false) {
 		if (listeMembres[i].pseudo === query.pseudo) {
-			trouve = true;
+				trouve = true;
+		}
+		if (listeMembres[i].password2 === query.password2) {
+				trouve = true;
+		}
+		if (listeMembres[i].password === query.password) {
+				trouve = true;
+		}
+		if (listeMembres[i].adresse === query.adresse) {
+				trouve = true;
+		}
+		if (listeMembres[i].age === query.age) {
+				trouve = true;
+		}
+		if (listeMembres[i].number === query.number) {
+				trouve = true;
 		}
 		i++;
 	}
@@ -40,6 +56,10 @@ const trait = function (req, res, query) {
 		nouveauMembre = {};
 		nouveauMembre.pseudo = query.pseudo;
 		nouveauMembre.password = query.password;
+		nouveauMembre.password2 = query.password2;
+		nouveauMembre.adresse = query.adresse;
+		nouveauMembre.age = query.age;
+		nouveauMembre.number = query.number;
 		listeMembres[listeMembres.length] = nouveauMembre;
 
 		contenu_fichier = JSON.stringify(listeMembres);
@@ -67,8 +87,10 @@ const trait = function (req, res, query) {
 
 		marqueurs = {};
 		marqueurs.pseudo = query.pseudo;
+		marqueurs.number = query.number;
 		marqueurs.password = query.password;
 		page = page.supplant(marqueurs);
+		
 	}
 
 	res.writeHead(200, { 'Content-Type': 'text/html' });

@@ -4,7 +4,7 @@ body{
     font-family: sans-serif;
     background-size: cover;
     height: 100vh;
-    background: url("la_nsa.jpeg ");
+    background: url("images/la_nsa.jpeg ");
     background-position: center;
     background-repeat:no-repeat;
     background-color: black;
@@ -68,7 +68,7 @@ border-image-slice: 1;
 }
 
 .flip-box-front {
-	background-image: url("confrontation.jpg");
+	background-image: url("images/confrontation.jpg");
 
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -92,6 +92,14 @@ border-image-slice: 1;
 .forme{
   
 
+}
+
+.erreur {
+  
+  position: absolute;
+  top: 12%;
+  color: red;
+  left: 28%;
 }
 
   .secret {
@@ -358,7 +366,9 @@ bottom: 85%;
     background:black;
   }
 
-  .box input[type = "text"]:focus,.box input[type = "password"]:focus {
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus,
+   .box input[type = "text"]:valid,.box input[type = "password"]:valid
+{
     width: 230px;
     background: rgba(255,255,255,.1);
     color:white;
@@ -406,6 +416,9 @@ border-radius: 30px;
   top: 0%;
   }
 }
+
+
+
 
 
 

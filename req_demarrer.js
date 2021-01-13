@@ -5,6 +5,8 @@
 const fs = require("fs");
 require("remedial");
 
+const afficher_plateau = require("./fct_afficher_plateau.js");
+
 const trait = function (req, res, query) {
 	let page;
 	let contenu;
@@ -47,7 +49,7 @@ const trait = function (req, res, query) {
 
 	marqueurs = {};
 	marqueurs.pseudo = query.pseudo;
-
+	marqueurs.plateau = afficher_plateau(partie);
 	page = fs.readFileSync("./modele_jeu_actif.html", "utf-8");
 	page = page.supplant(marqueurs);
 

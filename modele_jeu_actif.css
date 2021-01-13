@@ -99,7 +99,11 @@ content: '';
 	white-space: nowrap;
 }
 
-
+.nb-cases {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 
 

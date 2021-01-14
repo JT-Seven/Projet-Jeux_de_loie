@@ -7,7 +7,7 @@
     <title>Page Acceuil</title>
  </head>
   <body>
- 	<div class="flip-box"> 
+	<div class="flip-box"> 
 		<div class="flip-box-inner">
 			<div class="flip-box-front">
    				<p>Lorsque vous dites « le droit à la vie privée ne me préoccupe pas, parce que je n'ai rien à cacher », cela ne fait aucune différence avec le fait de dire « Je me moque du droit à la liberté d'expression parce que je n'ai rien à dire », ou « de la liberté de la presse parce que je n'ai rien à écrire ».</p>
@@ -58,6 +58,34 @@
 			<span class="b3"></span>
 			Signaler
 		</a>
-	</div> 	
+	</div>
+   	<div class="rotate">
+		<div id="coulissant" style="z-index: 10;">
+			<div id="titre-coul" style="/*background-image: url('http://ekladata.com/papyrocktest.eklablog.com/perso/images/forum.png'); background-repeat: no-repeat; background-size: 30px;">REGLE DU JEU</div>
+				<div id="cont-coul">
+					<div class="image_loie"></div>
+						<h2 class="h2_rotate">Regle du Jeu de l'Oie</h2>
+							<p class="texte_rotate">
+								Chaque joueur lance à son tour les deux dés et avance sa marque du nombre de cases indiquées par les dés. Le premier arrivé au 63, dans le jardin de l'oie, gagne la partie à condition de tomber juste, sinon il retourne en arrière, sur autant de cases qu'il lui reste a parcourir.
+							</p>
+							<h3 class="h3_rotate">Les differentes Cases</h3>	
+								<p class="texte_rotate"><b>La case Oie : </b>vous permet de vous re-déplacer du même nombre de cases. Les oies sont en général disposées toutes les 9 cases (sans compter certaines d’entres elles disposées aléatoirement).
+									<b>Les cases Ponts : </b>Sont des raccourcis et vous permettent de vous rendre au pont suivant.
+									<b>La case Hôtellerie : </b>Le joueur se repose et passe son tour. Les autres joueurs jouent donc deux fois de suite.
+									<b>La case Puits : </b>Si un joueur tombe dans le puits, ce dernier doit attendre qu’un autre joueur prenne sa place pour se déplacer à nouveau. Ce joueur devra à son tour, pour sortir du puits, attendre qu’un autre joueur vienne le délivrer.
+									<b>La  case Labyrinthe : </b>Le joueur qui tombe sur un labyrinthe subit un malus et recule de 12 cases (juste derrière un puits).
+									<b>La case Deux dés : </b>Sur deux cases du plateau figurent deux dés. Si un joueur obtient les mêmes dés que ceux affichés sur la case.
+									Par exemple : 3 et 6 il se rend sur la case en question sur laquelle sont représentés un dé face 3 points et un dé face 6 points.
+									Pareil s’il fait 4 et 5, il se rend sur la case illustrant les dés 4 et 5.
+									<b>La case Prison : </b>Le joueur qui tombe sur la prison doit attendre qu’un autre joueur l’en délivre (contrairement au puits, le joueur ne restera pas en prison).
+									<b>La case Tête de mort : </b>Le joueur qui tombe sur la Tête de morts recommence tout à 0 !
+									<b>La case joueur : </b>Lorsqu’un joueur (A) s’arrête sur la case d’un autre joueur (B), ils échangent leurs places. Le joueur (B) se retrouve sur la case qu’occupait le joueur (A) avant qu’il ne lance les dés. Ainsi, à la fin d’un tour, deux joueurs n’occuperont jamais la même case.
+									<b>La Case d'arrivée (63) : </b>Pour occuper la dernière case, un joueur doit obtenir le nombre de cases exact, sinon il recule d’autant de cases excessives. </p>
+				</div>
+		</div>
+	</div>
+	  <form action="req_afficher_signaler" method="GET">
+      	<input type="hidden" name="signaler" value="{pseudo}">
+      </form>
    </body>
 </html>

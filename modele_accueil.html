@@ -51,9 +51,13 @@
 							Connexion
 						</button>
 					</div>
-					<div class="mdp">
-						<a href="modele_mdp_oublie.html">Mot de passe oublié ?</a>
-					</div>
+			</form>
+			<form class="mdp_oublie" action="req_afficher_compte" method="GET">
+				<input type="hidden" name="pseudo" value="{pseudo}">
+				<input type="hidden" name="password" value="{password}">
+				<div class="mdp">
+					<a href="req_afficher_compte">Mot de passe oublié ?</a>
+				</div>
 			</form>
 			<br>
 			<form action="/req_afficher_formulaire_inscription" class="inscription" method="GET">
@@ -68,8 +72,11 @@
 				</div>
 				<img class="inscrit" src="images/icone_inscription.png" alt="image">
 			</form>
+			<form action="req_afficher_signaler" method="GET">
+				<input type="hidden" name="signaler" value="{pseudo}">
+			</form>
 			<div class="boutton3">
-				<a  href="req_contacter" class="btn3">
+				<a  href="req_afficher_signaler" class="btn3">
 					<span class="b3"></span>
 					<span class="b3"></span>
 					<span class="b3"></span>

@@ -11,11 +11,23 @@ body{
 	background-position-y: -5px;
   }
 
+
+.mdp_oublie {
+  
+  width: 265px;
+  height: 100px;
+  position: absolute;
+  top: 53%;
+  left: 81%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .mdp {
   
   position: absolute;
-  top: 92%;
-  left: 23%;
 }
 
  .erreur {
@@ -814,5 +826,6 @@ top: 20%;
   }
   
 }
+
 
 

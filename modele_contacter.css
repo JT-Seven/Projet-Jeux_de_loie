@@ -73,7 +73,7 @@ section .container .contactinfo h2 {
 
 section .container .contactinfo .info {
   position: relative;
-  margin: 20px 0;
+  margin: 20px -10px;
 }
 
 section .container .contactinfo .info li {
@@ -82,7 +82,7 @@ section .container .contactinfo .info li {
   display: flex;
   margin: 20px 0;
   cursor: pointer;
-  align-items: flex-start;
+  align-items: center;
 }
 
 section .container .contactinfo .info li span:nth-child(1) {
@@ -102,6 +102,10 @@ section .container .contactinfo .info li span:nth-child(2) {
   font-weight: 300;
   opacity: 0.5;
   
+  margin: ;
+  box-sizing: border-box;
+  text-align: initial;
+  white-space: nowrap;
 }
 
 section .container .contactinfo  .info li:hover span:nth-child(1) img,
@@ -124,6 +128,31 @@ section .container .contactForm {
   left: 50%;
 }
   
+section .container .contactinfo .info li:hover span:nth-chil(1) img,
+section .container .contactinfo .info li:hover span:nth-chil(1) img {
+  opacity: 1;
+}
+
+section .container .contactinfo .sci {
+  position: relative;
+  display: flex;
+  bottom: 21%;
+  right: 6%;
+  z-index: 2;
+}
+
+section .container .contactinfo .sci li  {
+  list-style: none;
+  margin-right: 15px;
+}
+
+section .container .contactinfo .sci li a {
+  text-decoration: none;
+}
+
+
+
+
  /* FORMULAIRE */
 
 
@@ -479,13 +508,152 @@ border: none;
 }
 
 
+/*  SLIDE CONTROLS */
 
 
+#slider {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#slider input[type=radio] {
+  display: none;
+}
+
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#slides {
+  padding: 10px;
+  border: 3px solid #ccc;
+  background:none;
+  position: relative;
+  z-index: 1;
+  
+  bottom: 0%;
+  padding-bottom: 160px;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+
+#slide5:checked ~ #slides .inner {
+  margin-left: -400%;
+}
+
+#slides .inner {
+  width:500%;
+  line-height:0;
+  height:200px;
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  overflow: hidden;
+}
+
+#slides .slide {
+  float: left;
+  display: block;
+  color: #fff;
+  height: 100%;
+  width: 20%;
+}
+
+.slide-content {
+  
+  width: 100%;
+  height: 100%;
+}
+
+#controls {
+  margin: -210px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+
+#controls label {
+  transition: opacity 0.2s ease-out; 
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+  display: none;
+}
+
+#controls label:hover {
+  opacity: 1;
+}
 
 
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(1)
+{
+  background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+  float: right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(5),
+#slide5:checked ~ #controls label:nth-last-child(1)
+{
+  background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+  float: left;
+  margin: 0 0 0 -50px;
+  display: block;
+  
+}
 
 
+#bullets {
+  margin: 180px 0 0;
+  text-align: center;
+}
 
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 100%;
+  margin:0 10px;
+}
+
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4),
+#slide5:checked ~ #bullets label:nth-child(5) {
+  background: #444;
+}
 
 
 
@@ -547,9 +715,6 @@ border: none;
   }
   
 }
-
-
-
 
 
 

@@ -516,6 +516,122 @@ border: none;
 }
 
 
+
+/* AFFICHAGE DE LA REGLE DU JEU */
+
+.rotate {
+  
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0%;
+  left:  73%;
+}
+
+
+#coulissant {
+position:fixed;
+left:-725px;
+width:700px;
+height:569px;
+border:1px solid black;
+background-color:rgba(30, 30, 30, 0.66);
+padding:10px;
+box-shadow:0px 0px 6px #b29144;
+transition:1s;
+top: 100px;
+}
+#coulissant:hover {
+left:-3px;
+transition:0.5s;
+z-index:100;
+}
+#titre-coul {
+position:relative;
+float:right;
+height:70px;
+margin-right:-110px;
+margin-top: 255px;
+color:#000;
+font-size:12px;
+line-height: 15px;
+border:2px solid #fefeff;;
+border-left:0px ;
+border-radius:0px 0px 10px 10px;
+background-color:rgb(178, 145, 68);
+box-shadow:6px 6px 10px black;
+padding:12px;
+transform: rotate(270deg);
+width: 100px;
+height: 15px;
+display: flex;
+}
+#titre-coul:hover {
+  color: white;
+}
+#cont-coul {
+position:relative;
+color:#fff;
+border:1px solid grey;
+background-color:rgba(0, 0, 0, 0.95);
+height: 690px;
+transform: rotate(270deg);
+width: 80%;
+top: -61px;
+left: 70px;
+}
+#cont-coul img{
+margin:15px;
+border:3px solid white;
+box-shadow:6px 6px 10px black;
+width: 20%;
+border-radius: 15px;
+position: absolute;
+top: 0%;
+float: left;
+shape-outside: circle();
+}
+
+.texte_rotate {
+  
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 0.9px;
+}
+
+.texte_rotate2 {
+
+  font-size: 14px;
+  letter-spacing: 1px;
+}  
+  
+.image_loie {
+  background: url("images/jeu_de_loie.jpg");
+  width: 140px;
+  height: 190px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  margin: 20px;
+  float: left;
+  shape-outside: circle();
+}
+
+.h2_rotate {
+  
+  position: relative;
+  text-align: center;
+}
+
+.h3_rotate {
+  
+  text-align: center;
+  position: relative;
+}
+
+b {
+  color: #b29144;
+}
+
 @media screen and (max-width:1409px) and (min-width:1000px) {
   
    body {
@@ -653,6 +769,12 @@ border: none;
  
   
 }
+
+
+
+
+
+
 
 
 

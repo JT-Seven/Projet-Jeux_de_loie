@@ -28,6 +28,10 @@ const req_lancer_des = require("./req_lancer_des.js");
 const req_attendre_tour = require("./req_attendre_tour.js");
 const req_entrer = require("./req_entrer.js");
 const req_contacter = require("./req_contacter.js");
+const req_afficher_formulaire_inscription = require("./req_afficher_formulaire_inscription.js");
+const req_afficher_compte = require("./req_afficher_compte.js");
+const req_afficher_signaler = require("./req_afficher_signaler.js");
+const req_compte = require("./req_compte.js");
 
 //-------------------------------------------------------------------------
 // FONCTION DE CALLBACK APPELLEE POUR CHAQUE REQUETE
@@ -54,14 +58,21 @@ const traite_requete = function (req, res) {
 				case '/req_afficher_formulaire_inscription':
 					req_afficher_formulaire_inscription(req, res, query);
 					break;
-				case "/req_afficher_formulaire_connexion":
-					req_afficher_formulaire_connexion(req, res, query);
-				  break;
 				case '/req_inscrire':
 					req_inscrire(req, res, query);
 					break;
 				case '/req_entrer':
 					req_entrer(req, res, query);
+					break;
+				case '/req_afficher_signaler':
+					req_afficher_signaler(req, res, query);
+					break;
+
+				case '/req_afficher_compte':
+					req_afficher_compte(req, res, query);
+					break;
+				case '/req_compte':
+					req_compte(req, res, query);
 					break;
 				case '/req_connecter':
 					req_connecter(req, res, query);

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 	<head>
-    	<meta http-equiv="refresh" content="5;url=/req_attendre_joueur?pseudo={pseudo}">
+    	<meta http-equiv="refresh" content="50000000;url=/req_attendre_joueur?pseudo={pseudo}">
         <link rel="stylesheet" href="modele_salle_attente.css">
 		<meta charset="utf-8">
         <title>lobby</title>
@@ -90,6 +90,9 @@
 			
 			<div class="liste">
 				<div class="L">						
+					<div class="titre">  
+						<h1 data-text="LOBBY">LOBBY</h1>	
+					</div>		
 					<div class="wavy">	
 						<span class="w" style="--i:1;">L</span>
 						<span class="w" style="--i:2;">o</span>
@@ -109,15 +112,6 @@
 				<div class="joueur">
 					{liste}
 				</div>
-				<div class="boutton2">
-					<a class="btn2" href="modele_accueil_jeu.html">
-						<span class="b2"></span>
-						<span class="b2"></span>
-						<span class="b2"></span>
-						<span class="b2"></span>
-						Quitter
-					</a>	
-				</div>
 			</div>	
 			<div class="li">
 			</div>
@@ -125,6 +119,22 @@
 			<form action="/req_attendre_joueur" method="GET">
 				<input type="hidden" name="pseudo" value="{pseudo}">
 			</form>
+			<nav class="nav" role="navigation">
+				<div id="menuToggle">
+					<input type="checkbox" />
+					<span class="petit_logo"></span>
+					<span class="petit_logo"></span>
+					<span class="petit_logo"></span>
+					<ul id="menu">
+					  <a class="lien" href="modele_accueil_jeu.html"><li class="texte_menu">Quitter</li></a>
+					  <a class="lien" href="req_contacter"><li  class="texte_menu">Signaler</li></a>
+					  <a class="lien" href="modele_accueil.html"><li class="texte_menu">Déconnexion</li></a>
+					</ul>
+				</div>
+			</nav>
+			<form action="req_afficher_signaler" method="GET">
+                <input type="hidden" name="signaler" value="{pseudo}">
+            </form>
 	  </body>
 </html>
 	

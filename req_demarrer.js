@@ -35,6 +35,9 @@ const trait = function (req, res, query) {
 			joueur.role = partie.roles[0];
 			partie.roles.splice(0, 1);
 			joueur.position = 1;
+			joueur.passetour = 0;
+			joueur.script = 0;
+			joueur.dernierNb = 0;
 			partie.joueurs.push(joueur);
 		}
 	}

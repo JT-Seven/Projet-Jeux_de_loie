@@ -29,9 +29,13 @@ const traits = function (req, res, query) {
 		marqueurs.position = partie.joueurs[partie.actif].position;
         page = fs.readFileSync("modele_jeu_actif.html", "utf-8");
     } else {
+		//trouver le pseudo du joueur sur la page jeu passif
 		for (i = 0; i < partie.joueurs.length; i++) {
+			//trouver le joueur sur la page
 			if (partie.joueurs[i].pseudo === query.pseudo) {
+				//affiche la valeur du lancer de des precedent (definit dans req_lancer_des)
 				marqueurs.des = partie.joueurs[i].dernierNb;
+				//affiche le script en fonction de la case et du role
 				switch (partie.joueurs[i].script) {
 					case 0:
 						marqueurs.script = "test";

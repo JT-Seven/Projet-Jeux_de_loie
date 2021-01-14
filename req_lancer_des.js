@@ -16,17 +16,23 @@ const trait = function (req, res, query) {
 
     contenu = fs.readFileSync("partie.json", "utf-8");
     partie = JSON.parse(contenu);
-	
+	//position du joueur avant le lancer de des	
 	position = partie.joueurs[partie.actif].position;
+	//on verifie si le joueur doit passer son tour ou pas
 	if (partie.joueurs[partie.actif].passetour === 0) {
+		//on lance le des, donc on genere un nombre entre 1 et 12
 		random = Math.floor(Math.random() * 12) + 1;
+		//on ajoute la valeur de lancer de des a la position du joueur
 		position = position + random;
 		switch (position) {
 			case 58:
+				//case tete de mort, position du joueur est == a 1
 				partie.joueurs[partie.actif].position = 1;
+				//pour l'affichage du script adapte a la case tete de mort
 				partie.joueurs[partie.actif].script = 58;
 				break;
 			case 19:
+				//le joueur passe 2 tours
 				partie.joueurs[partie.actif].passetour = 2;
 				partie.joueurs[partie.actif].script = 19;
 				break;
@@ -48,6 +54,7 @@ const trait = function (req, res, query) {
 			case 36:
 			case 45:
 			case 54:
+				//case boost 
 				partie.joueurs[partie.actif].position = position + random;
 				partie.joueurs[partie.actif].script = 9;
 				break;
@@ -56,8 +63,10 @@ const trait = function (req, res, query) {
 				partie.joueurs[partie.actif].script = 0;
 				break;
 		}
+		//pour memoriser le dernier lancer de des
 		partie.joueurs[partie.actif].dernierNb = random;
 	} else {
+		//on decrement passetour
 		partie.joueurs[partie.actif].passetour--;	
 	}
 

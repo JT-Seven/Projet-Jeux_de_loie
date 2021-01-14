@@ -35,8 +35,11 @@ const trait = function (req, res, query) {
 			joueur.role = partie.roles[0];
 			partie.roles.splice(0, 1);
 			joueur.position = 1;
+			//si il est > 0 le joueur va passer son tour
 			joueur.passetour = 0;
+			//permet d'afficher le script en fonction de la case du joueur
 			joueur.script = 0;
+			//dernier lancer de des
 			joueur.dernierNb = 0;
 			partie.joueurs.push(joueur);
 		}

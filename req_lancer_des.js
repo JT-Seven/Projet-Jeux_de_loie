@@ -10,11 +10,22 @@ const trait = function (req, res, query) {
     let contenu;
     let partie;
     let marqueurs;
-
+	let position;
     // Récupération de la partie.
 
     contenu = fs.readFileSync("partie.json", "utf-8");
     partie = JSON.parse(contenu);
+	
+	position = partie.joueurs[partie.actif].position;
+	position = position + Math.floor(Math.random() * 12) + 1;
+	switch (position) {
+		case 58:
+			partie.joueurs[partie.actif].position = 1;
+			break;
+		default: 
+			partie.joueurs[partie.actif].position = position;
+			break;
+	}
 
     // Incrémentation de l'indice du joueur actif.
 
@@ -27,7 +38,6 @@ const trait = function (req, res, query) {
     marqueurs = {}; 
     marqueurs.pseudo = query.pseudo;
     page = page.supplant(marqueurs);
-    
     //envoi de la reponse
 
     res.writeHead(200, { "Content-Type": "text/html" }); 

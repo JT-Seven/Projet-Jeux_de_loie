@@ -1,7 +1,7 @@
 // Affiche la première page du site.
 
 "use strict";
-
+const afficher_plateau = require("./fct_afficher_plateau.js");
 const fs = require("fs");
 require("remedial");
 
@@ -22,7 +22,7 @@ const traits = function (req, res, query) {
 
     marqueurs = {}; 
     marqueurs.pseudo = query.pseudo;
-    
+    marqueurs.plateau = afficher_plateau(partie);
     if (partie.joueurs[partie.actif].pseudo === query.pseudo) {
         console.log("ACTIF")
         page = fs.readFileSync("modele_jeu_actif.html", "utf-8");

@@ -13,6 +13,8 @@ const afficher_plateau = function (partie) {
  	let x, y;
 	let contenu;		
 	let plateau;
+	let trouve;
+	let pion;
 	grille = [];
 
 	for(i = 0; i < 8; i++){
@@ -29,11 +31,20 @@ const afficher_plateau = function (partie) {
 	contenu = fs.readFileSync("nbCases.json", "utf-8");
 	plateau = JSON.parse(contenu);
 	for (i = 0; i < 63; i++) {
-		console.log(plateau.cases[i].x);
-		console.log(plateau.cases[i].y);
-		x = plateau.cases[i].x;
-		y = plateau.cases[i].y;
-		grille[x][y].nb = i + 1;
+		trouve = false;
+		for (j = 0; j < partie.joueurs.length; j++) {
+			if (i+1 === partie.joueurs[j].position) {
+			trouve = true;
+			pion = partie.joueurs[j].role;
+			}
+		}
+			x = plateau.cases[i].x;
+			y = plateau.cases[i].y;
+		if (trouve === false) {
+			grille[x][y].nb = i + 1;
+		} else {
+			grille[x][y].nb = pion;
+		}
 	}
 
 	//Placer les elements de plateau.

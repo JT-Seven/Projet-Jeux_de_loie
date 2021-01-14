@@ -34,7 +34,7 @@ const trait = function (req, res, query) {
 			joueur.pseudo = lobby[i].pseudo;
 			joueur.role = partie.roles[0];
 			partie.roles.splice(0, 1);
-			joueur.position = 0;
+			joueur.position = 1;
 			partie.joueurs.push(joueur);
 		}
 	}

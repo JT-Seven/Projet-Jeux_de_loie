@@ -3,15 +3,29 @@
        <head>
            <title>Jeu Passif</title>
            
-           <meta http-equiv="refresh" content="5;url=/req_attendre_tour?pseudo={pseudo}">
+           <meta http-equiv="refresh" content="3 ;url=/req_attendre_tour?pseudo={pseudo}">
 		   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	   	   <link rel="stylesheet" type="text/css" href="modele_jeu_passif.css">
 
 	   </head>
     <body>
+		<div class = "positionPlateau">
          {plateau}
-		 {des}
-		 {script}
+		 <div>
+		 <div>
+		<p>{DernierLancer}  {des}</p>
+		</div>
+		<div>
+		 <p>{Histoire}  {script}</p>
+		 </div>
+		 <div class = "positionLegende">
+		 <h1>Legende  </h1>
+		 <p>Couleurs des pions</p>
+		 <p>Rouge : Snowden</p>
+		 <p>Noir : Corbin</p>
+		 <p>Rose : Lindsay</p>
+		 <p>Vert : Agent Russes</p>
+		 </div>
 		 <!-- 
 		 <section>
                 <div class="pattern">

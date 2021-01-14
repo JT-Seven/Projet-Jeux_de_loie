@@ -48,6 +48,15 @@ const traits = function(req, res, query) {
 		page = fs.readFileSync("./modele_salle_attente.html", "utf-8");
 	} else if (lobby[i].etat === "EN JEU") {
 		page = fs.readFileSync("./modele_jeu_passif.html", "utf-8");
+
+		marqueurs.dernierNb = "";
+		marqueurs.script = "";
+		marqueurs.plateau = "";
+		marqueurs.Histoire = "";
+		marqueurs.DernierLancer = "";
+		marqueurs.des = "";
+
+	
 	}
 
 	page = page.supplant(marqueurs);

@@ -80,7 +80,15 @@ const trait = function (req, res, query) {
 
     marqueurs = {};
     marqueurs.pseudo = query.pseudo;
-    page = page.supplant(marqueurs);
+    marqueurs.plateau = "";
+    marqueurs.script = "";
+	marqueurs.des = "";
+	marqueurs.Histoire = "";
+	marqueurs.DernierLancer = ""
+	
+
+	page = page.supplant(marqueurs);
+
     //envoi de la reponse
 
     res.writeHead(200, { "Content-Type": "text/html" }); 

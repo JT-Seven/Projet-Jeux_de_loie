@@ -99,12 +99,26 @@ content: '';
 	white-space: nowrap;
 }
 
+p{
+font-size:16px;
+}
 
+.positionPlateau{
+display: flex;
+justify-content:center;
 
-
-
-
-
+}
+.positionLegende{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 10%;
+    left: 90%;
+}
 
 
 

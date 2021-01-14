@@ -54,6 +54,10 @@ const trait = function (req, res, query) {
 	//création de la page à afficher
 
 	marqueurs = {};
+	marqueurs.role = "";
+	marqueurs.Role = "";
+	marqueurs.Position = "";
+	marqueurs.position = "";
 	marqueurs.pseudo = query.pseudo;
 	marqueurs.plateau = afficher_plateau(partie);
 	page = fs.readFileSync("./modele_jeu_actif.html", "utf-8");

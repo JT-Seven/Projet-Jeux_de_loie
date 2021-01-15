@@ -1,1 +1,1 @@
-{"joueurs":[{"pseudo":"a","role":"Snowden","position":0},{"pseudo":"b","role":"Lindsay","position":0},{"pseudo":"c","role":"Corbin","position":0}],"roles":["Les Russes"],"actif":0}
+{"joueurs":[{"pseudo":"a","role":"Snowden","position":1,"passetour":0,"script":0,"dernierNb":0},{"pseudo":"b","role":"Lindsay","position":1,"passetour":0,"script":0,"dernierNb":0},{"pseudo":"c","role":"Corbin","position":1,"passetour":0,"script":0,"dernierNb":0}],"roles":["LesRusses"],"actif":0}

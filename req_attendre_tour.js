@@ -27,6 +27,8 @@ const traits = function (req, res, query) {
     if (partie.joueurs[partie.actif].pseudo === query.pseudo) {
 		marqueurs.role = partie.joueurs[partie.actif].role;
 		marqueurs.position = partie.joueurs[partie.actif].position;
+		marqueurs.Position = "Position :";
+		marqueurs.Role = "Role :";
         page = fs.readFileSync("modele_jeu_actif.html", "utf-8");
     } else {
 		//trouver le pseudo du joueur sur la page jeu passif
@@ -38,15 +40,80 @@ const traits = function (req, res, query) {
 				//affiche le script en fonction de la case et du role
 				switch (partie.joueurs[i].script) {
 					case 0:
-						marqueurs.script = "test";
+						marqueurs.script = "Apres l'arrivé de Snowden à Moscou, le voicit agent double ! A vous maintenant de resoudre votre quete!";
 						break;
 					case 9:
 						if (partie.joueurs[i].role === "Snowden") {
-							marqueurs.script = "Snowden a de la chance aujourd'hui";
-						}
+							marqueurs.script = "Snowden viens de reussir la collecte de donnée! Acceleration de la quête!";
+						}else if(partie.joueurs[i].role === "Lindsay"){
+							marqueurs.script = "Lindsay viens de rejoindre Snowden à Moscou! Acceleration de la quête!";
+						}else if(partie.joueurs[i].role === "Corbin"){
+							marqueurs.script = "corbin a reussi à communiquer avec snowden! Acceleration de la quête!";
+				
+						}else if(partie.joueurs[i].role === "LesRusses"){
+							marqueurs.script = "Les Russes vienne de decouvrir une faille dans le systeme de securité Americain ! Acceleration de la quête!";
+						}	
 						break;
 					case 58:
-						marqueurs.script = "Notre personnage reste bloque pendant 1 tour";
+						if (partie.joueurs[i].role === "Snowden") {
+                            marqueurs.script = "La quete viens d'echouer! Recommencer!";
+                        }else if(partie.joueurs[i].role === "Lindsay"){
+                            marqueurs.script = "La quete viens d'echouer! Recommencer!";
+                        }else if(partie.joueurs[i].role === "Corbin"){
+                            marqueurs.script = "La quete viens d'echouer! Recommencer!";
+
+                        }else if(partie.joueurs[i].role === "LesRusses"){
+                            marqueurs.script = "La quete viens d'echouer! Recommencer!";
+                        }
+
+						break;
+						case 52:
+						if (partie.joueurs[i].role === "Snowden") {
+                            marqueurs.script = "Snowden est en difficulté sur la resolution du blackout que subit les Etats-unis! Il devra resoudre cette affaire avant de poursuivre!";
+                        }else if(partie.joueurs[i].role === "Lindsay"){
+                            marqueurs.script = "Lindsay viens de se faire cambrioler! Elle devra resoudre cette affaire avant de poursuivre!";
+                        }else if(partie.joueurs[i].role === "Corbin"){
+                            marqueurs.script = "Les Etats-unis subissent une crise economique!";
+
+                        }else if(partie.joueurs[i].role === "LesRusses"){
+                            marqueurs.script = "La population Russe essaye de se lever contre le regime de Poutine suite au revelation de sa vie privé par les Americain!";
+                        }
+						break;
+						case 42 :
+						if (partie.joueurs[i].role === "Snowden") {
+                            marqueurs.script = "Snowden dois faire face a son faux  procés pour trahison!";
+                        }else if(partie.joueurs[i].role === "Lindsay"){
+                            marqueurs.script = "Lindsay n'arrete pas de s'inquieter pour la vie de son marie !";
+                        }else if(partie.joueurs[i].role === "Corbin"){
+                            marqueurs.script = "Les Etats-unis doivent tenir tete lors de la Guerre industrielle!";
+
+                        }else if(partie.joueurs[i].role === "LesRusses"){
+                            marqueurs.script = "Les Russes sont malmené par les E-U lors de la Guerre industrielle! ";
+						}
+						break;
+                        case 36 :
+                        if (partie.joueurs[i].role === "Snowden") {
+                            marqueurs.script = "Snowden attend son extraction!";
+                        }else if(partie.joueurs[i].role === "Lindsay"){
+                            marqueurs.script = "Lindsay est en train d'accoucher!";
+                        }else if(partie.joueurs[i].role === "Corbin"){
+                            marqueurs.script = "Corbin doit attendre l'investiture de Joe Biden!";
+
+                        }else if(partie.joueurs[i].role === "LesRusses"){
+                            marqueurs.script = "Les Russes sont en train de resoudre le programme de surveillance de masse! ";
+                        }
+						break;
+                        case 19 :
+                        if (partie.joueurs[i].role === "Snowden") {
+                            marqueurs.script = "Lindsay est enceinte !";
+                        }else if(partie.joueurs[i].role === "Lindsay"){
+                            marqueurs.script = "Lindsay est soupçonner par les agents Russes de cacher quelque chose!";
+                        }else if(partie.joueurs[i].role === "Corbin"){
+                            marqueurs.script = "Snowden reste injoignable!";
+
+                        }else if(partie.joueurs[i].role === "LesRusses"){
+                            marqueurs.script = "Les Russes echouent au trucquage des elections presidentielle 2020! ";
+                        }
 						break;
 					default:
 						marqueurs.script = "";
@@ -54,7 +121,11 @@ const traits = function (req, res, query) {
 					}
 				}
 			}
-        page = fs.readFileSync("modele_jeu_passif.html", "utf-8");
+    marqueurs.Histoire = "Histoire :";
+	marqueurs.DernierLancer = "Dernier lancer :"
+	
+
+		page = fs.readFileSync("modele_jeu_passif.html", "utf-8");
     }   
 
     page = page.supplant(marqueurs);

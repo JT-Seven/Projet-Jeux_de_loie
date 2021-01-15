@@ -99,7 +99,7 @@ const trait = function (req, res, query) {
     marqueurs.script = "";
 	marqueurs.des = "";
 	marqueurs.Histoire = "";
-	marqueurs.DernierLancer = ""
+	marqueurs.DernierLancer = "";
 	
 
 	page = page.supplant(marqueurs);

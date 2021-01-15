@@ -38,6 +38,7 @@ const traits = function (req, res, query) {
 		marqueurs.position = partie.joueurs[partie.actif].position;
 		marqueurs.Position = "Position :";
 		marqueurs.Role = "Role :";
+
         page = fs.readFileSync("modele_jeu_actif.html", "utf-8");
     } else {
 		//trouver le pseudo du joueur sur la page jeu passif
@@ -131,7 +132,7 @@ const traits = function (req, res, query) {
 				}
 			}
     marqueurs.Histoire = "Histoire :";
-	marqueurs.DernierLancer = "Dernier lancer :"
+	marqueurs.DernierLancer = "Dernier lancer :";
 	
 
 		page = fs.readFileSync("modele_jeu_passif.html", "utf-8");

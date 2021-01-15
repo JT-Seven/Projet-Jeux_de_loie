@@ -23,7 +23,7 @@ const traits = function(req, res, query) {
 	//on cherche si notre joueur est dans la liste lobby 
 	i = 0;
 	trouve = false;
-	while (i < lobby.length && trouve == false) {
+	while (i < lobby.length && trouve === false) {
 		if (lobby[i].pseudo  === query.pseudo) {
 			trouve = true;
 		} else {

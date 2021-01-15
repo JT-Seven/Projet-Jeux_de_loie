@@ -151,6 +151,7 @@ body:before {
 }
 
 p{
+    color: #cbcfff;;
 font-size : 20px;
 }
 
@@ -294,5 +295,8 @@ a {
 }
 
 
+body{
+    background-color:rgb(25 6 24);
+}
 
 

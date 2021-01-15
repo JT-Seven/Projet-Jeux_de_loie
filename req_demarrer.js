@@ -54,6 +54,7 @@ const trait = function (req, res, query) {
 	//création de la page à afficher
 
 	marqueurs = {};
+	marqueurs.information = "";
 	marqueurs.role = "";
 	marqueurs.Role = "";
 	marqueurs.Position = "";

@@ -1,0 +1,23 @@
+body{
+    background-image: url("cia.jpeg");
+}
+.parent{
+    height: 48vh;
+    display: flex;
+    justify-content: center;
+}
+.cadre1{
+    height: 50vh;
+    width: 50vh;
+    justify-content: center;
+    display: flex;
+    border:solid black;
+    border-radius: 10px;
+
+}
+.boutton{
+    display: flex;
+    justify-content: center;
+    height: 3vh;
+}
+

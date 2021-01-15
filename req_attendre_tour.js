@@ -10,7 +10,6 @@ const traits = function (req, res, query) {
     let contenu;
     let partie;
     let i;
-    let trouve;
     let marqueurs;
 
     // Récupération de la liste des gens déjà en attente.
@@ -19,6 +18,16 @@ const traits = function (req, res, query) {
     partie = JSON.parse(contenu);
 
     // Création de la page à afficher.
+
+    if (partie.victoire === true) {
+        page = fs.readFileSync("modele_perdu.html", "utf-8");
+
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.write(page);
+        res.end();
+        return;
+    }
+
 
     marqueurs = {}; 
     marqueurs.pseudo = query.pseudo;

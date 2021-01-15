@@ -54,8 +54,9 @@ const trait = function (req, res, query) {
 			case 36:
 			case 45:
 			case 54:
-				//case boost 
-				partie.joueurs[partie.actif].position = position + random;
+				//case boost
+				position = position + random;
+				partie.joueurs[partie.actif].position = position;
 				partie.joueurs[partie.actif].script = 9;
 				break;
 			default: 
@@ -68,6 +69,20 @@ const trait = function (req, res, query) {
 	} else {
 		//on decrement passetour
 		partie.joueurs[partie.actif].passetour--;	
+	}
+
+	if (position > 63) {
+		partie.victoire = true;
+		partie.actif = (partie.actif + 1) % partie.joueurs.length;
+		contenu = JSON.stringify(partie);
+		fs.writeFileSync("partie.json", contenu, "utf-8");
+
+		page = fs.readFileSync("./modele_gagne.html", "utf-8");
+
+		res.writeHead(200, { "Content-Type": "text/html" });
+		res.write(page);
+		res.end();
+		return;
 	}
 
     // Incrémentation de l'indice du joueur actif.

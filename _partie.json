@@ -6,6 +6,6 @@
 	"Corbin",
 	"LesRusses"
 	],
-	"actif": 0
-	
+	"actif": 0,
+	"victoire": false
 }

@@ -27,6 +27,7 @@ const trait = function (req, res, query) {
  	marqueurs.age = "";
 	marqueurs.number = rng;
 	marqueurs.password2 = "";
+	marqueurs.nom = "";
 	marqueurs.adresse = "";
 	marqueurs.password = "";
 

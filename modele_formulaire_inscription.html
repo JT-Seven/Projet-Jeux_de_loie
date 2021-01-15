@@ -34,7 +34,7 @@
 							
 						<div class="nom">
 							<label class="N" for="nom">Nom : </label>
-							<input type="text" name="nom" value="" required="" placeholder="Votre Nom">
+							<input type="text" name="nom" value="{nom}" required="" placeholder="Votre Nom">
 							<label class="N_2" for="prenom">Prénom : </label>
 							<input type="text" name="prenom" value="" required="" placeholder="Votre Prénom"></div>
 						<div class="civilite">
@@ -64,7 +64,7 @@
 						</div>
 				</form>
 				<div class="boutton3">
-					<a href="req_contacter" class="btn3">
+					<a href="req_afficher_signaler" class="btn3">
 						<span class="b3"></span>
 						<span class="b3"></span>
 						<span class="b3"></span>
@@ -72,6 +72,15 @@
 						Signaler
 					</a>
                 </div>
+				<div class="boutton4">
+					<a href="req_entrer" class="btn4">
+						<span class="b4"></span>
+						<span class="b4"></span>
+						<span class="b4"></span>
+						<span class="b4"></span>
+						Retour
+					</a>
+			 	</div>
 				<form action="req_afficher_signaler" method="GET">
                 	<input type="hidden" name="signaler" value="{pseudo}">
             	</form>

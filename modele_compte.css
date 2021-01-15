@@ -11,40 +11,130 @@ body{
 	background-position-y: -5px;
   }
 
-  .main-head {
-  background: black;
-color: #ffffff;
-height: 5vh;
-display: flex;
-position: relative;
-bottom: 20%;
+
+.mdp_oublie {
+  
+  width: 265px;
+  height: 100px;
+  position: absolute;
+  top: 53%;
+  left: 81%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  
+  width: 25%;
+  height: 550px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 45%;
+  left: 50%;
+  border: 5px solid white;
+  border-image: linear-gradient(to right, #011b2c, white, #001a29);
+  border-image-slice: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.mdp {
+  
+  position: absolute;
+}
+
+ .erreur {
+    
+  color: red;
   }
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size:25px;
-  }
+.forme {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
+.element_1 {
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.label {
+  
+  margin: 15px;
+  position: relative;
+  color: white;
+}
+
+.input {
+  
+  border: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  text-align: center;
+  border: 2px solid blue;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  padding: 15px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  transition: 0.25s;
+  border-image: linear-gradient(303deg, #141e30, white, #243b55);
+  border-image-slice: 100%;
+  border-image-slice: 1;
+  position: relative;
+  top: 0%;
+  color: white;
+}
+
+.input:focus {
+  width: 235px;
+border-color: rgb(255, 123, 35);
+}
+
+
+.titre {
+  
+  color: #fff;
+  position: absolute;
+  bottom: 83%;
+}
+
+.marqueurs {
+  
+  color: red;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
 
 
 
 /*BOUTTON */
 
-.boutton4 {
+.boutton {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 90%;
-  left: 90%;
+  position: absolute;
+  top: 86%;
 }
 
-.btn4 {
+.btn {
   position: relative;
   display: inline-block;
   padding: 14px 30px;
@@ -60,7 +150,7 @@ bottom: 20%;
   border-radius: 5px;
 }
 
-.btn4:hover {
+.btn:hover {
   color: black;
   background:#f2f0f0;
   box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
@@ -68,24 +158,25 @@ bottom: 20%;
 }
 
 
- a:hover {
+button:hover {
   color: black;
   background:#f2f0f0;
   box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
   transition-delay: 0.1s;
+  
 }
 
-button4 {
-  background: none;
+button {
+ background: none;
 border: none;
 }
 
-.btn4 .b4 {
+.btn .b {
   position: absolute;
   display: block;
 }
 
-.btn4 .b4:nth-child(1) {
+.btn .b:nth-child(1) {
   top:0;
   left:-100%;
   width: 100%;
@@ -93,12 +184,12 @@ border: none;
   background: linear-gradient(90deg,transparent,white);  
 }
 
-.btn4:hover .b4:nth-child(1) {
+.btn:hover .b:nth-child(1) {
   left: 100%;
   transition: 1s;
 }
 
-.btn4 .b4:nth-child(3) {
+.btn .b:nth-child(3) {
   bottom:0;
   right :-100%;
   width: 100%;
@@ -106,13 +197,13 @@ border: none;
   background: linear-gradient(270deg,transparent,white);  
 }
 
-.btn4:hover .b4:nth-child(3) {
+.btn:hover .b:nth-child(3) {
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
 
-.btn4 .b4:nth-child(2) {
+.btn .b:nth-child(2) {
   top:0;
   right :0;
   width: 2px;
@@ -120,13 +211,13 @@ border: none;
   background: linear-gradient(180deg,transparent,white);  
 }
 
-.btn4:hover .b4:nth-child(2) {
+.btn:hover .b:nth-child(2) {
   top: 100%;
   transition: 1s;
   transition-delay: 0.25s;
 }
 
-.btn4 .b4:nth-child(4) {
+.btn .b:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -134,13 +225,11 @@ border: none;
   background: linear-gradient(360deg,transparent,white);  
 }
 
-.btn4:hover .b4:nth-child(4) {
+.btn:hover .b:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
 }
-
-
 
 
 /*  BOUTTON INSCRIPTION */
@@ -152,8 +241,9 @@ border: none;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 62%;
-  left: 23%;
+  top: 90%;
+  left: 90%;
+  width: 130px;
 }
 
 .btn2 {
@@ -246,8 +336,6 @@ border: none;
   transition: 1s;
   transition-delay: 0.75s;
 }
-
-
 
 
 /* BOUTTON SIGNALÉ */
@@ -367,17 +455,97 @@ border: none;
 
 
 
-/* Slide 3D */
 
+/* Titre du Jeu */
+
+.text-box {
+	font-family:poppins;
+	font-size:50px;
+	font-weight:600;
+	letter-spacing:10px;
+	display: flex;
+	position:absolute;
+	top: 8%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+
+}
+
+.text-box span {
+	color: #011d32;
+	text-transform: uppercase;
+	animation: animate 4s ease forwards infinite;
+	
+}
+
+.text-box span:nth-child(1) {
+	animation-delay: .1s;
+}
+
+.text-box span:nth-child(2) {
+	animation-delay: .2s;
+}
+
+.text-box span:nth-child(3) {
+	animation-delay: .3s;
+}
+
+.text-box span:nth-child(4) {
+	animation-delay: .4s;
+}
+
+.text-box span:nth-child(5) {
+	animation-delay: .5s;
+}
+
+.text-box span:nth-child(6) {
+	animation-delay: .6s;
+}
+
+.text-box span:nth-child(7) {
+	animation-delay: .7s;
+	letter-spacing:50px;
+}
+
+.text-box span:nth-child(8) {
+	animation-delay: .8s;
+}
+
+.text-box span:nth-child(9) {
+	animation-delay: .9s;
+}
+
+.text-box span:nth-child(10) {
+	animation-delay: 1s;
+}
+
+.text-box span:nth-child(11) {
+	animation-delay: 1s;
+}
+
+.text-box span:nth-child(12) {
+	animation-delay: 1s;
+}
+
+@keyframes animate {
+	0%, 100% {
+		text-shadow: 0 0 0 #fff;
+	}
+
+	50% {
+		text-shadow: 0 30px 25px #fff;
+	}
+}
+
+/*	slide 3D	*/
 
 .flip-box {
 	width: 300px;
 	height:160px;
-	border: 1px solid white;
-	perspective:500px;
+	border: ;
 	position: relative;
-	top: 20%;
-	left: 3%;
+	top: 30%;
+	left: 5%;
 	border: 5px solid aliceblue;
 
     border-image-outset: 0;
@@ -407,7 +575,7 @@ border-image-slice: 1;
 
 .flip-box-front {
 	background-image: url("images/confrontation.jpg");
-
+ 
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -424,21 +592,22 @@ border-image-slice: 1;
 }
 
 
-
 /*		*/
+  .main-head {
+  background: black;
+color: #ffffff;
+height: 5vh;
+display: flex;
+position: relative;
+  }
 
-.forme{
-  
-
-}
-
-.erreur {
-  
-  position: absolute;
-  top: 12%;
-  color: red;
-  left: 28%;
-}
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:25px;
+  }
 
   .secret {
     width: 40px;
@@ -446,16 +615,21 @@ height: 5vh;
 object-fit: cover;
   }
 
+  .nasa {
+	display: flex;
+justify-content: center;
+  }
 
-.nom {
-  display: flex;
-  
-  
-  position: absolute;
-  bottom: 34%;
-  flex-direction: column;
-  right: 50%;
-}
+	.usa {
+		border: 5px solid aliceblue;
+border-image: linear-gradient(to right, #141e30, white, #243b55);
+border-image-slice: 1;
+	width: 265px;
+	position: absolute;
+top: 30%;
+right: 80%;
+	}
+
 
   .logo {
   font-weight: normal;
@@ -466,175 +640,10 @@ padding-left: 42%;
   }
 
   .box {
-    width: 500px;
-padding: 40px;
+    width: 250px;
+padding: 30px;
 position: absolute;
-top: 50%;
-left: 50%; 
-transform: translate(-50%,-50%);
-background: #191919;
-text-align: center;
-background-color: rgba(0, 0, 0, 0.9);
-border: 5px solid aliceblue;
-border-image: linear-gradient(to right, #141e30, white, #243b55);
-border-image-slice: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 700px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-.image {
-  
-  display: flex;
-  justify-content: center;
-}
-.password {
-  display: flex;
-  position: absolute;
-  top: 76%;
-}
-
-
-.btn {
-  display: flex;
-  position: absolute;
-  top: 90%;
-  justify-content: space-around;
-  left: 70px;
-}
-
-.reset {
-  display: flex;
-  position: absolute;
-  top: 90%;
-  justify-content: space-around;
-  left: 356px;
-}
-
-.adresse {
-  display: flex;
-  position: absolute;
-  top: 64%;
-  right: 50%;
-}
-
-.blaze {
-  display: flex;
-  position: absolute;
-  right: 50%;
-  bottom: 60%;
-}
-
-.blaz {
-   position: absolute;
-  color: white;
-  left: 20%;
-  font-size: 18px;
-}
-
-.civilite {
-  position: absolute;
-  
-  left: 64%;
-  bottom: 445px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.sexe {
-  color:white;
-  display: flex;
-  position: relative;
-  left: 100%;
-  bottom: 15px;
-  
-}
-
-.C {
-  
-  color: white;
-  font-size: 18px;
-  width: 180px;
-  position: absolute;
-  bottom: 104px;
-  left: -60%;
-}
-
-
-
-  #homme {
-}
-
-.B_2 {
-   position: absolute;
-  color: white;
-  left: 48%;
-  font-size: 18px;
-   bottom: 80%;
-   width: 285px;
-}
-
-.box .B {
-   position: absolute;
-  color: white;
-  left: 13%;
-  font-size: 18px;
-}
-
-.box .A {
-  
-  position: absolute;
-  color: white;
-  left: 28%;
-  font-size: 18px;
-}
-
-.date {
-  position: absolute;
-  
-  right: 15%;
-  display: flex;
-  top: 57%;
-}
-
-.D {
-   position: absolute;
-  color: white;
-  font-size: 18px;
-   bottom: 140%;
-   width: 180%;
-   left: -40%;
-}
-
-.N {
-  color: white;
-  left: 16%;
-  font-size: 18px;
-  width: 180px;
-  position: absolute;
-}
-
-.N_2 {
-  color: white;
-  left: 16%;
-  font-size: 18px;
-  width: 180px;
-  position: absolute;
-  top: 49%;
-}
-
-
-  .inscription {
-  width: 250px;
-padding: 40px;
-position: absolute;
-top: 77%;
+top: 35%;
 left: 88%;
 transform: translate(-50%,-50%);
 background: #191919;
@@ -644,133 +653,254 @@ border: 5px solid aliceblue;
 border-image: linear-gradient(to right, #141e30, white, #243b55);
 border-image-slice: 1;
 padding-bottom: 45px;
+    height: 47%;
+}
+
+
+  .inscription {
+    width: 230px;
+    padding: 40px;
+position: absolute;
+top: 75%;
+left: 88%;
+transform: translate(-50%,-50%);
+background: #191919;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.65);
+border: 5px solid aliceblue;
+border-image: linear-gradient(to right, #141e30, white, #243b55);
+border-image-slice: 1;
+padding-bottom: 120px;
 
   }
 
   .inscrit {
 background: white;
 object-fit: cover;
-width: 6%;
+width: 11%;
 border: 0px solid white;
 border-radius: 35px;
 position: absolute;
-top:19%;
+left: 138px;
+top: 20%;
   }
 
-  .inscription button {
-     background: none;
-display: block;
-margin: 20px auto;
-text-align: center;
-border: 2px inset #243b55;
-padding: 14px 40px;
-outline: none;
-background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-background-size: 200%;
-color: white;
-cursor: pointer;
-transition: 0.4s ease-out;
-border-radius: 30px;
-margin: 80px 2px -25px 20%;
-  }
-
-  .inscription button:hover {
-    color: black;
-    background-position: 100%;
-    border-radius:30px;
-
-  }
+  
+  
 
   .box h1{
     color: white;
     text-transform: uppercase;
     font-weight: 500;
-	position: absolute;
-bottom: 85%;
   }
   .box input[type = "text"],.box input[type = "password"]{
+    border:0;
     background: none;
-    margin: 30px;
+    display: flex;
+    margin: 20px auto;
     text-align: center;
     border: 2px solid blue;
-    padding: 10px 0px;
+    padding: 15px 10px;
     width: 200px;
     outline: none;
     color: white;
     transition: 0.25s;
-    border-image: linear-gradient(to right, #141e30, white, #243b55);
+    border-image: linear-gradient(303deg, #141e30, white, #243b55);
     border-image-slice: 1;
     position: relative;
-    background:black;
+    top: 0%;
+  }
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus,
+  .box input[type = "text"]:valid,.box input[type = "password"]:valid 
+{
+
+    width: 235px;
+    border-color: rgb(255, 123, 35);
+  }
+  
+  svg{
+    background: white;
+    border-radius: 24px;
   }
 
-  .box input[type = "text"]:focus,.box input[type = "password"]:focus,
-   .box input[type = "text"]:valid,.box input[type = "password"]:valid
-{
-    width: 230px;
-    background: rgba(255,255,255,.1);
-    color:white;
+
+@media screen and (max-width:1310px) and (min-width:1000px) {
+    
+     body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .mdp {
+    
+  left: 31%;
+  top: 93%;
+  }
+  .boutton {
+    
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  
+  .box input[type="text"], .box input[type="password"] {
+    
+  top: 0%;
+  }
+  
+  .boutton2 {
+    
+  left: 87%;
+  }
+  
+  .btn2 {
+    
+  padding-right: 0;
+  }
+  
+  .flip-box {
+    width: 220px;
+    height: 117px;
+    position: absolute;
+    top:24%;
+    left: 2%;
+  }
+  
+  .main-head {
+    position: absolute;
+    top: 0%;
+  }
+  
+  .box {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    background: rgba(0,0,0,0.9);
+  
+    width: 400px;
+    height: 430px;
+  }
+  
+ 
+  .inscription {
+  width: 180px;
+padding: 40px;
+    padding-bottom: 40px;
+position: absolute;
+top: 72%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+padding-bottom: 25px;
+    x 0px;
+   position: absolute;
+  border: none;
+  background: none;
+  }
+  
+  
+  
+  .inscrit {
+    background: white;
+object-fit: cover;
+width: 8%;
+border: 0px solid white;
+border-radius: 35px;
+position: absolute;
+left: 17%;
+top: 35%;
   }
   
   
   .box button {
-    background: none;
-text-align: center;
-border: 2px inset #243b55;
-padding: 14px 40px;
-outline: none;
-background-image: linear-gradient(to right, transparent 50%, #141e30 50%, white, #243b55);
-background-size: 200%;
-color: white;
-cursor: pointer;
-transition: 0.4s ease-out;
-border-radius: 30px;
+    
+  width: 100%;
   }
-
-  .box button:hover{
-    color: black;
-    background-position: 100%;
-    border-radius:30px;
-  }
-
-  svg{
-    background: white;
-    border-radius: 24px;
-
 }
 
+@media screen and (max-width:1500px) and (min-width:1311px) {
+  body {
+    width: 10%;
+  }
+  
+  .flip-box {
+    width: 250px;
+    height: 132px;
+  }
+  
+  .mdp {
     
-@media screen and (max-width: 1600px) {
-      
-      .flip-box {
-        
-  width: 230px;
-  height: 122px;
-      }
-      
+  left: 17%;
+  }
   .main-head {
-    
-  position: absolute;
-  top: 0%;
+    position: absolute;
+    top: 0%;
   }
   
-  .boutton3 {
-    
-  left: 5%;
+  .box {
+    position: absolute;
+  width: 200px;
+  
   }
   
-  .boutton4 {
+  .box input[type="text"], .box input[type="password"] {
     
-  left: 86%;
+  padding: 10px 0px;
+  top: 2%;
+  }
+  
+  .box button {
+    
+  }
+  
+  .inscription {
+    width: 180px;
+    padding: 40px;
+position: absolute;
+top: 76%;
+left: 88%;
+transform: translate(-50%,-50%);
+background: #191919;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.65);
+border: 5px solid aliceblue;
+border-image: linear-gradient(to right, #141e30, white, #243b55);
+border-image-slice: 1;
+padding-bottom: 120px;
+
+  }
+
+  .boutton {
+    
+  }
+  
+  .boutton2 {
+    
+  }
+  
+  
+  .inscrit {
+background: white;
+object-fit: cover;
+width: 12%;
+border: 0px solid white;
+border-radius: 35px;
+position: absolute;
+left: 44%;
+top: 20%;
+  }
+
+ 
+
+@media screen and (max-width: 1700px) and (min-width:1500px) {
+  body {
+    width: 20%;
+    
+    
   }
   
 }
-
-
-
-
-
-
 
 
 

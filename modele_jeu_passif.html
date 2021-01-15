@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html>
-       <head>
-           <title>Jeu Passif</title>
-           
-           <meta http-equiv="refresh" content="3 ;url=/req_attendre_tour?pseudo={pseudo}">
-		   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	   	   <link rel="stylesheet" type="text/css" href="modele_jeu_passif.css">
-
-	   </head>
-    <body>
+	<head>
+		<title>Jeu Passif</title>
+		<meta http-equiv="refresh" content="3;url=/req_attendre_tour?pseudo={pseudo}">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="modele_jeu_passif.css">
+	</head>
+	<body>
+		<h1 class="titre_snowden">La Quete de Snowden<h1>
 		<div class = "positionPlateau">
-         {plateau}
-		 <div class = "couleurTexte">
-		<p>{DernierLancer}  {des}</p>
+			{plateau}
 		</div>
-		<div>
-		 <p>{Histoire}  {script}</p>
-		 </div>
-		 <div class = "positionLegende">
-		  <h1>Legende  </h1>
-         <h2>Couleurs des pions :</h2>
-         <p style="color:red;">Rouge : Snowden</p>
-         <p style="color:black;">Noir : Corbin</p>
-         <p style="color:rgb(167, 19, 159) ;">Rose : Lindsay</p>
-         <p style="color:green;">Vert : Agent Russes</p>
-		 </div>
-		  
-		<!--
+		<div class = "couleurTexte">
+			<div class="historique">
+				<p class="historique_script">{Histoire}  {script}</p>
+			</div>
+			<p class="lencer_des">{DernierLancer}  {des}</p>
+		</div>
+		<div class = "positionLegende">
+			<h2 class="titre_legende">Legende</h2>
+			<h2 class="titre_h2">Couleurs des pions :</h2>
+			<div class="rouge"></div><p class="texte_legende_rouge" style="color:red;"> : Snowden</p>
+			<div class="noir"></div><p class="texte_legende_noir" style="color:black;"> : Corbin</p>
+			<div class="rose"></div><p class="texte_legende_rose" style="color:rgb(167, 19, 159) ;"> : Lindsay</p>
+			<div class="vert"></div><p class="texte_legende_vert" style="color:green;"> : Agent Russes</p>
+		</div>
 		<section>
-                <div class="pattern">
-                    <div class="face face1"></div>
-                    <div class="face face2"></div>
-                </div>
-                <div class="titre">
-                    <h1>La Pièce Maitresse</h1>
-                </div>
-		 </section> 
-		-- >
+			<div class="ctn-btns-show-modal">
+				<button class="btn-show-modal" data-modal="#modal-card"><a href="/req_lancer_des?pseudo={pseudo}">
+					Lancer Des
+				</a></button>
+			</div>
+        </section>
 	</body>
 </html>

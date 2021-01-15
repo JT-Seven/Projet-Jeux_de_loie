@@ -11,6 +11,7 @@ const trait = function (req, res, query) {
 	
 	marqueurs = {};
 	marqueurs.pseudo = "";
+	marqueurs.erreur = "";
 	marqueurs.nom = "";
 	marqueurs.email = "";
 	marqueurs.confirmer = "";

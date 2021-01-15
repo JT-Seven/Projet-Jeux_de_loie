@@ -8,13 +8,17 @@ const trait = function(req, res, query) {
 	let contenu;
 	let listeMembres;
 	let i;
-	let trouver;
+	let trouve;
 	let marqueurs;
+	let contenu_contacte;
+	let listeContacte;
 
-
-		contenu = fs.readFileSync('contacte.json','utf-8');
+		contenu = fs.readFileSync('membres.json','utf-8');
 		listeMembres = JSON.parse(contenu);
 		
+		contenu_contacte = fs.readFileSync('contacte.json','utf-8');
+		listeContacte = JSON.parse(contenu_contacte);
+
 		trouve = false;
 		i = 0;
 		while (i < listeMembres.length && trouve === false) {
@@ -38,17 +42,15 @@ const trait = function(req, res, query) {
 			
 			marqueurs = {},
 			marqueurs.pseudo = query.pseudo;
-			marqueurs.erreur = "";		
-			marqueurs.nom = query.pseudo;
-			marqueurs.email = query.pseudo;
-			marqueurs.message = query.pseudo;
-			marqueurs.confirmer = "Votre message a bien été envoyer nous vous recontacterons ultérieurement";
-			listeMembres[listeMembres.length] = marqueurs;
+			marqueurs.nom = query.nom;
+			marqueurs.email = query.email;
+			marqueurs.message = query.message;
+			listeContacte[listeContacte.length] = marqueurs;
 			page = page.supplant(marqueurs);
 
-			contenu = JSON.stringify(listeMembres);
+			contenu_contacte = JSON.stringify(listeContacte);
 
-        	fs.writeFileSync("contacte.json", contenu , 'utf-8');
+        	fs.writeFileSync("contacte.json", contenu_contacte , 'utf-8');
 		}
 
 		if (trouve === false) {
@@ -57,9 +59,9 @@ const trait = function(req, res, query) {
 			
 			marqueurs = {};
 			marqueurs.pseudo = query.pseudo;
-            marqueurs.nom = query.pseudo;
-            marqueurs.email = query.pseudo;
-            marqueurs.message = query.pseudo;
+            marqueurs.nom = query.nom;
+            marqueurs.email = query.email;
+            marqueurs.message = query.message;
             marqueurs.confirmer = "";
 			marqueurs.erreur = "ERREUR : ce compte n'existe pas"
 			page = page.supplant(marqueurs);
@@ -71,16 +73,16 @@ const trait = function(req, res, query) {
 			marqueurs = {},
             marqueurs.pseudo = query.pseudo;
             marqueurs.erreur = "";
-            marqueurs.nom = query.pseudo;
-            marqueurs.email = query.pseudo;
-            marqueurs.message = query.pseudo;
-            marqueurs.confirmer = "";
+            marqueurs.nom = query.nom;
+            marqueurs.email = query.email;
+            marqueurs.message = query.message;
+            marqueurs.confirmer = "Votre message a bien été envoyer nous vous recontacterons ultérieurement";
 			page = page.supplant(marqueurs);
-
+		}
 			res.writeHead(200, { 'Content-Type': 'text/html' });
 			res.write(page);
 			res.end();
-		}
+		
 };
 
 module.exports = trait;

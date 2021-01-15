@@ -47,6 +47,10 @@ const trait = function (req, res, query) {
 		if (listeMembres[i].number === query.number) {
 				trouve = true;
 		}
+		if (listeMembres[i].nom === query.nom) {
+                trouve = true;
+        }
+
 		i++;
 	}
 
@@ -58,6 +62,7 @@ const trait = function (req, res, query) {
 		nouveauMembre.password = query.password;
 		nouveauMembre.password2 = query.password2;
 		nouveauMembre.adresse = query.adresse;
+		nouveauMembre.nom = query.nom;
 		nouveauMembre.age = query.age;
 		nouveauMembre.number = query.number;
 		listeMembres[listeMembres.length] = nouveauMembre;

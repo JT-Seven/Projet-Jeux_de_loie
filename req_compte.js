@@ -24,16 +24,6 @@ const trait = function (req, res, query) {
         }
         i++;
     }
-
-        
-		page = fs.readFileSync('modele_compte.html', 'utf-8');
-
-        marqueurs = {};
-        marqueurs.erreur = "";
-        marqueurs.pseudo = query.pseudo;
-        marqueurs.password = query.password;
-        page = page.supplant(marqueurs);
-
         if(query.nouveau_mdp === query.confirmation_mdp) {
             listeMembres[i-1].password = query.confirmation_mdp;
 			

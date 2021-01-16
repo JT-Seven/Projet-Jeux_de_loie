@@ -13,6 +13,7 @@ const trait = function(req, res, query) {
 	let contenu_contacte;
 	let listeContacte;
 
+// On lit le compte existant.
 		contenu = fs.readFileSync('membres.json','utf-8');
 		listeMembres = JSON.parse(contenu);
 		
@@ -23,6 +24,7 @@ const trait = function(req, res, query) {
 		i = 0;
 		while (i < listeMembres.length && trouve === false) {
 			if (listeMembres[i].pseudo === query.pseudo) {
+				trouve = true;
 			}
 			if (listeMembres[i].nom === query.nom) {
 				trouve = true;
@@ -30,12 +32,10 @@ const trait = function(req, res, query) {
 			if (listeMembres[i].email === query.email) {
             	trouve = true;
 			}
-			if (listeMembres[i].message === query.message) {
-                trouve = true;
- 	       }
+
 			i++;
 		}
-		
+		//On enregistre les information ainsi que le message entrer par l'utilsateur.
 		if (trouve === true) {
 			
 			page = fs.readFileSync('modele_contacter.html','utf-8');
@@ -49,10 +49,9 @@ const trait = function(req, res, query) {
 			page = page.supplant(marqueurs);
 
 			contenu_contacte = JSON.stringify(listeContacte);
-
         	fs.writeFileSync("contacte.json", contenu_contacte , 'utf-8');
 		}
-
+//On affiche un mesage d'erreur si le compte n'existe pas .
 		if (trouve === false) {
 			
 			page = fs.readFileSync('modele_contacter.html','utf-8');

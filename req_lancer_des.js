@@ -100,7 +100,13 @@ const trait = function (req, res, query) {
 	marqueurs.des = "";
 	marqueurs.Histoire = "";
 	marqueurs.DernierLancer = "";
-	
+	marqueurs.Role = "";
+	marqueurs.role = "";
+	marqueurs.Position = "";
+	marqueurs.position = "";
+
+
+
 
 	page = page.supplant(marqueurs);
 

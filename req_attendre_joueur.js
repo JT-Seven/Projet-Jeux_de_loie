@@ -55,6 +55,10 @@ const traits = function(req, res, query) {
 		marqueurs.Histoire = "";
 		marqueurs.DernierLancer = "";
 		marqueurs.des = "";
+		marqueurs.Role = "";
+		marqueurs.Position = ""
+		marqueurs.role = "";
+		marqueurs.position = "";
 
 	
 	}

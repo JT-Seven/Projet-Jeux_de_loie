@@ -34,6 +34,7 @@ const traits = function (req, res, query) {
     marqueurs.plateau = afficher_plateau(partie);
 	//trouver le pseudo du joueur sur la page modele_jeu_actif.html
     if (partie.joueurs[partie.actif].pseudo === query.pseudo) {
+        marqueurs.des = partie.joueurs[partie.actif].dernierNb;
 		marqueurs.role = partie.joueurs[partie.actif].role;
 		marqueurs.position = partie.joueurs[partie.actif].position;
 		marqueurs.Position = "Position :";
@@ -133,6 +134,10 @@ const traits = function (req, res, query) {
 			}
     marqueurs.Histoire = "Histoire :";
 	marqueurs.DernierLancer = "Dernier lancer :";
+        marqueurs.role = "";
+        marqueurs.position = "";
+        marqueurs.Position = "";
+        marqueurs.Role = "";
 	
 
 		page = fs.readFileSync("modele_jeu_passif.html", "utf-8");

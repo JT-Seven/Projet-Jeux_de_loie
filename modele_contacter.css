@@ -1,20 +1,29 @@
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  
-    height: 100vh;
-    width: 100%;
-    background-position: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  height: 100vh;
+  width: 100%;
+  background-position: center;
 }
 
 .titre {
-  
+
   position: relative;
   font-size: 2rem;
 }
 
+.marqueurs {
 
+  width: 62%;
+  position: absolute;
+  top: 3%;
+  font-size: 20px;
+  white-space: nowrap;
+  left: 14%;
+  color: #00ff0a;
+}
 
 section {
   position:relative;
@@ -58,7 +67,7 @@ section .container .contactinfo {
   display: flex;
   justify-content: space-between;
   flex-flow: column;
-  box-shadow: 0 20px 20px rgba(0,0,0,0.2);  
+  box-shadow: 0 20px 20px rgba(0,0,0,0.2);
   transform: translate(-50%,-50%);
   top: 45%;
   left: 10%;
@@ -68,7 +77,7 @@ section .container .contactinfo {
 section .container .contactinfo h2 {
   color:#ffff;
   font-size: 24px;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 section .container .contactinfo .info {
@@ -101,7 +110,7 @@ section .container .contactinfo .info li span:nth-child(2) {
   margin-left: 10px;
   font-weight: 300;
   opacity: 0.5;
-  
+
   margin: ;
   box-sizing: border-box;
   text-align: initial;
@@ -111,8 +120,8 @@ section .container .contactinfo .info li span:nth-child(2) {
 section .container .contactinfo  .info li:hover span:nth-child(1) img,
 section .container .contactinfo  .info li:hover span:nth-child(2) {
   opacity: 1;
-}  
- 
+}
+
 
 section .container .contactForm {
   position: absolute;
@@ -127,7 +136,7 @@ section .container .contactForm {
   top: 45%;
   left: 50%;
 }
-  
+
 section .container .contactinfo .info li:hover span:nth-chil(1) img,
 section .container .contactinfo .info li:hover span:nth-chil(1) img {
   opacity: 1;
@@ -153,7 +162,7 @@ section .container .contactinfo .sci li a {
 
 
 
- /* FORMULAIRE */
+/* FORMULAIRE */
 
 
 .container .row100 {
@@ -161,12 +170,12 @@ section .container .contactinfo .sci li a {
   width: 40%;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  
+
   left: 10%;
   background: #00000036;
   top: 12%;
 }
-  
+
 
 .container .row100 .col {
   position: relative;
@@ -182,9 +191,9 @@ section .container .contactinfo .sci li a {
   width: 100%;
   height: 40px;
   color: #fff;
-  
+
 }
-  
+
 .container .row100 .inputBox input,
 .container .row100 .inputBox.textarea textarea {
   position: absolute;
@@ -196,9 +205,9 @@ section .container .contactinfo .sci li a {
   padding: 0 10px;
   z-index: 1;
   color: #000;
-  
+
 }
-  
+
 .container .row100 .inputBox .text {
   position: absolute;
   top: 0;
@@ -209,10 +218,10 @@ section .container .contactinfo .sci li a {
   display: block;
   transition: 0.5s;
   pointer-events: none;
-  
+
 }
 
-.container .row100 .inputBox input:focus + .text, 
+.container .row100 .inputBox input:focus + .text,
 .container .row100 .inputBox input:valid + .text {
   top: -35px;
   left: -10px;
@@ -230,9 +239,9 @@ section .container .contactinfo .sci li a {
   pointer-events: none;
 }
 
-.container .row100 .inputBox input:focus ~ .line, 
+.container .row100 .inputBox input:focus ~ .line,
 .container .row100 .inputBox input:valid ~ .line {
-  height: 100%; 
+  height: 100%;
 }
 
 .container .row100 .inputBox.textarea {
@@ -245,18 +254,18 @@ section .container .contactinfo .sci li a {
 .container .row100 .inputBox.textarea textarea {
   height: 100%;
   resize: none;
-} 
+}
 
 
-.container .row100 .inputBox textarea:focus + .text, 
+.container .row100 .inputBox textarea:focus + .text,
 .container .row100 .inputBox textarea:valid + .text {
   top: -35px;
   left: -10px;
 }
 
-.container .row100 .inputBox textarea:focus ~ .line, 
+.container .row100 .inputBox textarea:focus ~ .line,
 .container .row100 .inputBox textarea:valid ~ .line {
-  height: 100%; 
+  height: 100%;
 }
 
 
@@ -264,7 +273,7 @@ section .container .contactinfo .sci li a {
 
 
 
-  
+
 /*BOUTTON */
 
 .boutton {
@@ -307,12 +316,12 @@ button:hover {
   background:#fff;
   box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
   transition-delay: 0.1s;
-  
+
 }
 
 button {
- background: none;
-border: none;
+  background: none;
+  border: none;
 }
 
 .btn .b {
@@ -325,7 +334,7 @@ border: none;
   left:-100%;
   width: 100%;
   height:2px;
-  background: linear-gradient(90deg,transparent,white);  
+  background: linear-gradient(90deg,transparent,white);
 }
 
 .btn:hover .b:nth-child(1) {
@@ -338,7 +347,7 @@ border: none;
   right :-100%;
   width: 100%;
   height:2px;
-  background: linear-gradient(270deg,transparent,white);  
+  background: linear-gradient(270deg,transparent,white);
 }
 
 .btn:hover .b:nth-child(3) {
@@ -352,7 +361,7 @@ border: none;
   right :0;
   width: 2px;
   height:100%;
-  background: linear-gradient(180deg,transparent,white);  
+  background: linear-gradient(180deg,transparent,white);
 }
 
 .btn:hover .b:nth-child(2) {
@@ -366,7 +375,7 @@ border: none;
   left: 0;
   width: 2px;
   height:100%;
-  background: linear-gradient(360deg,transparent,white);  
+  background: linear-gradient(360deg,transparent,white);
 }
 
 .btn:hover .b:nth-child(4) {
@@ -411,7 +420,7 @@ border: none;
 }
 
 
- a:hover {
+a:hover {
   box-shadow: 0 0 10px black, 0 0 10px black, 0 0 20px black;
   transition-delay: 0.1s;
 }
@@ -428,7 +437,7 @@ border: none;
   left:-100%;
   width: 100%;
   height:2px;
-  background: linear-gradient(90deg,transparent,#f0efef);  
+  background: linear-gradient(90deg,transparent,#f0efef);
 }
 
 .btn2:hover .b2:nth-child(1) {
@@ -441,7 +450,7 @@ border: none;
   right :-100%;
   width: 100%;
   height:2px;
-  background: linear-gradient(270deg,transparent,#f7f3f3);  
+  background: linear-gradient(270deg,transparent,#f7f3f3);
 }
 
 .btn2:hover .b2:nth-child(3) {
@@ -455,7 +464,7 @@ border: none;
   right :0;
   width: 2px;
   height:100%;
-  background: linear-gradient(180deg,transparent,#f2ecec);  
+  background: linear-gradient(180deg,transparent,#f2ecec);
 }
 
 .btn2:hover .b2:nth-child(2) {
@@ -469,7 +478,7 @@ border: none;
   left: 0;
   width: 2px;
   height:100%;
-  background: linear-gradient(360deg,transparent,#f2efef);  
+  background: linear-gradient(360deg,transparent,#f2efef);
 }
 
 .btn2:hover .b2:nth-child(4) {
@@ -497,7 +506,7 @@ border: none;
 .circle {
   width: 110px;
   background: url("images/logo_agent.jpeg");
-  
+
   height: 110px;
   background-size: 100% 100%;
   border-radius: 50%;
@@ -533,7 +542,7 @@ border: none;
   background:none;
   position: relative;
   z-index: 1;
-  
+
   bottom: 0%;
   padding-bottom: 160px;
 }
@@ -580,7 +589,7 @@ border: none;
 }
 
 .slide-content {
-  
+
   width: 100%;
   height: 100%;
 }
@@ -594,7 +603,7 @@ border: none;
 }
 
 #controls label {
-  transition: opacity 0.2s ease-out; 
+  transition: opacity 0.2s ease-out;
   width: 50px;
   height: 50px;
   opacity: .4;
@@ -628,7 +637,7 @@ border: none;
   float: left;
   margin: 0 0 0 -50px;
   display: block;
-  
+
 }
 
 
@@ -658,64 +667,62 @@ border: none;
 
 
 @media screen and (max-width:1310px) and (min-width:1000px) {
-    
-     body {
+
+  body {
     width: 100vw;
     height: 100vh;
   }
-  
+
   .boutton {
-    
-  position: absolute;
-  top: 68%;
-  left: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
+
+    position: absolute;
+    top: 68%;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
   }
-  
-  
+
+
   .boutton2 {
-    
-  width: 75%;
-  left: 13%;
-  top: 15%;
+
+    width: 75%;
+    left: 13%;
+    top: 15%;
   }
-  
+
   .btn2 {
-    
-  padding-right: 0;
+
+    padding-right: 0;
   }
-  
-  
+
+
 }
 
 @media screen and (max-width:1500px) and (min-width:1311px) {
   body {
     width: 10%;
   }
-  
+
   .boutton {
-    
-  left: 8%;
-  width: 85%;
+
+    left: 8%;
+    width: 85%;
   }
-  
+
   .boutton2 {
-    
-  left: 17%;
+
+    left: 17%;
   }
-  
-  
- 
-@media screen and (max-width: 1700px) and (min-width:1500px) {
-  body {
-    width: 20%;
-  }
-  
-}
 
 
+
+  @media screen and (max-width: 1700px) and (min-width:1500px) {
+    body {
+      width: 20%;
+    }
+
+  }
 
 

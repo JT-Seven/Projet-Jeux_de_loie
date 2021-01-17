@@ -23,14 +23,8 @@ const trait = function(req, res, query) {
 		trouve = false;
 		i = 0;
 		while (i < listeMembres.length && trouve === false) {
-			if (listeMembres[i].pseudo === query.pseudo) {
+			if (listeMembres[i].pseudo === query.pseudo && listeMembres[i].nom === query.nom && listeMembres[i].adresse === query.email) {
 				trouve = true;
-			}
-			if (listeMembres[i].nom === query.nom) {
-				trouve = true;
-			}
-			if (listeMembres[i].adresse === query.email) {
-            	trouve = true;
 			}
 
 			i++;

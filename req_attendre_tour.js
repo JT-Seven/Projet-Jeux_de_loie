@@ -125,20 +125,14 @@ const traits = function (req, res, query) {
                         }else if(partie.joueurs[i].role === "LesRusses"){
                             marqueurs.script = "Les Russes echouent au trucquage des elections presidentielle 2020! ";
                         }
-						break;
-					default:
-						marqueurs.script = "";
-						break;
-					}
-				}
-			}
-    marqueurs.Histoire = "Histoire :";
-	marqueurs.DernierLancer = "Dernier lancer :";
-        marqueurs.role = "";
-        marqueurs.position = "";
-        marqueurs.Position = "";
-        marqueurs.Role = "";
-	
+                        break;
+                    default:
+                        marqueurs.script = "";
+                        break;
+                }
+            }
+        }
+
 
 		page = fs.readFileSync("modele_jeu_passif.html", "utf-8");
     }   

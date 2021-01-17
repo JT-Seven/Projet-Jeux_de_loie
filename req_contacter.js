@@ -29,7 +29,7 @@ const trait = function(req, res, query) {
 			if (listeMembres[i].nom === query.nom) {
 				trouve = true;
 			}
-			if (listeMembres[i].email === query.email) {
+			if (listeMembres[i].adresse === query.email) {
             	trouve = true;
 			}
 
@@ -40,7 +40,7 @@ const trait = function(req, res, query) {
 			
 			page = fs.readFileSync('modele_contacter.html','utf-8');
 			
-			marqueurs = {},
+			marqueurs = {}
 			marqueurs.pseudo = query.pseudo;
 			marqueurs.nom = query.nom;
 			marqueurs.email = query.email;

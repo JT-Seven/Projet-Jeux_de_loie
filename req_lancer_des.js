@@ -25,6 +25,9 @@ const trait = function (req, res, query) {
 		//on ajoute la valeur de lancer de des a la position du joueur
 		position = position + random;
 		switch (position) {
+			case 0:
+				partie.joueurs[partie.actif].script = 0;
+				break;
 			case 58:
 				//case tete de mort, position du joueur est == a 1
 				partie.joueurs[partie.actif].position = 1;
@@ -61,7 +64,7 @@ const trait = function (req, res, query) {
 				break;
 			default: 
 				partie.joueurs[partie.actif].position = position;
-				partie.joueurs[partie.actif].script = 0;
+				partie.joueurs[partie.actif].script = -1;
 				break;
 		}
 		//pour memoriser le dernier lancer de des

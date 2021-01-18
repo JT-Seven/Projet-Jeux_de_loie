@@ -76,12 +76,16 @@ const trait = function (req, res, query) {
 
 	if (position > 63) {
 		partie.victoire = true;
-		partie.actif = (partie.actif + 1) % partie.joueurs.length;
 		contenu = JSON.stringify(partie);
 		fs.writeFileSync("partie.json", contenu, "utf-8");
 
-		page = fs.readFileSync("./modele_gagne.html", "utf-8");
+		marqueurs = {};
+		marqueurs.pseudo = query.pseudo;
+		marqueurs.role = partie.joueurs[partie.actif].role
+		partie.actif = (partie.actif + 1) % partie.joueurs.length;
 
+		page = fs.readFileSync("./modele_gagne.html", "utf-8");
+		page = page.supplant(marqueurs)
 		res.writeHead(200, { "Content-Type": "text/html" });
 		res.write(page);
 		res.end();

@@ -1,120 +1,149 @@
 
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url(images/fond_g_p.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: cover;
-  background-position-y: -100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/fond_g_p.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-position-y: -100px;
 }
+
+
 
 .container {
-  max-width: 1000px;
-  margin: 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  position: absolute;
-  top: 10%;
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+    top: 10%;
 
-  left: 50%;
+
+
+    left: 50%;
 }
+
+
 
 .card {
-  position: absolute;
-  margin: 20px 0;
-  width: 300px;
-  height: 400px;
-  background: #fff;
-  transform-style: preserve-3d;
-  transform: perspective(2000px);
-  transition: 1s;
-  box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
-  transform: translate(0%,-20%);
+    position: absolute;
+    margin: 20px 0;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+    transform: translate(0%,-20%);
 }
+
+
 
 
 
 
 .card:hover {
-  transform: perspective(2000px) rotate(-10deg);
-  box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
-  z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+    z-index: 1000;
+
+
 
 }
+
+
 
 .card .imgBox  {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border 1px solid #000;
-  box-sizing: border-box;
-  transform-origin: left;
-  z-index: 1;
-  transition: 1s;
-  background-position: center;
-  background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+    background-position: center;
+    background-size: cover;
+
+
 
 }
+
+
 
 .card .imgBox img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
 
 }
+
+
 
 .card:hover .imgBox  {
-  transform: rotateY(-135deg);
+    transform: rotateY(-135deg);
+
+
 
 }
+
+
 
 .card .details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  padding: 20px;
-  color:white;
-  background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    color:white;
+    background: rgba(0,0,0,0.5);
 }
+
+
 
 .card .imgBox_2 {
-position: absolute;
-width: 100%;
-height: 100%;
-box-sizing: border-box;
-transform-origin: lef;
-z-index: ;
-transition: 1s;
-backface-visibility: hidden;
-   background: url(images/Anonymous.jpg);
-  background-position: center;
-  background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform-origin: lef;
+    z-index: ;
+    transition: 1s;
+    backface-visibility: hidden;
+    background: url(images/Anonymous.jpg);
+    background-position: center;
+    background-size: cover;
 }
+
+
 
 .card .fond_noir {
-  
-  width: 300px;
-  height: 30px;
-  background: #fdfcfc;
-  position: absolute;
-  top: 370px;
-  left: 0%;
-  z-index: 2;
+
+    width: 300px;
+    height: 30px;
+    background: #fdfcfc;
+    position: absolute;
+    top: 370px;
+    left: 0%;
+    z-index: 2;
 }
-
-
-
-
-
-
+.boutton{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70vh;
+    width: 100vh;
+}

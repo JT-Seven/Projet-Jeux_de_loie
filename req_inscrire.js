@@ -50,6 +50,9 @@ const trait = function (req, res, query) {
 		if (listeMembres[i].nom === query.nom) {
                 trouve = true;
         }
+	/*	if (listeMembres[i].reponse === query.reponse) {
+                trouve = true;
+        }*/
 
 		i++;
 	}
@@ -93,6 +96,8 @@ const trait = function (req, res, query) {
         nouveauMembre.age = query.age;
         nouveauMembre.erreur = "";
         nouveauMembre.number = query.number;
+       // nouveauMembre.reponse = query.reponse;
+       // nouveauMembre.question = query.question;
     	page = page.supplant(nouveauMembre);
         listeMembres[listeMembres.length] = nouveauMembre;
 
@@ -105,20 +110,21 @@ const trait = function (req, res, query) {
 
         nouveauMembre = {};
         nouveauMembre.pseudo = query.pseudo;
-        nouveauMembre.password = query.password;
+        nouveauMembre.password = "";
         nouveauMembre.adresse = query.adresse;
-        nouveauMembre.password2 = query.password2;
+        nouveauMembre.password2 = "";
         nouveauMembre.erreur = "ERREUR : Votre nouveau mot de passe et la confirmation du nouveau mot de passe ne sont pas cohérent !";
         nouveauMembre.nom = query.nom;
         nouveauMembre.age = query.age;
         nouveauMembre.number = query.number;
+       // nouveauMembre.reponse = query.reponse;
     	page = page.supplant(nouveauMembre);
 	}
 
 
-	res.writeHead(200, { 'Content-Type': 'text/html' });
-	res.write(page);
-	res.end();
+		res.writeHead(200, { 'Content-Type': 'text/html' });
+		res.write(page);
+		res.end();
 };
 
 //---------------------------------------------------------------------------

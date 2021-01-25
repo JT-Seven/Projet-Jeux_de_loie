@@ -96,8 +96,9 @@ const trait = function (req, res, query) {
         nouveauMembre.age = query.age;
         nouveauMembre.erreur = "";
         nouveauMembre.number = query.number;
-       // nouveauMembre.reponse = query.reponse;
-       // nouveauMembre.question = query.question;
+		nouveauMembre.question = query.selection_question;
+		nouveauMembre.reponse = query.reponse;
+
     	page = page.supplant(nouveauMembre);
         listeMembres[listeMembres.length] = nouveauMembre;
 

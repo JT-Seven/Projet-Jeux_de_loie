@@ -62,6 +62,24 @@
 						<div class="reset">
 							<button type="reset" name="effacer" value="Effacer">Effacer</button>
 						</div>
+			<div class="container_q_r">
+				<h2 class="titre_question">Question secrète</h2>
+				<div class="erreur_secrete">
+					{erreur_secrete}
+				</div>
+				<div class="confirmation_secrete">
+					{confirmation_secrete}
+				</div>
+				<select class="select" name="selection_question">
+					<option class="question" name="question" value="Comment vos amis vous appellent ils ?">Comment vos amis vous appellent ils ?</option>
+					<option class="question" name="question" value="Quel est votre sport préféré ?">Quel est votre sport préféré ?</option>
+					<option class="question" name="question" value="Quel est votre instrument de musique ?">Quel est votre instrument de musique ?</option>
+					<option class="question" name="question" value="Quel est le nom de votre animal de compagnie ?">Quel est le nom de votre animal de compagnie ?</option>
+					<option class="question" name="question" value="Votre équipe de foot préféré ?">Votre équipe de foot préféré ?</option>
+					<input class="input_reponse" type="text" name="reponse" value="" required="" placeholder="Ecrivez votre réponse...">
+				</select>
+
+			</div>
 				</form>
 				<div class="boutton3">
 					<a href="req_afficher_signaler" class="btn3">
@@ -85,32 +103,6 @@
                 	<input type="hidden" name="signaler" value="{pseudo}">
             	</form>
 		</div>
-		<form class="container_q_r" action="req_question_secrete" method="GET">
-			<h2 class="titre_question">Question secrète</h2>	
-				<div class="erreur_secrete">
-					{erreur_secrete}
-				</div>
-				<div class="confirmation_secrete">
-					{confirmation_secrete}
-				</div>
-				<select class="select" name="selection_question">
-					<option class="question" name="question" value="{question}">Comment vos amis vous appellent ils ?</option>
-					<option class="question" name="question" value="{question}">Quel est votre sport préféré ?</option>			
-					<option class="question" name="question" value="{question}">Quel est votre instrument de musique ?</option>
-					<option class="question" name="question" value="{question}">Quel est le nom de votre animal de compagnie ?</option>
-					<option class="question" name="question" value="{question}">Votre équipe de foot préféré ?</option>
-					<input class="input_reponse" type="text" name="pseudo" value="{pseudo}" required="" placeholder="Réecrivez votre Nom d'utilisateur">
-					<input class="input_reponse" type="text" name="reponse" value="{reponse}" required="" placeholder="Ecrivez votre réponse...">
-				</select>
-				<div class="boutton5">
-                    <a href="req_question_secrete" class="btn5">
-                        <span class="b5"></span>
-                        <span class="b5"></span>
-                        <span class="b5"></span>
-                        <span class="b5"></span>
-                        Valider
-                    </a>
-                </div>
-		</form>
+
 	</body>
 </html>

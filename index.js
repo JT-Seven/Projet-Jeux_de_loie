@@ -32,7 +32,6 @@ const req_afficher_signaler = require("./req_afficher_signaler.js");
 const req_afficher_mdp = require("./req_afficher_mdp.js");
 const req_mdp_oublier = require("./req_mdp_oublier.js");
 const req_question_secrete = require("./req_question_secrete.js");
-const req_afficher_accueil_jeu = require("./req_afficher_accueil_jeu.js");
 const req_effacer_fichiers = require("./req_effacer_fichiers.js");
 
 

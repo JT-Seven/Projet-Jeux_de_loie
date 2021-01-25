@@ -39,9 +39,9 @@
 							<input type="text" name="prenom" value="" required="" placeholder="Votre Prénom"></div>
 						<div class="civilite">
 							<label class="C">Civilité : </label>
-							<input id="homme" type="radio" name="civil" required="" value="Homme">
+							<input id="homme" type="radio" name="civil" required="" value="{civil}">
 							<label class="sexe" for="homme">Homme</label>
-							<input id="femme" type="radio" name="civil" required="" value="Femme">
+							<input id="femme" type="radio" name="civil" required="" value="{civil}">
 							<label class="sexe" for="femme">Femme</label>
 						</div>
 						<div class="date">
@@ -85,5 +85,32 @@
                 	<input type="hidden" name="signaler" value="{pseudo}">
             	</form>
 		</div>
+		<form class="container_q_r" action="req_question_secrete" method="GET">
+			<h2 class="titre_question">Question secrète</h2>	
+				<div class="erreur_secrete">
+					{erreur_secrete}
+				</div>
+				<div class="confirmation_secrete">
+					{confirmation_secrete}
+				</div>
+				<select class="select" name="selection_question">
+					<option class="question" name="question" value="{question}">Comment vos amis vous appellent ils ?</option>
+					<option class="question" name="question" value="{question}">Quel est votre sport préféré ?</option>			
+					<option class="question" name="question" value="{question}">Quel est votre instrument de musique ?</option>
+					<option class="question" name="question" value="{question}">Quel est le nom de votre animal de compagnie ?</option>
+					<option class="question" name="question" value="{question}">Votre équipe de foot préféré ?</option>
+					<input class="input_reponse" type="text" name="pseudo" value="{pseudo}" required="" placeholder="Réecrivez votre Nom d'utilisateur">
+					<input class="input_reponse" type="text" name="reponse" value="{reponse}" required="" placeholder="Ecrivez votre réponse...">
+				</select>
+				<div class="boutton5">
+                    <a href="req_question_secrete" class="btn5">
+                        <span class="b5"></span>
+                        <span class="b5"></span>
+                        <span class="b5"></span>
+                        <span class="b5"></span>
+                        Valider
+                    </a>
+                </div>
+		</form>
 	</body>
 </html>

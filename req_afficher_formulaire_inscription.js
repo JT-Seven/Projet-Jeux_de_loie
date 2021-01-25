@@ -30,7 +30,11 @@ const trait = function (req, res, query) {
 	marqueurs.nom = "";
 	marqueurs.adresse = "";
 	marqueurs.password = "";
-
+	marqueurs.reponse = "";
+	marqueurs.question = "";
+	marqueurs.confirmation_secrete = "";
+	marqueurs.erreur_secrete = "";
+	
 	page = page.supplant(marqueurs);
 
 	res.writeHead(200, { 'Content-Type': 'text/html' });

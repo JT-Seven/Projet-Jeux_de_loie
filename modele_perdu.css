@@ -1,26 +1,136 @@
 
-body{
-    background-color: black;
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(images/page_perdu.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  object-fit: cover;
+  background-size: 100%;
 }
-h1{
-    color: white;
+
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: absolute;
+  top: 33%;
+
+  left: 50%;
 }
-.parent{
-    height: 48vh;
-    display: flex;
-    justify-content: center;
+
+.card {
+  position: absolute;
+  margin: 20px 0;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+  box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+  transform: translate(0%,0%);
+  top: 0%;
 }
-.cadre1{
-    height: 50vh;
-    width: 50vh;
-    justify-content: center;
-    display: flex;
-    border:solid black;
-    border-radius: 10px;
-    background-color: none;
+
+
+
+
+.card:hover {
+  transform: perspective(2000px) rotate(-5deg);
+  box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+  z-index: 1000;
+
 }
-.boutton{
-    display: flex;
-    justify-content: center;
-    height: 3vh;
+
+.card .imgBox  {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border 1px solid #000;
+  box-sizing: border-box;
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s;
+  background-position: center;
+  background-size: cover;
+
 }
+
+.card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.card:hover .imgBox  {
+  transform: rotateY(-135deg);
+
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  color:white;
+  background: rgba(0,0,0,0.5);
+}
+
+.card .imgBox_2 {
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: border-box;
+transform-origin: lef;
+z-index: ;
+transition: 1s;
+backface-visibility: hidden;
+   background: url(images/Anonymous.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card .fond_noir {
+  
+  width: 300px;
+  height: 30px;
+  background: #fdfcfc;
+  position: absolute;
+  top: 370px;
+  left: 0%;
+  z-index: 2;
+}
+
+
+.btn_acceuil {
+  
+  position: absolute;
+  top: 70%;
+  left: 25%;
+}
+
+.btn_quittez {
+  
+  top: 70%;
+  left: 65%;
+  position: absolute;
+}
+
+
+
+
+
+
+

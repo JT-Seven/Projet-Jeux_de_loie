@@ -15,7 +15,6 @@ let port;
 // DECLARATION DES DIFFERENTS MODULES CORRESPONDANT A CHAQUE ACTION
 //-------------------------------------------------------------------------
 
-const req_afficher_formulaire_connexion = require("./req_afficher_formulaire_connexion.js");
 const req_inscrire = require("./req_inscrire.js");
 const req_connecter = require("./req_connecter.js");
 const req_statique = require("./req_statique.js");
@@ -30,6 +29,11 @@ const req_entrer = require("./req_entrer.js");
 const req_contacter = require("./req_contacter.js");
 const req_afficher_formulaire_inscription = require("./req_afficher_formulaire_inscription.js");
 const req_afficher_signaler = require("./req_afficher_signaler.js");
+const req_afficher_mdp = require("./req_afficher_mdp.js");
+const req_mdp_oublier = require("./req_mdp_oublier.js");
+const req_question_secrete = require("./req_question_secrete.js");
+const req_afficher_accueil_jeu = require("./req_afficher_accueil_jeu.js");
+const req_effacer_fichiers = require("./req_effacer_fichiers.js");
 
 
 //-------------------------------------------------------------------------
@@ -66,9 +70,20 @@ const traite_requete = function (req, res) {
 				case '/req_afficher_signaler':
 					req_afficher_signaler(req, res, query);
 					break;
-
+				case '/req_afficher_mdp':
+					req_afficher_mdp(req, res, query);
+					break;
+				case '/req_question_secrete':
+					req_question_secrete(req, res, query);
+					break;
 				case '/req_connecter':
 					req_connecter(req, res, query);
+					break;
+				case '/req_afficher_accueil_jeu':
+					req_afficher_accueil_jeu(req, res, query);
+					break;
+				case '/req_mdp_oublier':
+					req_mdp_oublier(req, res, query);
 					break;
 				case "/req_commencer":
 					req_commencer(req, res, query);
@@ -90,6 +105,9 @@ const traite_requete = function (req, res) {
 					break;
 				case "/req_contacter":	
 					req_contacter(req, res, query);
+					break;
+				case "/req_effacer_fichiers":
+					req_effacer_fichiers(req, req, query)
 					break;
 				default:
 					req_statique(req, res, query);

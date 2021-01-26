@@ -119,19 +119,22 @@
 			<form action="/req_attendre_joueur" method="GET">
 				<input type="hidden" name="pseudo" value="{pseudo}">
 			</form>
-			<nav class="nav" role="navigation">
-				<div id="menuToggle">
-					<input type="checkbox" />
-					<span class="petit_logo"></span>
-					<span class="petit_logo"></span>
-					<span class="petit_logo"></span>
-					<ul id="menu">
-					  <a class="lien" href="modele_accueil_jeu.html"><li class="texte_menu">Quitter</li></a>
-					  <a class="lien" href="req_afficher_signaler"><li  class="texte_menu">Signaler</li></a>
-					  <a class="lien" href="req_entrer"><li class="texte_menu">Déconnexion</li></a>
-					</ul>
-				</div>
-			</nav>
+				<nav class="nav" role="navigation">
+					<div id="menuToggle">
+						<input type="checkbox" />
+						<span class="petit_logo"></span>
+						<span class="petit_logo"></span>
+						<span class="petit_logo"></span>
+						<ul id="menu">
+						<form action="/req_afficher_accueil_jeu" method="GET">
+						  <a class="lien" href="req_afficher_accueil_jeu"><button><li class="texte_menu">Quitter</li></button></a>
+						  <input type="hidden" name="pseudo" value="{pseudo}">
+						</form>
+						  <a class="lien" href="req_afficher_signaler"><li  class="texte_menu">Signaler</li></a>
+						  <a class="lien" href="req_entrer"><li class="texte_menu">Déconnexion</li></a>
+						</ul>
+					</div>
+				</nav>
 			<form action="req_afficher_signaler" method="GET">
                 <input type="hidden" name="signaler" value="{pseudo}">
             </form>

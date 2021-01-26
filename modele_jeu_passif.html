@@ -1,35 +1,65 @@
 <!DOCTYPE html>
-<html xmlns:font-size="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Jeu Passif</title>
-		<meta http-equiv="refresh" content="3;url=/req_attendre_tour?pseudo={pseudo}">
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="modele_jeu_passif.css">
-	</head>
+<html>
+	 <head>
+        <title>Jeu Passif</title>
+        <meta http-equiv="refresh" content="3;url=/req_attendre_tour?pseudo={pseudo}">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="modele_jeu_passif.css">
+    </head>
 	<body>
-		<h1 class="titre_snowden">La Quete de Snowden</h1>
+		<div class="cards">
+			<div class="card1">
+				<h3>Snowden</h3>	
+			</div>
+			<div class="card2">
+				<h3>Corbin</h3>	
+			</div>
+			<div class="card3">
+				<h3>Lindsay</h3>	
+			</div>
+			<div class="card4">
+				<h3>Agent Russe</h3>	
+			</div>
+		</div>
+		<section>
+			<div id="stars"></div>
+			<div id="stars2"></div>
+			<div id="stars3"></div>
+		</section>
+		<div class="titre_snowden_text">
+			<h1 class="titre_snowden">La Quete de Snowden<h1>
+		</div>
+		<!--SVG-->
+		<svg>
+			<filter id="fire">
+				<feTurbulence id="turbulence" baseFrequency="0.1 0.1" numOctaves="2" seed="3">
+					<animate attributeName="baseFrequency" dur="10s" values="0.1 0.1;0.12 0.2" repeatCount="indefinite"></animate>
+				</feTurbulence>
+				<feDisplacementMap in="SourceGraphic" scale="16"></feDisplacementMap>
+			</filter>
+		</svg>
+		<svg>
+			<filter id="wavy">
+				<feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+					<animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite"/>
+				</feTurbulence>
+				<feDisplacementMap in="SourceGraphic" scale="30"/>
+			</filter>
+		</svg>
+		<!--	-->
 		<div class = "positionPlateau">
 			{plateau}
 		</div>
-		<div class = "couleurTexte">
-			<div class="historique">
-				<p>{role}</p>
-				<p> {position}</p>
-				<p class="historique_script">{Histoire} {script}</p>
+		<div class="container_historique">
+			<div class="box">
+				<div class="content">
+					<p>{role}</p>
+					<p> {position}</p>
+					<p class="historique_script">{Histoire} {script}</p>
+            		<p class="lencer_des">{DernierLancer} {des}</p>
+				</div>
 			</div>
-			<p class="lencer_des">{DernierLancer} {des}</p>
 		</div>
-		<div class = "positionLegende">
-			<h2 class="titre_legende">Legende</h2>
-			<h2 class="titre_h2">Couleurs des pions :</h2>
-			<div class="rouge"></div><p class="texte_legende_rouge" style="color:red;"> : Snowden</p>
-			<div class="noir"></div><p class="texte_legende_noir" style="color:black;"> : Corbin</p>
-			<div class="rose"></div><p class="texte_legende_rose" style="color:rgb(167, 19, 159) ;"> : Lindsay</p>
-			<div class="vert"></div><p class="texte_legende_vert" style="color:green;"> : Agent Russes</p>
-		</div>
-		<section>
-			<div class="ctn-btns-show-modal">
-			</div>
-        </section>
 	</body>
 </html>
+                                 

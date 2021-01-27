@@ -637,9 +637,10 @@ border-image-slice: 1;
 .erreur {
   
   position: absolute;
-  top: 12%;
+  top: 13%;
   color: red;
-  left: 28%;
+  left: 2%;
+  width: 44%;
 }
 
   .secret {
@@ -967,6 +968,7 @@ border-radius: 30px;
   }
   
 }
+
 
 
 

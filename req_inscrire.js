@@ -61,17 +61,28 @@ const trait = function (req, res, query) {
 	// ON RENVOIT UNE PAGE HTML 
 
 	if (trouve === true) {
+		
 		// SI CREATION PAS OK, ON REAFFICHE PAGE FORMULAIRE AVEC ERREUR
 		
 		page = fs.readFileSync('modele_formulaire_inscription.html', 'UTF-8');
 		
 		marqueurs = {};
 		marqueurs.erreur = "ERREUR : ce compte existe déjà";
-		marqueurs.pseudo = query.pseudo;
+		marqueurs.pseudo = "";
+        marqueurs.password = "";
+        marqueurs.password2 = "";
+        marqueurs.adresse = "";
+        marqueurs.nom = "";
+        marqueurs.age = "";
+        marqueurs.number = "";
+        marqueurs.question = "";
+        marqueurs.reponse = "";
+
 		page = page.supplant(marqueurs);
 		
 
 	} else {
+		
 		// SI CREATION OK, ON ENVOIE PAGE DE CONFIRMATION
 
 		page = fs.readFileSync('modele_confirmation_inscription.html', 'UTF-8');
@@ -87,14 +98,26 @@ const trait = function (req, res, query) {
 	    // SI PAS TROUVE, ON AJOUTE LE NOUVEAU COMPTE DANS LA LISTE DES COMPTES
 
     if (query.password === query.password2) {
-        nouveauMembre = {};
+        
+		marqueurs = {};
+		marqueurs.pseudo = "";
+        marqueurs.password = "";
+        marqueurs.password2 = "";
+        marqueurs.adresse = "";
+        marqueurs.nom = "";
+        marqueurs.age = "";
+        marqueurs.number = "";
+        marqueurs.question = "";
+        marqueurs.reponse = "";
+
+
+		nouveauMembre = {};
         nouveauMembre.pseudo = query.pseudo;
         nouveauMembre.password = query.password;
         nouveauMembre.password2 = query.password2;
         nouveauMembre.adresse = query.adresse;
         nouveauMembre.nom = query.nom;
         nouveauMembre.age = query.age;
-        nouveauMembre.erreur = "";
         nouveauMembre.number = query.number;
 		nouveauMembre.question = query.selection_question;
 		nouveauMembre.reponse = query.reponse;
@@ -105,7 +128,8 @@ const trait = function (req, res, query) {
         contenu_fichier = JSON.stringify(listeMembres);
 
         fs.writeFileSync("membres.json", contenu_fichier, 'utf-8');
-    } else {
+    
+	} else {
 
         page = fs.readFileSync('modele_formulaire_inscription.html', 'utf-8');
 

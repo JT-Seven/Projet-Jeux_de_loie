@@ -58,7 +58,7 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 5%;
+  top: 10%;
   width: 70%;
   left: 15%;
 }
@@ -465,6 +465,104 @@ border: none;
 	}
 }
 
+/* QUESTION / REPONSE */
+
+.container_q_r {
+
+  display: flex;
+  justify-content: center;
+  transform: translate(-50%,-50%);
+  top: 35%;
+  left: 250%;
+  position: absolute;
+  flex-direction: column;
+  background: #191919;
+  background-color: rgb(25, 25, 25);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 5px solid aliceblue;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-image: linear-gradient(to right, #141e30, white, #243b55);
+  border-image-slice: 100%;
+  border-image-slice: 1;
+  width: 300px;
+  height: 300px;
+  align-items: center;
+}
+
+.question {
+
+}
+
+.select {
+
+  width: 85%;
+  position: relative;
+  top: 7%;
+}
+
+.input_reponse {
+
+  position: relative;
+  width: auto;
+  margin-top: 20px;
+  text-align: center;
+  border: 2px solid blue;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  padding: 10px 0px;
+  width: 200px;
+  outline: none;
+  color: white;
+  transition: 0.25s;
+  border-image: linear-gradient(to right, #141e30, white, #243b55);
+  border-image-slice: 100%;
+  border-image-slice: 1;
+  position: relative;
+  background: black;
+  top: 3%;
+}
+
+.input_reponse:focus {
+  width: 230px;
+background: rgba(255,255,255,.1);
+color: white;
+}
+
+.titre_question {
+
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: absolute;
+  bottom: 70%;
+}
+
+.erreur_secrete {
+
+  position: absolute;
+  top: 25%;
+  color: red;
+}
+
+.confirmation_secrete {
+
+  position: absolute;
+  top: 25%;
+  color: #18df18;
+}
+
+
+
+
+
 /*	slide 3D	*/
 
 .flip-box {
@@ -637,7 +735,7 @@ top: 20%;
     border-image: linear-gradient(303deg, #141e30, white, #243b55);
     border-image-slice: 1;
     position: relative;
-    top: 0%;
+    top: 10%;
   }
   .box input[type = "text"]:focus,.box input[type = "password"]:focus,
   .box input[type = "text"]:valid,.box input[type = "password"]:valid 
@@ -828,7 +926,6 @@ left: 44%;
 top: 20%;
   }
 
- 
 
 @media screen and (max-width: 1700px) and (min-width:1500px) {
   body {
@@ -838,6 +935,7 @@ top: 20%;
   }
   
 }
+
 
 
 

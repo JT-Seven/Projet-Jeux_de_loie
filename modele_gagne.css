@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +11,7 @@ body {
     background-position: center;
     object-fit: cover;
     background-position-y: -100px;
+    overflow: hidden;
 }
 
 
@@ -134,7 +134,7 @@ body {
 
     width: 300px;
     height: 30px;
-    background: #fdfcfc;
+    background: #0f101a;
     position: absolute;
     top: 370px;
     left: 0%;
@@ -147,3 +147,222 @@ body {
     height: 70vh;
     width: 100vh;
 }
+
+/* MENU */
+
+.navbar {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    background: #15151f;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: 0.24s 0.2s;
+    left: 89%;
+    top: 5%;
+    color: white;
+}
+
+.navbar .menu {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    border: 150px solid transparent;
+    cursor: default;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1.4s 0.07s;
+    z-index: -1;
+}
+
+.navbar:hover .menu {
+    
+    transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.navbar .menu li {
+    
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    transform-origin: 100px 100px;
+    transition: all 0.5s 0.1s;
+}
+
+.navbar:hover .menu li {
+    
+    transition: all 0.7s;
+}
+
+.navbar .menu li a {
+    
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 59%;
+    transition: 0.7s;
+    background-size: 110%;
+    
+    background: #000;
+}
+
+.navbar .menu li button {
+    
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 59%;
+    transition: 0.7s;
+    background-size: 110%;
+    
+    background: #000;
+    cursor: pointer;
+}
+
+
+.navbar .menu li .fa-rejouer {
+    background: url("images/manette.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #6c6b70;
+    background-position: center;
+    transform: rotate(45deg);
+}
+
+.navbar .menu li .fa-signaler {
+    background: url("images/signalement.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #fcb80e;
+    background-position: center;
+    transform: rotate(87deg);
+}
+
+.navbar .menu li .fa-quitter {
+    background: url("images/quitter.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    transform: rotate(125deg);
+}
+
+
+.navbar:hover .menu li:nth-child(1) {
+    transition-delay: 0.02s;
+    transform: rotate(-45deg);
+}
+
+.navbar:hover .menu li:nth-child(2){
+    transition-delay: 0.04s;
+    transform: rotate(-85deg);
+}
+
+.navbar:hover .menu li:nth-child(3)  {
+    transition-delay: 0.04s;
+    transform: rotate(-125deg);
+}
+
+
+
+/* CUBE 3D */
+
+.container2 {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  position:absolute;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 1.2rem;
+}
+
+.top {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+    transform: rotateX(90deg) translateZ(20px);
+  content: '2';
+}
+.bottom {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+
+    background-size: cover;
+  background-position: center;
+  transform: rotateX(-90deg) translateZ(20px);
+}
+
+.right {
+      background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(90deg) translateZ(20px);
+}
+.left {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+  transform: rotateY(-90deg) translateZ(20px);
+}
+
+.front {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+  transform: rotateX(0deg) translateZ(20px);
+}
+.back {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+  transform: rotateX(-180deg) translateZ(20px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -1,132 +1,366 @@
-
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url(images/page_perdu.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  object-fit: cover;
-  background-size: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/fond_perdu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-position-y: -100px;
+    overflow: hidden;
 }
+
+
 
 .container {
-  max-width: 1000px;
-  margin: 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  position: absolute;
-  top: 33%;
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+    top: 10%;
 
-  left: 50%;
+
+
+    left: 50%;
 }
+
+
 
 .card {
-  position: absolute;
-  margin: 20px 0;
-  width: 300px;
-  height: 400px;
-  background: #fff;
-  transform-style: preserve-3d;
-  transform: perspective(2000px);
-  transition: 1s;
-  box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
-  transform: translate(0%,0%);
-  top: 0%;
+    position: absolute;
+    margin: 20px 0;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+    transform: translate(0%,-20%);
 }
+
+
 
 
 
 
 .card:hover {
-  transform: perspective(2000px) rotate(-5deg);
-  box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
-  z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+    z-index: 1000;
+
+
 
 }
+
+
 
 .card .imgBox  {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border 1px solid #000;
-  box-sizing: border-box;
-  transform-origin: left;
-  z-index: 1;
-  transition: 1s;
-  background-position: center;
-  background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+    background-position: center;
+    background-size: cover;
+
+
 
 }
+
+
 
 .card .imgBox img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
 
 }
+
+
 
 .card:hover .imgBox  {
-  transform: rotateY(-135deg);
+    transform: rotateY(-135deg);
+
+
 
 }
+
+
 
 .card .details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  padding: 20px;
-  color:white;
-  background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #dbbbed;
+    background: rgba(0,0,0,0.5);
 }
+
+
 
 .card .imgBox_2 {
-position: absolute;
-width: 100%;
-height: 100%;
-box-sizing: border-box;
-transform-origin: lef;
-z-index: ;
-transition: 1s;
-backface-visibility: hidden;
-   background: url(images/Anonymous.jpg);
-  background-position: center;
-  background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform-origin: lef;
+    z-index: ;
+    transition: 1s;
+    backface-visibility: hidden;
+    background: url(images/Anonymous.jpg);
+    background-position: center;
+    background-size: cover;
 }
+
+
 
 .card .fond_noir {
-  
-  width: 300px;
-  height: 30px;
-  background: #fdfcfc;
-  position: absolute;
-  top: 370px;
-  left: 0%;
-  z-index: 2;
+
+    width: 300px;
+    height: 30px;
+    background: #131313;
+    position: absolute;
+    top: 370px;
+    left: 0%;
+    z-index: 2;
+}
+.boutton{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70vh;
+    width: 100vh;
+}
+
+/* MENU */
+
+.navbar {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    background: #131313;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: 0.24s 0.2s;
+    left: 89%;
+    top: 5%;
+    color: white;
+}
+
+.navbar .menu {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    border: 150px solid transparent;
+    cursor: default;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1.4s 0.07s;
+    z-index: -1;
+}
+
+.navbar:hover .menu {
+    
+    transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.navbar .menu li {
+    
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    transform-origin: 100px 100px;
+    transition: all 0.5s 0.1s;
+}
+
+.navbar:hover .menu li {
+    
+    transition: all 0.7s;
+}
+
+.navbar .menu li a {
+    
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 59%;
+    transition: 0.7s;
+    background-size: 110%;
+    
+    background: #000;
+}
+
+.navbar .menu li button {
+    
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 59%;
+    transition: 0.7s;
+    background-size: 110%;
+    
+    background: #000;
+    cursor: pointer;
 }
 
 
-.btn_acceuil {
-  
-  position: absolute;
-  top: 70%;
-  left: 25%;
+.navbar .menu li .fa-rejouer {
+    background: url("images/manette.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #6c6b70;
+    background-position: center;
+    transform: rotate(45deg);
 }
 
-.btn_quittez {
-  
-  top: 70%;
-  left: 65%;
-  position: absolute;
+.navbar .menu li .fa-signaler {
+    background: url("images/signalement.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #fcb80e;
+    background-position: center;
+    transform: rotate(87deg);
 }
+
+.navbar .menu li .fa-quitter {
+    background: url("images/quitter.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    transform: rotate(125deg);
+}
+
+
+.navbar:hover .menu li:nth-child(1) {
+    transition-delay: 0.02s;
+    transform: rotate(-45deg);
+}
+
+.navbar:hover .menu li:nth-child(2){
+    transition-delay: 0.04s;
+    transform: rotate(-85deg);
+}
+
+.navbar:hover .menu li:nth-child(3)  {
+    transition-delay: 0.04s;
+    transform: rotate(-125deg);
+}
+
+
+
+/* CUBE 3D */
+
+.container2 {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  position:absolute;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 1.2rem;
+}
+
+.top {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+    transform: rotateX(90deg) translateZ(20px);
+  content: '2';
+}
+.bottom {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+
+    background-size: cover;
+  background-position: center;
+  transform: rotateX(-90deg) translateZ(20px);
+}
+
+.right {
+      background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(90deg) translateZ(20px);
+}
+.left {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+  transform: rotateY(-90deg) translateZ(20px);
+}
+
+.front {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+  transform: rotateX(0deg) translateZ(20px);
+}
+.back {
+  background-image: linear-gradient( 43deg, #000 0%, #222428 46%, #8314df 100% );
+    background-size: cover;
+  background-position: center;
+  transform: rotateX(-180deg) translateZ(20px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+
+
 
 
 

@@ -25,61 +25,66 @@
 					<p>{erreur}</p>
 				</div>
 					<div class="image">
-						<img class="inscrit" src="images/icone_inscription.png" alt="image"></div>
-						<div class="blaze">
-							<label class="blaz" for="blaz">Nom d'utilisateur : </label>
-							<input type="text" name="pseudo" required="" value="{pseudo}" placeholder="Votre Pseudo">
-							<input type="hidden" name="number" required="" value="{number}">
+						<img class="inscrit" src="images/icone_inscription.png" alt="image">
+					</div>
+					<div class="blaze">
+						<label class="blaz" for="blaz">Nom d'utilisateur : </label>
+						<input type="text" name="pseudo" required="" value="{pseudo}" placeholder="Votre Pseudo">
+						<input type="hidden" name="number" required="" value="{number}">
+					</div>
+					<div class="nom">
+						<label class="N" for="nom">Nom : </label>
+						<input type="text" name="nom" value="{nom}" required="" placeholder="Votre Nom">
+						<label class="N_2" for="prenom">Prénom : </label>
+						<input type="text" name="prenom" value="" required="" placeholder="Votre Prénom">
+					</div>
+					<div class="adresse">
+						<label class="A" for="adress">Adresse Mail: </label>
+						<input type="text" name="adresse" value="{adresse}" required="" placeholder="Votre Mail">
+					</div>
+					<div class="password">
+						<label class="B" for="mdp">Mot de Passe : </label>
+						<input type="password" name="password" value="{password}" required="" placeholder="Votre Mot De Passe">
+						<label class="B_2" for="mdp">Confirmation du mot de Passe : </label>
+						<input type="password" name="password2" value="{password2}" required="" placeholder="Confirmation du Mot De Passe">
+					</div>
+					<div class="civilite">
+						<label class="C">Civilité : </label>
+						<input id="homme" type="radio" name="civil" required="" value="{civil}">
+						<label class="sexe" for="homme">Homme</label>
+						<input id="femme" type="radio" name="civil" required="" value="{civil}">
+						<label class="sexe" for="femme">Femme</label>
+					</div>
+					<div class="date">
+						<label class="D" for="date">Date de Naissance : </label>
+						<input type="date" name="age" value="{age}" required="" placeholder="Date de naissance">
+					</div>
+					
+					<!--BOUTTON -->
+					
+					<div class="btn">
+						<button type="submit" name="action" value="Créer compte">Créer compte</button>
+					</div>
+					<div class="reset">
+						<button type="reset" name="effacer" value="Effacer">Effacer</button>
+					</div>
+					<div class="container_q_r">
+						<h2 class="titre_question">Question secrète</h2>
+						<div class="erreur_secrete">
+							{erreur_secrete}
 						</div>
-							
-						<div class="nom">
-							<label class="N" for="nom">Nom : </label>
-							<input type="text" name="nom" value="{nom}" required="" placeholder="Votre Nom">
-							<label class="N_2" for="prenom">Prénom : </label>
-							<input type="text" name="prenom" value="" required="" placeholder="Votre Prénom"></div>
-						<div class="civilite">
-							<label class="C">Civilité : </label>
-							<input id="homme" type="radio" name="civil" required="" value="{civil}">
-							<label class="sexe" for="homme">Homme</label>
-							<input id="femme" type="radio" name="civil" required="" value="{civil}">
-							<label class="sexe" for="femme">Femme</label>
+						<div class="confirmation_secrete">
+							{confirmation_secrete}
 						</div>
-						<div class="date">
-							<label class="D" for="date">Date de Naissance : </label>
-							<input type="date" name="age" value="{age}" required="" placeholder="Date de naissance"></div>
-						<div class="adresse">
-							<label class="A" for="adress">Adresse Mail: </label>
-							<input type="text" name="adresse" value="{adresse}" required="" placeholder="Votre Mail"></div>
-						<div class="password">
-							<label class="B" for="mdp">Mot de Passe : </label>
-							<input type="password" name="password" value="{password}" required="" placeholder="Votre Mot De Passe">
-							<label class="B_2" for="mdp">Confirmation du mot de Passe : </label>
-							<input type="password" name="password2" value="{password2}" required="" placeholder="Confirmation du Mot De Passe">
-						</div>
-						<div class="btn">
-							<button type="submit" name="action" value="Créer compte">Créer compte</button>
-						</div>
-						<div class="reset">
-							<button type="reset" name="effacer" value="Effacer">Effacer</button>
-						</div>
-			<div class="container_q_r">
-				<h2 class="titre_question">Question secrète</h2>
-				<div class="erreur_secrete">
-					{erreur_secrete}
-				</div>
-				<div class="confirmation_secrete">
-					{confirmation_secrete}
-				</div>
-				<select class="select" name="selection_question">
-					<option class="question" name="question" value="Comment vos amis vous appellent ils ?">Comment vos amis vous appellent ils ?</option>
-					<option class="question" name="question" value="Quel est votre sport préféré ?">Quel est votre sport préféré ?</option>
-					<option class="question" name="question" value="Quel est votre instrument de musique ?">Quel est votre instrument de musique ?</option>
-					<option class="question" name="question" value="Quel est le nom de votre animal de compagnie ?">Quel est le nom de votre animal de compagnie ?</option>
-					<option class="question" name="question" value="Votre équipe de foot préféré ?">Votre équipe de foot préféré ?</option>
-					<input class="input_reponse" type="text" name="reponse" value="" required="" placeholder="Ecrivez votre réponse...">
-				</select>
-
-			</div>
+						<select class="select" name="selection_question">
+							<option class="question" name="question" value="Comment vos amis vous appellent ils ?">Comment vos amis vous appellent ils ?</option>
+							<option class="question" name="question" value="Quel est votre sport préféré ?">Quel est votre sport préféré ?</option>
+							<option class="question" name="question" value="Quel est votre instrument de musique ?">Quel est votre instrument de musique ?</option>
+							<option class="question" name="question" value="Quel est le nom de votre animal de compagnie ?">Quel est le nom de votre animal de compagnie ?</option>
+							<option class="question" name="question" value="Votre équipe de foot préféré ?">Votre équipe de foot préféré ?</option>
+							<input class="input_reponse" type="text" name="reponse" value="" required="" placeholder="Ecrivez votre réponse...">
+						</select>
+					</div>
 				</form>
 				<div class="boutton3">
 					<a href="req_afficher_signaler" class="btn3">
@@ -103,6 +108,5 @@
                 	<input type="hidden" name="signaler" value="{pseudo}">
             	</form>
 		</div>
-
 	</body>
 </html>

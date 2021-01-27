@@ -20,10 +20,39 @@
 				</div>
 			</div>
 		</div>
-			<form action="/req_afficher_accueil_jeu" method="GET">
-				<a class="lien" href="req_afficher_accueil_jeu"><button><li class="texte_menu">Accueil_jeu</li></button></a>
-				<input type="hidden" name="pseudo" value="{pseudo}">
-			</form>
 		</div>
+		<div class="navbar">Menu
+			<ul class="menu">
+				<li>
+					<div class="container2">
+						<div class="cube-z">  
+							<div class="cube-y">  
+								<div class="cube-x">  
+									<div class="cube">
+									  <div class="face front">1</div>
+									  <div class="face back">2</div>
+									  <div class="face right">3</div>
+									  <div class="face left">4</div>
+									  <div class="face top">5</div>
+									  <div class="face bottom">6</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form action="/req_afficher_accueil_jeu" method="GET">
+						<button class="fa fa-rejouer" name="action"></button>
+						<input type="hidden" name="pseudo" value="{pseudo}">
+					</form>
+				</li>
+				<li><a href="/req_afficher_signaler" class="fa fa-signaler"></a></li>
+				<li><a href="/req_entrer" class="fa fa-quitter"></a></li>
+			</ul>
+		</div>
+		<div class="details">
+                        <h2>C'est un échec {pseudo} !</h2>
+                        <p>L'ésperance que nous avions mit sur vous était honorable mais vous n'avez pas su repondre a nos attente. Plusieurs choix s'offre a vous : regagner notre confiance en cliquant sur le boutton qui vous raménera sur la page d'acceuil du jeu pour de nouvelle aventure ou nous laisser cette image de vous en cliquant sur le boutton quitter. Vous êtes maître de votre choix {pseudo}</p>
+                    </div>
+
 	</body>
 </html>
